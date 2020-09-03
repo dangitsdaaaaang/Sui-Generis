@@ -1,0 +1,16 @@
+﻿#Persian Innovation Incrementing Prestige Bonus
+#persian_court_literature_adoption_rate = {
+#	value = 1
+#	if = {
+#		limit = {
+#			has_global_variable = persian_court_literature_adoption
+#		}
+#		value = var:persian_court_literature_adoption
+#		multiply = 0.05
+#		add = 1
+#		min = 1
+#	}
+#}
+
+
+

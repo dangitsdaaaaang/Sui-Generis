@@ -1,0 +1,4 @@
+﻿#Caucasian Diplomacy Innovation (Byzantine)
+sg_caucasian_alliance_interaction_opinion = {
+	opinion = 20
+}

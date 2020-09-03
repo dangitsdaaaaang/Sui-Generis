@@ -1,0 +1,50 @@
+﻿#CORE TRIGGERS#
+can_spread_from_neighboring_diff_culture_county = { 
+	custom_description = {
+		text = can_spread_from_neighboring_diff_culture_county_trigger
+		any_independent_ruler = {
+			this.culture = prev #If any independent ruler of this culture... 
+			any_realm_county = { #(runs in character scope to target landed title scope)
+				any_title_to_title_neighboring_and_across_water_county = { #...contains a county or borders another county, even across water...
+					holder = { #... whose county holder is of a culture already possessing the innovation...
+						OR = {
+							culture = {
+								OR = { $INNOVATION$ }
+							}
+							any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
+								culture = {
+									OR = { $INNOVATION$ }
+								}
+							}
+						}
+					}
+				}
+			}
+		} #... then progress can begin, and the hard-coded spread rate modifiers can modulate the research rate.
+	}
+}
+
+can_spread_from_close_family_member_ruler_or_noble_courtier = {
+	custom_description = {
+		text = can_spread_from_close_family_member_ruler_or_noble_courtier_trigger
+		any_independent_ruler = {
+			this.culture = prev #If any independent ruler of this culture...
+			primary_title = { tier >= tier_duchy } #... is a significantly powerful ruler...
+			OR = {
+				any_spouse = { #... has a spouse with a court of the source culture...
+					is_ruler = yes
+					culture = culture:$CULTURE$
+				}
+				any_close_family_member = { #... or a father/mother/child/sibling/grandparent with a court of the source culture...
+					is_ruler = yes
+					culture = culture:$CULTURE$
+				}
+				any_courtier = { #... or a courtier of the source culture of noble birth ...
+					culture = culture:$CULTURE$
+					is_imprisoned  = no
+					is_lowborn = no
+				}
+			}
+		} #... then progress toward understanding the innovation can begin.
+	}
+}

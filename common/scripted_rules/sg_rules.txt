@@ -1,0 +1,40 @@
+﻿# Barbary Corsairs (Berber)
+# [OC] Can this character cross water (sea, rivers) while on raid?
+# [OC] root: the potential raider
+can_raid_across_water = { #overwrite entry 00_rules.txt
+	culture = {
+		OR = {
+			has_innovation = innovation_longboats
+			has_innovation = innovation_african_canoes
+			has_innovation = innovation_barbary_corsairs 
+		}
+	}
+}
+
+# Caucasian Diplomacy (Byzantine)
+# [OC] Is the alliance reason still valid
+# [OC] Root = First character of alliance reason
+# [OC] scope:second = Second character of alliance reason
+is_alliance_valid = { #overwrite entry 00_rules.txt
+	OR = {
+		any_spouse = {
+			this = scope:second
+		}
+		betrothed = scope:second
+		is_parent_of = scope:second
+		is_child_of = scope:second
+		is_sibling_of = scope:second
+		scope:second = {
+			has_opinion_modifier = {
+				modifier = perk_negotiated_alliance_opinion
+				target = root
+			}
+		}
+		scope:second = { #
+			has_opinion_modifier = {
+				modifier = sg_caucasian_alliance_interaction_opinion
+				target = root
+			}
+		}
+	}
+}

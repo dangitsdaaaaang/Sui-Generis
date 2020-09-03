@@ -1,0 +1,70 @@
+﻿# standard costs
+@maa_buy_cost = 150
+@maa_low_maintenance_cost = 1.0
+@maa_high_maintenance_cost = 5.0
+@cultural_maa_extra_ai_score = 25 # Equivalent to having 2.5 extra regiments beyond what the code scoring would indicate (see NEGATIVE_SCORE_PER_EXISTING_REGIMENT)
+
+hetselazaurkh = { #Cataphract counterpart - high damage variant - Knights of the East (Caucasian)
+	type = heavy_cavalry
+	
+	damage = 120
+	toughness = 35
+	pursuit = 15
+	screen = 0
+	
+	terrain_bonus = {
+		steppe = { damage = -40 }
+		plains = { damage = -40 }
+		drylands = { damage = -40 } 
+		desert = { damage = -40 }
+		hills = { damage = 10 }
+		mountains = { damage = 30 }
+		desert_mountains = { damage = 30 }
+		wetlands = { damage = -90 }
+	}
+
+	counters = {
+		heavy_infantry = 1
+	}
+
+	buy_cost = { gold = cataphract_recruitment_cost }
+	low_maintenance_cost = { gold = cataphract_low_maint_cost }
+	high_maintenance_cost = { gold = cataphract_high_maint_cost }
+	
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	
+	icon = heavy_cavalry
+}
+
+raindebi = { #Cataphract counterpart - sustainability variant - Knights of the East (Caucasian)
+	type = heavy_cavalry
+	
+	damage = 100
+	toughness = 50
+	pursuit = 10
+	screen = 10
+	
+	terrain_bonus = {
+		steppe = { damage = -25 }
+		plains = { damage = -25 }
+		drylands = { damage = -25 } 
+		desert = { damage = -25 }
+		hills = { damage = 10 }
+		mountains = { damage = 30 }
+		desert_mountains = { damage = 30 }
+		wetlands = { damage = -80 }
+	}
+
+	counters = {
+		archers = 1
+	}
+
+	buy_cost = { gold = cataphract_recruitment_cost }
+	low_maintenance_cost = { gold = cataphract_low_maint_cost }
+	high_maintenance_cost = { gold = cataphract_high_maint_cost }
+	
+	stack = 50
+	ai_quality = { value = @cultural_maa_extra_ai_score }
+	icon = heavy_cavalry
+}

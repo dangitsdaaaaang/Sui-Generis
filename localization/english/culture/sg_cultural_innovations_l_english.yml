@@ -1,0 +1,49 @@
+﻿l_english:
+ #Berber
+ innovation_barb_horses_berber:1 "Barb Horses"
+ innovation_barb_horses_berber_desc:1 "The Barb horse is a northern African breed with great hardiness and stamina and generally possesses a fiery temperament. These prize stallions bore the fierce Berber invaders during the conquest of al-Andalus and became a cornerstone of the elite mounted forces of the Iberian peninsula and beyond."
+ 
+ innovation_barb_horses_andalusian:1 "Barb Horses"
+ innovation_barb_horses_andalusian_desc:1 "The Barb horse is a northern African breed with great hardiness and stamina and generally possesses a fiery temperament. These prize stallions bore the fierce Berber invaders during the conquest of al-Andalus and became a cornerstone of the elite mounted forces of the Iberian peninsula and beyond."
+ 
+ innovation_barb_horses_iberian:1 "Barb Horses"
+ innovation_barb_horses_iberian_desc:1 "The Barb horse is a northern African breed with great hardiness and stamina and generally possesses a fiery temperament. These prize stallions bore the fierce Berber invaders during the conquest of al-Andalus and became a cornerstone of the elite mounted forces of the Iberian peninsula and beyond."
+ 
+ innovation_barb_horses_world:1 "Barb Horses"
+ innovation_barb_horses_world_desc:1 "The Barb horse is a northern African breed with great hardiness and stamina and generally possesses a fiery temperament. These prize stallions bore the fierce Berber invaders during the conquest of al-Andalus and became a cornerstone of the elite mounted forces of the Iberian peninsula and beyond."
+ 
+ innovation_barbary_corsairs:1 "Barbary Corsairs"
+ innovation_barbary_corsairs_desc:1 "Though the practice of piracy and raiding had always plagued the Mediterranean, the coastal Berber states were able to vastly enrich themselves at the expense of their European neighbors. Such razzias were such a thorn in the side of Italian, French, and Iberian rulers that the Sicilian Normans invaded North Africa in 1135, and in 1390, a French-Genoese joint military expedition embarked on the short-lived Barbary Crusade."
+ sg_unlocks_corsair_raiding:1 "Enables [raiding|E] of foreign [counties|E] both by land and by sea, provided our [faith|E]'s [doctrines|E] do not forbid it."
+ 
+ #Persian
+ innovation_persian_court_literature_iranian:1 "Persian Court Literature"
+ innovation_persian_court_literature_iranian_desc:1 "Despite having been momentarily eclipsed by Arabic as the language of prestige in the Muslim world, the great literary tradition of the Persians resurged in the latter half of the first millenium, most famously in the Shahnameh by the renowned poet Ferdowsi. For centuries afterward, Persian became the primary influence upon the court languages not only of the sultanates of Persia proper, but also the far reaches of Muslim-ruled India and the steppes of Central Asia and beyond."
+ innovation_persian_court_literature_iranian_trigger:1 "A [county|E] of our [culture|E] has not developed sufficiently (20 [development|E] or greater) to begin attracting great poets and writers of our language."
+ 
+ innovation_persian_court_literature_world:1 "Persianate Literary Influence"
+ innovation_persian_court_literature_world_desc:1 "Despite having been momentarily eclipsed by Arabic as the language of prestige in the Muslim world, the great literary tradition of the Persians resurged in the latter half of the first millenium, most famously in the Shahnameh by the renowned poet Ferdowsi. For centuries afterward, Persian became the primary influence upon the court languages not only of the sultanates of Persia proper, but also the far reaches of Muslim-ruled India and the steppes of Central Asia and beyond."
+ sg_persian_court_literature_mechanic:1 "Every [culture|E] that adopts the Persianate Literary Influence innovation will grant us additional [prestige|E]."
+ innovation_persian_court_literature_adopted:1 "Innovation Adopted by Foreign Culture" 
+ innovation_persian_court_literature_adopted_desc:1 "The [culture_head_notification.GetCulture.GetCollectiveNoun] are beginning to model their written works after our own. Our language and literature will become the envy of the world!"
+ 
+ #Byzantine
+ innovation_legacy_of_rome:1 "Legacy of Rome"
+ innovation_legacy_of_rome_desc:1 "Despite the fall of the empire in the West, the imperial tradition of the Romans remains strong in the East where the authority of a strong ruler is still to be respected and feared. Hardened by centuries of battling for survival against myriad foes, true Romans understand that might makes right, and the shining beacon of civilization can only be upheld by a will of iron."
+ 
+ innovation_legacy_of_byzantium:1 "Echoes of Konstantinopolis"
+ innovation_legacy_of_byzantium_desc:1 "Tales of the splendor of the imperial court at Constantinople served as a dazzling inspiration to many of the burgeoning powers of Asia Minor and Eastern Europe. Awed by the wealth and grandeur of the Basileus and the absolute authority he exercised over the empire of the Romans, lesser rulers sought to emulate what they perceived as divinely-inspired autocracy to exert their power over their subjects."
+ innovation_legacy_of_byzantium_trigger:1 "No realms of our [culture|E] contain or border any [counties|E] belonging to a culture that has adopted this innovation, and no rulers of our [culture|E] have [noble|E] [courtiers|E] or [close_family_members|E] of a culture that has adopted it."
+ 
+ innovation_caucasian_heritage:1 "Caucasian Heritage"
+ innovation_caucasian_heritage_desc:1 "The proud peoples of the Caucasus have witnessed the rise of countless empires across the millenia and remain resilient in the face of invasion, persecution, and domination. Their indomitable spirit inspires courage few can match in the face of unfavorable odds, and their battle-hardened warriors are more than capable of defending their mountainous homeland."
+ 
+ innovation_caucasian_diplomacy:1 "Caucasian Diplomacy"
+ innovation_caucasian_diplomacy_desc:1 "As Muslim invaders and steppe hordes make their incursions into the heart of the Caucasus, it became more and more important to consider pragmatic alliances when dynastic bonds cannot be forged. This relative understanding and cooperation in the face of fierce hostility bore many fruitful military alliances between Georgian, Armenian and Alan states, both with and against their powerful neighbor, the Byzantine Roman Empire."
+ sg_unlock_caucasian_diplomacy:1 "[rulers|E] are able to propose one [alliance|E] without a [marriage|E] if both rulers' cultures share this innovation."
+ 
+ innovation_knights_of_the_east:1 "Knights of the East"
+ innovation_knights_of_the_east_desc:1 "Though the unforgiving terrain of the Caucasus would prove a challenge to most, the resilient kingdoms of Armenia and Georgia developed a proud chivalric tradition stretching back to the dawn of empires. Their heavy cavalry repulsed larger armies time and time again, and even when the Turkic and Mongol hordes finally displaced them from their mountain halls, these noble cavaliers fought on and served as an integral part in the armies of their Christian neighbors."
+ 
+ 
+

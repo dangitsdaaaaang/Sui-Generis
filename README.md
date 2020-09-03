@@ -1,1 +1,2 @@
-# Sui-Generis
+# Sui Generis - A Cultural Innovation Expansion mod for Crusader Kings 3
+_Sui Generis_ was designed with two objectives in mind: firstly that each culture in the game should be governed by a unique mechanic that distinguishes it from others on the basis of their culture group or geographic location, and secondly that select unique cultural innovations should be able to spread far beyond their origins to enrich the various cultures of the medieval world. 

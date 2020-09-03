@@ -1,0 +1,70 @@
+﻿yearly_playable_pulse = {
+	on_actions = {
+		innovation_persian_court_literature_adopted_evaluation_pulse
+	}
+}
+# Caucasian Diplomacy (Byzantine)
+on_alliance_removed = { #overwrite vanilla entry in alliance_on_actions.txt
+	effect = {
+		# [OC] Embassies modifier removal:
+		update_embassies_effect = yes
+		scope:second = { update_embassies_effect = yes }
+		
+		# [OC] Remove the opinion modifier from having proposed an alliance via the perk:
+		try_remove_perk_alliance_opinion_effect = { TARGET = scope:second }
+		scope:second = { try_remove_perk_alliance_opinion_effect = { TARGET = root } }
+		
+		# Remove the opinion modifier from having proposed an alliance via the Caucasian Diplomacy Innovation:
+		try_remove_perk_alliance_opinion_effect = { TARGET = scope:second }
+		scope:second = { try_remove_caucasian_alliance_opinion_effect = { TARGET = root } }
+	}
+}
+
+# Persianate Literary Influence (Persian)
+innovation_persian_court_literature_adopted_evaluation_pulse = { 
+	trigger = {
+		culture = {
+			has_innovation = innovation_persian_court_literature_world #If a non-Iranian culture adopts Persian literature...
+			NOT = { has_variable = sg_adopted_persian_court_literature } 
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { #set variable if it doesn't exist
+				NOT = { has_global_variable = persian_court_literature_adoption }
+			}	
+			set_variable = { name = persian_court_literature_adoption value = 0 }
+		}
+		
+		culture = {
+			add_innovation = innovation_persian_court_literature_world
+			set_variable = { name = sg_adopted_persian_court_literature value = true }
+			culture_head = { save_scope_as = culture_head_notification }  #mark character as culture representative for display in the notification 	
+				
+			every_ruler = {
+				limit = { 
+					NOT = { culture_group = culture_group:iranian_group } #sanity check
+					culture = { has_innovation = innovation_persian_court_literature_iranian } 
+				}
+				
+				send_interface_message = {
+					title = innovation_persian_court_literature_adopted
+					desc = innovation_persian_court_literature_adopted_desc
+					type = event_innovation_adopted
+					left_icon = scope:culture_head_notification
+					add_prestige = 100
+				}
+			}
+		}
+		
+		if = { 
+			limit = { #Limit the number of unique adopter cultures allowed
+				has_global_variable = persian_court_literature_adoption 
+				var:persian_court_literature_adoption < 100 
+			} 
+			change_variable = { name = persian_court_literature_adoption add = 1 } #... increase the counter of unique adopter cultures by 1. See the script_value persian_court_literature_adoption_rate for the scaling factor used.
+		}	
+	}
+}
+

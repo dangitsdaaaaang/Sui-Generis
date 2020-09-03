@@ -1,0 +1,15 @@
+﻿#Caucasian Diplomacy Innovation (Byzantine)
+try_remove_caucasian_alliance_opinion_effect = { #copied from 00_diplomacy_perk_effects.txt
+	if = {
+		limit = {
+			has_opinion_modifier = {
+				modifier = sg_caucasian_alliance_interaction_opinion
+				target = $TARGET$
+			}
+		}
+		remove_opinion = {
+			modifier = sg_caucasian_alliance_interaction_opinion
+			target = $TARGET$
+		}
+	}
+}

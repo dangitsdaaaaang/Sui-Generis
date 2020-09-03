@@ -54,6 +54,7 @@ innovation_legacy_of_byzantium = {
 		
 	potential = {
 		NOT = { this = culture:greek }
+		#placeholder for culture not having an imperial legacy
 	}
 	
 	can_progress = {
@@ -124,12 +125,16 @@ innovation_caucasian_diplomacy = {
 	
 	potential = {
 		this.culture_group = culture_group:byzantine_group
+		#possible placeholder to evaluate counties of this culture being ruled by foreigners
 	}
 	
 	flag = global_regional
 	flag = early_medieval_era_regional
 	
 	custom = sg_unlock_caucasian_diplomacy
+	
+	flag = global_regional
+	flag = early_medieval_era_regional
 }
 
 innovation_knights_of_the_east = {
@@ -141,7 +146,7 @@ innovation_knights_of_the_east = {
 	potential = {
 #		OR = {
 			this.culture_group = culture_group:byzantine_group
-			#placeholder for Crusader auxiliary innovation
+			#placeholder for Crusader auxiliary innovation (look into how to track religious make-up of a culture)
 #		}
 	}
 	

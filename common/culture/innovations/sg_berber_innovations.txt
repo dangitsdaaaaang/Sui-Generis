@@ -132,7 +132,8 @@ innovation_barb_horses_world = {
 				this = culture:catalan
 			}
 		}
-		has_cultural_era_or_later = culture_era_high_medieval 
+		has_cultural_era_or_later = culture_era_high_medieval #hiding until appropriate era
+		# placeholder for region-locking
 	}
 	
 	can_progress = {
@@ -161,7 +162,7 @@ innovation_barbary_corsairs = {
 	
 	potential = {
 		culture_group = culture_group:berber_group
-		has_cultural_era_or_later = culture_era_high_medieval
+		has_cultural_era_or_later = culture_era_high_medieval #hiding until appropriate era
 	}
 	
 	modifier = {

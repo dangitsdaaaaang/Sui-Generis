@@ -61,6 +61,7 @@ innovation_persian_court_literature_world = {
 	
 	potential = {
 		NOT = { culture_group = culture_group:iranian_group }
+		has_cultural_era_or_later = culture_era_high_medieval #hiding until appropriate era
 	}
 	
 	can_progress = {

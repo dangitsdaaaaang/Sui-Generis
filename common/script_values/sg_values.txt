@@ -1,16 +1,77 @@
-﻿#Persian Innovation Incrementing Prestige Bonus
-#persian_court_literature_adoption_rate = {
-#	value = 1
-#	if = {
-#		limit = {
-#			has_global_variable = persian_court_literature_adoption
-#		}
-#		value = var:persian_court_literature_adoption
-#		multiply = 0.05
-#		add = 1
-#		min = 1
-#	}
-#}
+﻿#Persian Literary Influence Innovation Prestige Bonus
+@innovation_persian_court_literature_world_base = 25
+@innovation_persian_court_literature_world_tier_1 = 50
+@innovation_persian_court_literature_world_tier_2 = 75
+@innovation_persian_court_literature_world_tier_3 = 100
+@innovation_persian_court_literature_world_tier_4 = 125
+@innovation_persian_court_literature_world_tier_5 = 150
+@innovation_persian_court_literature_world_tier_6 = 200
 
+@innovation_persian_court_literature_world_learning_modifier_low = 0.8
+@innovation_persian_court_literature_world_learning_modifier_average = 1.0
+@innovation_persian_court_literature_world_learning_modifier_medium = 1.10
+@innovation_persian_court_literature_world_learning_modifier_decent = 1.15
+@innovation_persian_court_literature_world_learning_modifier_high = 1.25
+@innovation_persian_court_literature_world_learning_modifier_very_high = 1.33
+@innovation_persian_court_literature_world_learning_modifier_extremely_high = 1.5
 
+persian_court_literature_adoptors_tier = {
+	value = @innovation_persian_court_literature_world_base
+	if = {
+		limit = { global_var:persian_court_literature_adoptors >= 5 } #tier 1 at 5 cultures or above
+		value = @innovation_persian_court_literature_world_tier_1
+	}
+	if = {
+		limit = { global_var:persian_court_literature_adoptors >= 10 } #tier 2 at 10 cultures or above
+		value = @innovation_persian_court_literature_world_tier_2
+	}
+	if = {
+		limit = { global_var:persian_court_literature_adoptors >= 20 } #tier 3 at 20 cultures or above
+		value = @innovation_persian_court_literature_world_tier_3
+	}
+	if = {
+		limit = { global_var:persian_court_literature_adoptors >= 35 } #tier 4 at 35 cultures or above
+		value = @innovation_persian_court_literature_world_tier_4
+	}
+	if = {
+		limit = { global_var:persian_court_literature_adoptors >= 50 } #tier 5 at 50 cultures or above
+		value = @innovation_persian_court_literature_world_tier_5
+	}
+	if = {
+		limit = { global_var:persian_court_literature_adoptors >= 100 } #tier 6 at 100 cultures or above
+		value = @innovation_persian_court_literature_world_tier_6
+	}
+}
 
+persian_court_literature_adoption_learning = {
+	value = @innovation_persian_court_literature_world_learning_modifier_low 
+	if = {
+		limit = { learning > average_skill_rating }
+		value = @innovation_persian_court_literature_world_learning_modifier_average
+	}
+	if = {
+		limit = { learning > medium_skill_rating }
+		value = @innovation_persian_court_literature_world_learning_modifier_medium
+	}
+	if = {
+		limit = { learning > decent_skill_rating }
+		value = @innovation_persian_court_literature_world_learning_modifier_decent
+	}
+	if = {
+		limit = { learning > high_skill_rating }
+		value = @innovation_persian_court_literature_world_learning_modifier_high
+	}
+	if = {
+		limit = { learning > very_high_skill_rating }
+		value = @innovation_persian_court_literature_world_learning_modifier_very_high
+	}
+	if = {
+		limit = { learning > extremely_high_skill_rating }
+		value = @innovation_persian_court_literature_world_learning_modifier_extremely_high
+	}
+}
+
+persian_court_literature_adoption_prestige = {
+	value = persian_court_literature_adoptors_tier
+	multiply = persian_court_literature_adoption_learning
+}

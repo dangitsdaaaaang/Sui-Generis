@@ -19,8 +19,7 @@
 
 ###EVENT MESSAGES###
 
-#Generic event messages
-
+#Persian Court Literature (Iranian) 
 event_innovation_adopted = {
 	icon = "generic_good_effect.dds"
 	title = event_message_title

@@ -30,7 +30,7 @@ is_alliance_valid = { #overwrite entry 00_rules.txt
 				target = root
 			}
 		}
-		scope:second = { #
+		scope:second = { #copied from the above (could be condensed, but keeping separate for clarity) to assess validty of the added alliance type
 			has_opinion_modifier = {
 				modifier = sg_caucasian_alliance_interaction_opinion
 				target = root

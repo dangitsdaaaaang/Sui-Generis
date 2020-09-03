@@ -6,7 +6,7 @@
 # Caucasian Diplomacy (Byzantine)
 on_alliance_removed = { 
 	effect = {
-		try_remove_perk_alliance_opinion_effect = { TARGET = scope:second }
+		try_remove_perk_alliance_opinion_effect = { TARGET = scope:second } #clean up the opinion modifier used to limit it to only one free alliance
 		scope:second = { try_remove_caucasian_alliance_opinion_effect = { TARGET = root } }
 	}
 }
@@ -21,7 +21,7 @@ innovation_persian_court_literature_adopted_evaluation_pulse = {
 	}
 	
 	effect = {
-		if = { #set variable if not already set
+		if = { #...set the global variable (while still in character scope, damn you Paradox) if not already set...
 			limit = { NOT = { has_global_variable = persian_court_literature_adoptors } }
 			set_global_variable = {
 				name = persian_court_literature_adoptors
@@ -34,18 +34,18 @@ innovation_persian_court_literature_adopted_evaluation_pulse = {
 				exists = global_var:persian_court_literature_adoptors 
 				global_var:persian_court_literature_adoptors < 100 
 			} 
-			change_global_variable = { name = persian_court_literature_adoptors add = 1 } #... increase the counter of unique adopter cultures by 1
+			change_global_variable = { name = persian_court_literature_adoptors add = 1 } #... increase the counter of unique adopter cultures by 1 ...
 			debug_log = "Persian innovation adoption counter increased by 1"
 		}	
 		
 		culture = {
-			set_variable = { name = sg_adopted_persian_court_literature value = true }
-			culture_head = { save_scope_as = culture_head_notification }  #mark character as culture representative for display in the notification 	
+			set_variable = { name = sg_adopted_persian_court_literature value = true } #prevent a recursion over every character on every pulse...
+			culture_head = { save_scope_as = culture_head_notification }  #... mark character as culture representative for display in the notification... 	
 				
 			every_ruler = {
 				limit = { 
-					NOT = { culture_group = culture_group:iranian_group } #sanity check
-					culture = { has_innovation = innovation_persian_court_literature_iranian } 
+					NOT = { culture_group = culture_group:iranian_group } #(sanity check)
+					culture = { has_innovation = innovation_persian_court_literature_iranian } #... then select all Iranian culture rulers with the innovation...
 				}
 				
 				send_interface_message = {
@@ -53,7 +53,7 @@ innovation_persian_court_literature_adopted_evaluation_pulse = {
 					desc = innovation_persian_court_literature_adopted_desc
 					type = event_innovation_adopted
 					left_icon = scope:culture_head_notification
-					add_prestige = persian_court_literature_adoption_prestige
+					add_prestige = persian_court_literature_adoption_prestige #... and give them all a flat amount of prestige based on the number of cultures that have adopted the innovation scaled by their Learning stat. See sg_values.txt for a detailed breakdown.
 				}
 			}
 		}

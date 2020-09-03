@@ -10,7 +10,7 @@ can_spread_from_close_family_member_ruler_or_noble_courtier_trigger = {
 innovation_legacy_of_byzantium_trigger = {
 	global_not = innovation_legacy_of_byzantium_trigger
 }
-#Persians
+#Iranians
 innovation_persian_court_literature_iranian_trigger = {
 	global_not = innovation_persian_court_literature_iranian_trigger
 }

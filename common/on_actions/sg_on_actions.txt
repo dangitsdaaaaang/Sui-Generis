@@ -35,7 +35,7 @@ innovation_persian_court_literature_adopted_evaluation_pulse = {
 				global_var:persian_court_literature_adoptors < 100 
 			} 
 			change_global_variable = { name = persian_court_literature_adoptors add = 1 } #... increase the counter of unique adopter cultures by 1
-			debug_log = "Persian innovation adoption counter increased by 1 to final value of [persian_court_literature_adoptors]"
+			debug_log = "Persian innovation adoption counter increased by 1"
 		}	
 		
 		culture = {

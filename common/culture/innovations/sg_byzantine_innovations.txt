@@ -54,7 +54,9 @@ innovation_legacy_of_byzantium = {
 		
 	potential = {
 		NOT = { this = culture:greek }
-		#placeholder for culture not having an imperial legacy
+		can_show_innovation_due_to_exposure = {
+			INNOVATION = "has_innovation = innovation_legacy_of_rome has_innovation = innovation_legacy_of_byzantium"
+		}
 	}
 	
 	can_progress = {
@@ -144,10 +146,12 @@ innovation_knights_of_the_east = {
 	
 	
 	potential = {
-#		OR = {
+		OR = {
 			this.culture_group = culture_group:byzantine_group
-			#placeholder for Crusader auxiliary innovation (look into how to track religious make-up of a culture)
-#		}
+			can_show_innovation_due_to_exposure = {
+				INNOVATION = "has_innovation = innovation_knights_of_the_east"
+			}
+		}
 	}
 	
 	unlock_maa = hetselazaurkh

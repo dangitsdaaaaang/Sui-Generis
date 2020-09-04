@@ -48,3 +48,51 @@ can_spread_from_close_family_member_ruler_or_noble_courtier = {
 		} #... then progress toward understanding the innovation can begin.
 	}
 }
+
+can_show_innovation_due_to_exposure = {
+	any_independent_ruler = {
+		this.culture = prev #If any independent ruler of this culture (trimmed down for performance reasons)...
+		primary_title = { #(runs in character scope to target landed title scope)
+			any_title_to_title_neighboring_and_across_water_county = { #...contains a county or borders another county, even across water...
+				holder = { #... whose primary title or any title above him/her...
+					OR = {
+						primary_title = {
+							any_title_to_title_neighboring_and_across_water_county = { #...borders someone else...
+								holder = { #...who is of a culture already possessing the innovation...
+									OR = {
+										culture = {
+											OR = { $INNOVATION$ }
+										}
+										any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
+											culture = {
+												OR = { $INNOVATION$ }
+											}
+										}
+									}
+								}
+							}
+						}
+						any_liege_or_above = { #... or whose de facto liege or above's primary title...
+							primary_title = {
+								any_title_to_title_neighboring_county = { #...borders someone else but only by land to prevent extreme leapfrogging...
+									holder = { #... who is of a culture already possessing the innovation...
+										OR = {
+											culture = {
+												OR = { $INNOVATION$ }
+											}
+											any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
+												culture = {
+													OR = { $INNOVATION$ }
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}  #... then knowledge of the innovation's existence is gained.
+}

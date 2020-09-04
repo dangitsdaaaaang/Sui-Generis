@@ -133,7 +133,9 @@ innovation_barb_horses_world = {
 			}
 		}
 		has_cultural_era_or_later = culture_era_high_medieval #hiding until appropriate era
-		# placeholder for region-locking
+		can_show_innovation_due_to_exposure = {
+			INNOVATION = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
+		}
 	}
 	
 	can_progress = {

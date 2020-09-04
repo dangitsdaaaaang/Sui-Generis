@@ -1,6 +1,0 @@
-867.1.1 = {
-	discover_innovation = innovation_war_camels
-	discover_innovation = innovation_barb_horses_berber #
-}
-
-

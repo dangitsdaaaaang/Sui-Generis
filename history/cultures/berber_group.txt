@@ -1,0 +1,11 @@
+# Butr (named berber_group.txt to avoid error in error.log)
+
+# Baranis have separate file
+# Zaghawa have separate file
+
+867.1.1 = {
+	discover_innovation = innovation_war_camels #
+	discover_innovation = innovation_barb_horses_berber #
+}
+
+

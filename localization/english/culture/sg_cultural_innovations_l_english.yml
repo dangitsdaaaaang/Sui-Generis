@@ -31,9 +31,9 @@
  innovation_legacy_of_rome:1 "Legacy of Rome"
  innovation_legacy_of_rome_desc:1 "Despite the fall of the empire in the West, the imperial tradition of the Romans remains strong in the East where the authority of a strong ruler is still to be respected and feared. Hardened by centuries of battling for survival against myriad foes, true Romans understand that might makes right, and the shining beacon of civilization can only be upheld by a will of iron."
  
- innovation_legacy_of_byzantium:1 "Echoes of Konstantinopolis"
+ innovation_legacy_of_byzantium:1 "Legacy of the Autokrator"
  innovation_legacy_of_byzantium_desc:1 "Tales of the splendor of the imperial court at Constantinople served as a dazzling inspiration to many of the burgeoning powers of Asia Minor and Eastern Europe. Awed by the wealth and grandeur of the Basileus and the absolute authority he exercised over the empire of the Romans, lesser rulers sought to emulate what they perceived as divinely-inspired autocracy to exert their power over their subjects."
- innovation_legacy_of_byzantium_trigger:1 "No realms of our [culture|E] contain or border any [counties|E] belonging to a culture that has adopted this innovation, and no rulers of our [culture|E] have [noble|E] [courtiers|E] or [close_family_members|E] of a culture that has adopted it."
+ innovation_legacy_of_byzantium_trigger:1 "No [independent|E] realms of our [culture|E] contain or border any [counties|E] belonging to a culture that has adopted this innovation, and no powerful (Duke-[title_tier|E] or higher) rulers of our culture have [noble|E] [courtiers|E] or [close_family_members|E] of a culture that has adopted it."
  
  innovation_caucasian_heritage:1 "Caucasian Heritage"
  innovation_caucasian_heritage_desc:1 "The proud peoples of the Caucasus have witnessed the rise of countless empires across the millenia and remain resilient in the face of invasion, persecution, and domination. Their indomitable spirit inspires courage few can match in the face of unfavorable odds, and their battle-hardened warriors are more than capable of defending their mountainous homeland."

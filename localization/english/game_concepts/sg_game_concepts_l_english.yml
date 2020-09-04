@@ -1,7 +1,7 @@
 ﻿l_english:
- game_concept_powerful_rank:0 "Powerful (Rank)"
+ game_concept_powerful_rank:0 "Powerful (Title Rank)"
  game_concept_powerful_rank_adj:0 "powerful"
- game_concept_powerful_rank_desc:0 "#bold Powerful#! [rulers|E] are those whose [primary_titles|E] are Duke [title_rank|E] or above."
+ game_concept_powerful_rank_desc:0 "#bold Powerful#! [rulers|E] are rulers whose [primary_titles|E] are Duke [title_tier|E] or above. This is not to be confused with {game_concept_powerful_vassals}."
  game_concept_development_minor:0 "Development Level (Innovation)"
  game_concept_development_minor_adj:0 "developed"
  game_concept_development_minor_desc:0 "A #bold developed#! [county|E] is one that has reached 20 [development|E] or greater and is sufficiently developed to spread this innovation."

@@ -41,6 +41,4 @@
 	discover_innovation = innovation_currency_02
 	discover_innovation = innovation_chronicle_writing
 	#
-	join_era = culture_era_high_medieval #
-	discover_innovation = innovation_knights_of_the_east #
 }

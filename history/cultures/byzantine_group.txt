@@ -16,6 +16,8 @@
 	discover_innovation = innovation_currency_01
 	discover_innovation = innovation_crop_rotation
 	discover_innovation = innovation_ledger
+	
+	discover_innovation = innovation_caucasian_heritage #
 }
 
 950.1.1 = {
@@ -39,5 +41,5 @@
 	discover_innovation = innovation_currency_02
 	discover_innovation = innovation_chronicle_writing
 	#
-	discover_innovation = innovation_cataphracts
+	discover_innovation = innovation_knights_of_the_east #
 }

@@ -1,0 +1,8 @@
+﻿powerful_rank = {
+	alias = { powerful_rank_adj }
+}
+
+development_minor = {
+	alias = { development_minor_adj }
+}
+

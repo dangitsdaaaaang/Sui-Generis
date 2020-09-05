@@ -48,6 +48,10 @@ innovation_persian_court_literature_iranian = {
 		}
 	}
 	
+	modifier = {
+		monthly_prestige_gain_mult = 0.05
+	}
+	
 	flag = global_regional
 	flag = early_medieval_era_regional
 
@@ -66,7 +70,7 @@ innovation_persian_court_literature_world = {
 	
 	can_progress = {
 		can_spread_from_neighboring_diff_culture_county = { 
-			INNOVATION = "has_innovation = innovation_persian_court_literature_iranian has_innovation = innovation_persian_court_literature_world"
+			HAS_INNOVATION_LIST = "has_innovation = innovation_persian_court_literature_iranian has_innovation = innovation_persian_court_literature_world"
 		}
 	}
 	

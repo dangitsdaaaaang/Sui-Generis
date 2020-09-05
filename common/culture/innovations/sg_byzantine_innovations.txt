@@ -55,7 +55,23 @@ innovation_legacy_of_byzantium = {
 	potential = {
 		NOT = { this = culture:greek }
 		can_show_innovation_due_to_exposure = {
-			INNOVATION = "has_innovation = innovation_legacy_of_rome has_innovation = innovation_legacy_of_byzantium"
+			HAS_INNOVATION_LIST = "has_innovation = innovation_legacy_of_rome has_innovation = innovation_legacy_of_byzantium"
+		}
+		any_independent_ruler = { 
+			filter = { this.culture = prev }
+			percent >= 0.67 #supermajority
+			this.faith.religion = religion:christianity_religion #Byzantine autocratic tradition limited to Eastern variants of Christianity
+			NOT = {
+				OR = {
+					this.faith = faith:catholic
+					this.faith = faith:conversos
+					this.faith = faith:cathar
+					this.faith = faith:waldensian
+					this.faith = faith:lollard
+					this.faith = faith:adamites
+					this.faith = faith:insular_celtic
+				}
+			}
 		}
 	}
 	
@@ -64,7 +80,7 @@ innovation_legacy_of_byzantium = {
 			text = innovation_legacy_of_byzantium_trigger
 			OR = {	
 				can_spread_from_neighboring_diff_culture_county = { 
-					INNOVATION = "has_innovation = innovation_legacy_of_rome has_innovation = innovation_legacy_of_byzantium"			
+					HAS_INNOVATION_LIST = "has_innovation = innovation_legacy_of_rome has_innovation = innovation_legacy_of_byzantium"			
 				}
 				can_spread_from_close_family_member_ruler_or_noble_courtier = {
 					CULTURE = greek
@@ -81,8 +97,8 @@ innovation_legacy_of_byzantium = {
 	flag = global_regional
 	flag = early_medieval_era_regional
 	
-	custom = sg_can_spread_from_neighboring_diff_culture_county
-	custom = sg_can_spread_from_close_family_member_ruler_or_noble_courtier
+	custom = sg_can_spread_from_neighboring_diff_culture_county_to_eastern_christian
+	custom = sg_can_spread_from_close_family_member_ruler_or_noble_courtier_to_eastern_christian
 }
 
 innovation_cataphracts = { #overwrite vanilla entry in 00_cultural_regiment_types.txt
@@ -127,7 +143,6 @@ innovation_caucasian_diplomacy = {
 	
 	potential = {
 		this.culture_group = culture_group:byzantine_group
-		#possible placeholder to evaluate counties of this culture being ruled by foreigners
 	}
 	
 	flag = global_regional
@@ -149,8 +164,19 @@ innovation_knights_of_the_east = {
 		OR = {
 			this.culture_group = culture_group:byzantine_group
 			can_show_innovation_due_to_exposure = {
-				INNOVATION = "has_innovation = innovation_knights_of_the_east"
+				HAS_INNOVATION_LIST = "has_innovation = innovation_knights_of_the_east"
 			}
+		}
+		any_ruler = {
+			filter = { #must be of this culture and sufficiently powerful (in short, not locking out vassals)
+				this.culture = prev 
+				OR = {
+					primary_title = { tier >= tier_duchy }
+					is_independent_ruler = yes
+				}
+			}
+			percent >= 0.67
+			faith.religion = religion:christianity_religion
 		}
 	}
 	

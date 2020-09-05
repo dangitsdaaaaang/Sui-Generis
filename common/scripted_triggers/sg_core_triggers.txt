@@ -3,17 +3,32 @@ can_spread_from_neighboring_diff_culture_county = {
 	custom_description = {
 		text = can_spread_from_neighboring_diff_culture_county_trigger
 		any_independent_ruler = {
-			this.culture = prev #If any independent ruler of this culture... 
-			any_realm_county = { #(runs in character scope to target landed title scope)
-				any_title_to_title_neighboring_and_across_water_county = { #...contains a county or borders another county, even across water...
-					holder = { #... whose county holder is of a culture already possessing the innovation...
-						OR = {
+			this.culture = prev #If any independent ruler of this culture (trimmed down from any_ruler for performance reasons)... 
+			OR = {
+				any_realm_county = { #...whose realm contains a county...
+					OR = {
+						holder = { #... whose county holder is of a culture already possessing the innovation...
 							culture = {
-								OR = { $INNOVATION$ }
+								OR = { $HAS_INNOVATION_LIST$ }
 							}
-							any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
-								culture = {
-									OR = { $INNOVATION$ }
+						}
+						culture = { OR = { $HAS_INNOVATION_LIST$ } } #...or if the county itself is of a culture already possessing the innovation...
+						any_title_to_title_neighboring_and_across_water_county = { #... or directly borders another county, even across water...
+							holder = { #... whose county holder is of a culture already possessing the innovation...
+								OR = {
+									culture = {
+										OR = { $HAS_INNOVATION_LIST$ }
+									}
+									any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
+										culture = {
+											OR = { $HAS_INNOVATION_LIST$ }
+										}
+									}
+									any_sub_realm_county = {#... or whose subrealm on the border of the target ruler contains a county of a culture already possessing the innovation...
+										culture = {
+											OR = { $HAS_INNOVATION_LIST$ }
+										}
+									}
 								}
 							}
 						}
@@ -27,7 +42,7 @@ can_spread_from_neighboring_diff_culture_county = {
 can_spread_from_close_family_member_ruler_or_noble_courtier = {
 	custom_description = {
 		text = can_spread_from_close_family_member_ruler_or_noble_courtier_trigger
-		any_independent_ruler = {
+		any_independent_ruler = { 
 			this.culture = prev #If any independent ruler of this culture...
 			primary_title = { tier >= tier_duchy } #... is a significantly powerful ruler...
 			OR = {
@@ -51,41 +66,52 @@ can_spread_from_close_family_member_ruler_or_noble_courtier = {
 
 can_show_innovation_due_to_exposure = {
 	any_independent_ruler = {
-		this.culture = prev #If any independent ruler of this culture (trimmed down for performance reasons)...
-		primary_title = { #(runs in character scope to target landed title scope)
-			any_title_to_title_neighboring_and_across_water_county = { #...contains a county or borders another county, even across water...
-				holder = { #... whose primary title or any title above him/her...
-					OR = {
-						primary_title = {
-							any_title_to_title_neighboring_and_across_water_county = { #...borders someone else...
-								holder = { #...who is of a culture already possessing the innovation...
-									OR = {
-										culture = {
-											OR = { $INNOVATION$ }
-										}
-										any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
+		this.culture = prev #If any independent ruler of this culture (trimmed down from any_ruler for performance reasons)...
+		OR = {
+				any_title_to_title_neighboring_and_across_water_county = { #...contains a county or borders another county, even across water...
+					holder = { #... whose primary title or any title above him/her...
+						OR = {
+							primary_title = {
+								any_title_to_title_neighboring_and_across_water_county = { #...borders someone else...
+									holder = { #...who is of a culture already possessing the innovation...
+										OR = {
 											culture = {
-												OR = { $INNOVATION$ }
+												OR = { $HAS_INNOVATION_LIST$ }
+											}
+											any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
+												culture = {
+													OR = { $HAS_INNOVATION_LIST$ }
+												}
 											}
 										}
 									}
 								}
 							}
-						}
-						any_liege_or_above = { #... or whose de facto liege or above's primary title...
-							primary_title = {
-								any_title_to_title_neighboring_county = { #...borders someone else but only by land to prevent extreme leapfrogging...
-									holder = { #... who is of a culture already possessing the innovation...
-										OR = {
-											culture = {
-												OR = { $INNOVATION$ }
-											}
-											any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
-												culture = {
-													OR = { $INNOVATION$ }
+							any_liege_or_above = { #... or whose de facto liege or above's primary title...
+								OR = {
+									primary_title = {
+										any_title_to_title_neighboring_county = { #...borders someone else but only by land to prevent extreme leapfrogging...
+											holder = { #... who is of a culture already possessing the innovation...
+												OR = {
+													culture = {
+														OR = { $INNOVATION$ }
+													}
+													any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
+														culture = {
+															OR = { $INNOVATION$ }
+														}
+													}
 												}
 											}
 										}
+									}
+									any_realm_county = {
+										holder = { #... or if any county or county holder is of a culture already possessing the innovation...
+											culture = {
+												OR = { $HAS_INNOVATION_LIST$ }
+											}
+										}
+										culture = { OR = { $HAS_INNOVATION_LIST$ } }
 									}
 								}
 							}
@@ -93,6 +119,15 @@ can_show_innovation_due_to_exposure = {
 					}
 				}
 			}
+			any_realm_county = {
+				holder = { #... whose county  or county holder is of a culture already possessing the innovation...
+					culture = {
+						OR = { $HAS_INNOVATION_LIST$ }
+					}
+				}
+				culture = { OR = { $HAS_INNOVATION_LIST$ } }
+			}
 		}
 	}  #... then knowledge of the innovation's existence is gained.
 }
+

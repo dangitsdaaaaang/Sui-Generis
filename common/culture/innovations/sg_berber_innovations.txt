@@ -93,7 +93,7 @@ innovation_barb_horses_iberian = {
 	
 	can_progress = {
 		can_spread_from_neighboring_diff_culture_county = { 
-			INNOVATION = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
+			HAS_INNOVATION_LIST = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
 		}
 	}
 	
@@ -132,15 +132,14 @@ innovation_barb_horses_world = {
 				this = culture:catalan
 			}
 		}
-		has_cultural_era_or_later = culture_era_high_medieval #hiding until appropriate era
 		can_show_innovation_due_to_exposure = {
-			INNOVATION = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
+			HAS_INNOVATION_LIST = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
 		}
 	}
 	
 	can_progress = {
 		can_spread_from_neighboring_diff_culture_county = { 
-			INNOVATION = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
+			HAS_INNOVATION_LIST = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
 		}
 	}
 	

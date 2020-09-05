@@ -95,11 +95,11 @@ can_show_innovation_due_to_exposure = {
 											holder = { #... who is of a culture already possessing the innovation...
 												OR = {
 													culture = {
-														OR = { $INNOVATION$ }
+														OR = { $HAS_INNOVATION_LIST$ }
 													}
 													any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
 														culture = {
-															OR = { $INNOVATION$ }
+															OR = { $HAS_INNOVATION_LIST$ }
 														}
 													}
 												}

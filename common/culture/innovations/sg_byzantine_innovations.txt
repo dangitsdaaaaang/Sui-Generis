@@ -54,10 +54,8 @@ innovation_legacy_of_byzantium = {
 		
 	potential = {
 		NOT = { this = culture:greek }
-		can_show_innovation_due_to_exposure = {
-			HAS_INNOVATION_LIST = "has_innovation = innovation_legacy_of_rome has_innovation = innovation_legacy_of_byzantium"
-		}
 		trigger_if = {
+			limit = { this = culture:russian}
 			any_independent_ruler = { #Russians (still must be Eastern Christian)
 				filter = { this.culture = culture:russian }
 				percent >= 0.67 #supermajority
@@ -76,6 +74,9 @@ innovation_legacy_of_byzantium = {
 			}	
 		}
 		trigger_else = {
+			can_show_innovation_due_to_exposure = {
+				HAS_INNOVATION_LIST = "has_innovation = innovation_legacy_of_rome has_innovation = innovation_legacy_of_byzantium"
+			}
 			any_independent_ruler = { #Byzantine autocratic tradition limited to Eastern variants of Christianity (general case)
 				filter = { this.culture = prev }
 				percent >= 0.67 #supermajority

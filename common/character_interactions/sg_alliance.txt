@@ -40,7 +40,7 @@
 	is_valid_showing_failures_only = {
 		
 		custom_description = {
-			text = "already_has_an_alliance_deal"
+			text = "sg_already_has_an_alliance_deal"
 			subject = scope:recipient
 			scope:actor = {
 				NOT = {

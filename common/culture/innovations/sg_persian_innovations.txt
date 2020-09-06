@@ -49,7 +49,7 @@ innovation_persian_court_literature_iranian = {
 	}
 	
 	modifier = {
-		character_capital_county_monthly_development_growth_add = 0.2
+		character_capital_county_monthly_development_growth_add = 1
 	}
 	
 	flag = global_regional
@@ -65,7 +65,7 @@ innovation_persian_court_literature_world = {
 	
 	potential = {
 		NOT = { culture_group = culture_group:iranian_group }
-		# has_cultural_era_or_later = culture_era_high_medieval #hiding until appropriate era
+		has_cultural_era_or_later = culture_era_high_medieval #hiding until appropriate era
 	}
 	
 	can_progress = {

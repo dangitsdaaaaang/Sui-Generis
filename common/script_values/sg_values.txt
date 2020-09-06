@@ -2,10 +2,10 @@
 @innovation_persian_court_literature_world_base = 25
 @innovation_persian_court_literature_world_tier_1 = 50
 @innovation_persian_court_literature_world_tier_2 = 75
-@innovation_persian_court_literature_world_tier_3 = 100
-@innovation_persian_court_literature_world_tier_4 = 125
-@innovation_persian_court_literature_world_tier_5 = 150
-@innovation_persian_court_literature_world_tier_6 = 200
+@innovation_persian_court_literature_world_tier_3 = 125
+@innovation_persian_court_literature_world_tier_4 = 200
+@innovation_persian_court_literature_world_tier_5 = 250
+@innovation_persian_court_literature_world_tier_6 = 300
 
 @innovation_persian_court_literature_world_learning_modifier_low = 0.8
 @innovation_persian_court_literature_world_learning_modifier_average = 1.0
@@ -18,23 +18,23 @@
 persian_court_literature_adoptors_tier = {
 	value = @innovation_persian_court_literature_world_base
 	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 5 } #tier 1 at 5 cultures or above
+		limit = { global_var:persian_court_literature_adoptors >= 5 } #tier 1 at 5-9 cultures
 		value = @innovation_persian_court_literature_world_tier_1
 	}
 	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 10 } #tier 2 at 10 cultures or above
+		limit = { global_var:persian_court_literature_adoptors >= 10 } #tier 2 at 10-19 cultures 
 		value = @innovation_persian_court_literature_world_tier_2
 	}
 	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 20 } #tier 3 at 20 cultures or above
+		limit = { global_var:persian_court_literature_adoptors >= 20 } #tier 3 at 20-34 cultures 
 		value = @innovation_persian_court_literature_world_tier_3
 	}
 	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 35 } #tier 4 at 35 cultures or above
+		limit = { global_var:persian_court_literature_adoptors >= 35 } #tier 4 at 35-49 cultures 
 		value = @innovation_persian_court_literature_world_tier_4
 	}
 	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 50 } #tier 5 at 50 cultures or above
+		limit = { global_var:persian_court_literature_adoptors >= 50 } #tier 5 at 50-99 cultures 
 		value = @innovation_persian_court_literature_world_tier_5
 	}
 	if = {

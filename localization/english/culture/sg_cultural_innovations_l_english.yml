@@ -17,7 +17,7 @@
  sg_unlocks_corsair_raiding:1 "Enables [raiding|E] of foreign [counties|E] both by land and by sea, provided the [doctrines|E] of the ruler's [faith|E] do not forbid it."
  
  #Persian
- innovation_persian_court_literature_iranian:1 "Parsi"
+ innovation_persian_court_literature_iranian:1 "Parsi Renaissance"
  innovation_persian_court_literature_iranian_desc:1 "Despite having been momentarily eclipsed by Arabic as the language of prestige in the Muslim world, the great literary tradition of the Persians resurged in the latter half of the first millenium, fueled by a longing for the restoration of a national identity. For centuries afterward, Persian language and culture became the primary influence upon the extravagant courts and sprawling cities not only of Persia proper, but also the far reaches of Muslim-ruled India and the steppes of Central Asia and beyond."
  innovation_persian_court_literature_iranian_trigger:1 "A [county|E] of our [culture|E] has not [development_minor_adj|E] sufficiently to serve as a new cultural center for the [CULTURE.GetName] people."
  

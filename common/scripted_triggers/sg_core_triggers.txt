@@ -4,33 +4,32 @@ can_spread_from_neighboring_diff_culture_county = {
 		text = can_spread_from_neighboring_diff_culture_county_trigger
 		any_ruler = {
 			this.culture = prev #If any ruler of this culture... 
-			OR = {
-				primary_title = { tier >= tier_duchy }
-				is_independent_ruler = yes
-			}
-			OR = {
-				any_realm_county = { #...whose realm contains a county...
-					OR = {
-						holder = { #... whose county holder is of a culture already possessing the innovation...
-							culture = {
-								OR = { $HAS_INNOVATION_LIST$ }
-							}
-						}
-						culture = { OR = { $HAS_INNOVATION_LIST$ } } #...or if the county itself is of a culture already possessing the innovation...
-						any_title_to_title_neighboring_and_across_water_county = { #... or directly borders another county, even across water...
+			trigger_if = {
+				limit = { is_independent_ruler = yes }
+				OR = {
+					any_realm_county = { #...whose realm contains a county...
+						OR = {
 							holder = { #... whose county holder is of a culture already possessing the innovation...
-								OR = {
-									culture = {
-										OR = { $HAS_INNOVATION_LIST$ }
-									}
-									any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
+								culture = {
+									OR = { $HAS_INNOVATION_LIST$ }
+								}
+							}
+							culture = { OR = { $HAS_INNOVATION_LIST$ } } #...or if the county itself is of a culture already possessing the innovation...
+							any_title_to_title_neighboring_and_across_water_county = { #... or directly borders another county, even across water...
+								holder = { #... whose county holder is of a culture already possessing the innovation...
+									OR = {
 										culture = {
 											OR = { $HAS_INNOVATION_LIST$ }
 										}
-									}
-									any_sub_realm_county = {#... or whose subrealm on the border of the target ruler contains a county of a culture already possessing the innovation...
-										culture = {
-											OR = { $HAS_INNOVATION_LIST$ }
+										any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
+											culture = {
+												OR = { $HAS_INNOVATION_LIST$ }
+											}
+										}
+										any_sub_realm_county = {#... or whose subrealm on the border of the target ruler contains a county of a culture already possessing the innovation...
+											culture = {
+												OR = { $HAS_INNOVATION_LIST$ }
+											}
 										}
 									}
 								}
@@ -38,6 +37,48 @@ can_spread_from_neighboring_diff_culture_county = {
 						}
 					}
 				}
+			}
+			trigger_else_if = {
+				limit = {
+					primary_title = { tier >= tier_duchy }
+					any_sub_realm_county = {
+						count > 4
+					}
+				}
+				OR = {
+					any_realm_county = { #...whose realm contains a county...
+						OR = {
+							holder = { #... whose county holder is of a culture already possessing the innovation...
+								culture = {
+									OR = { $HAS_INNOVATION_LIST$ }
+								}
+							}
+							culture = { OR = { $HAS_INNOVATION_LIST$ } } #...or if the county itself is of a culture already possessing the innovation...
+							any_title_to_title_neighboring_and_across_water_county = { #... or directly borders another county, even across water...
+								holder = { #... whose county holder is of a culture already possessing the innovation...
+									OR = {
+										culture = {
+											OR = { $HAS_INNOVATION_LIST$ }
+										}
+										any_liege_or_above = { #... or if any liege of said county holder is of a culture already possessing the innovation...
+											culture = {
+												OR = { $HAS_INNOVATION_LIST$ }
+											}
+										}
+										any_sub_realm_county = {#... or whose subrealm on the border of the target ruler contains a county of a culture already possessing the innovation...
+											culture = {
+												OR = { $HAS_INNOVATION_LIST$ }
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			trigger_else = {
+				always = no
 			}
 		} #... then progress can begin, and the hard-coded spread rate modifiers can modulate the research rate.
 	}
@@ -49,8 +90,14 @@ can_spread_from_close_family_member_ruler_or_noble_courtier = {
 		any_ruler = { 
 			this.culture = prev #If any ruler of this culture...
 			OR = { #... is a significantly powerful ruler...
-				primary_title = { tier >= tier_duchy }
 				is_independent_ruler = yes
+				AND = {
+					primary_title = { tier >= tier_duchy }
+					any_sub_realm_county = {
+						count > 4
+					}
+					
+				}
 			}
 			OR = {
 				any_spouse = { #... has a spouse with a court of the source culture...
@@ -75,8 +122,13 @@ can_show_innovation_due_to_exposure = {
 	any_ruler = {
 		this.culture = prev #If any ruler of this culture...
 		OR = { #... is a significantly powerful ruler...
-			primary_title = { tier >= tier_duchy }
 			is_independent_ruler = yes
+			AND = {
+				primary_title = { tier >= tier_duchy }
+				any_sub_realm_county = {
+					count > 4
+				}
+			}
 		}
 		OR = {
 			primary_title = {
@@ -84,7 +136,7 @@ can_show_innovation_due_to_exposure = {
 					holder = { #... whose primary title or any title above him/her...
 						OR = {
 							primary_title = {
-								any_title_to_title_neighboring_and_across_water_county = { #...borders someone else...
+								any_title_to_title_neighboring_county = { #...borders someone else...
 									holder = { #...who is of a culture already possessing the innovation...
 										OR = {
 											culture = {

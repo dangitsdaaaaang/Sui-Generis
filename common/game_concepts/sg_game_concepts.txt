@@ -6,6 +6,10 @@ development_minor = {
 	alias = { development_minor_adj }
 }
 
+development_major = {
+	alias = { development_major_adj }
+}
+
 eastern_christian = {
 	alias = { eastern_christian_adj }
 }

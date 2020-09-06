@@ -1,0 +1,64 @@
+﻿# Caucasian Diplomacy (Byzantine)
+on_alliance_removed = { 
+	effect = {
+		try_remove_perk_alliance_opinion_effect = { TARGET = scope:second } #clean up the opinion modifier used to limit it to only one free alliance
+		scope:second = { try_remove_caucasian_alliance_opinion_effect = { TARGET = root } }
+	}
+}
+
+# Persianate Literary Influence (Persian)
+innovation_persian_court_literature_adopted_pulse = { 
+	trigger = {
+		debug_log = "Persian innovation adoption trigger evaluating"
+		culture = {
+			has_innovation = innovation_persian_court_literature_world #If a non-Iranian culture adopts Persian literature...
+			NOT = { has_variable = sg_adopted_persian_court_literature } 
+			debug_log = "Persian innovation adoption trigger evaluated"
+		}
+	}
+	
+	effect = {	
+		debug_log = "Persian innovation adoption effect running"
+		if = { #Set up the global variable (should not be used anywhere else)
+			limit = { NOT = { has_global_variable = persian_court_literature_adoptors } }
+			set_global_variable = {
+				name = persian_court_literature_adoptors
+				value = 0
+			}
+		}
+		else_if = { 
+			limit = { #Limit scaling bonus from the number of unique adopter cultures allowed to 100
+				exists = global_var:persian_court_literature_adoptors 
+				global_var:persian_court_literature_adoptors < 100 
+			} 
+			change_global_variable = { name = persian_court_literature_adoptors add = 1 } 
+			debug_log = "Persian innovation adoption counter increased by 1"
+		}	
+		
+		culture = {
+			set_variable = { name = sg_adopted_persian_court_literature value = true } #prevent a recursion over every character on every pulse
+			culture_head = { save_scope_as = culture_head_notification }  #mark culture head as culture representative for display in the notification 	
+				
+			every_ruler = {
+				limit = { 
+					culture_group = culture_group:iranian_group #(sanity check)
+					culture = { has_innovation = innovation_persian_court_literature_iranian } #... then select all Iranian culture rulers with the innovation...
+				}
+				
+				send_interface_message = {
+					title = innovation_persian_court_literature_adopted
+					desc = innovation_persian_court_literature_adopted_desc
+					type = event_innovation_adopted
+					left_icon = scope:culture_head_notification
+					add_prestige = persian_court_literature_adoption_prestige #... and give them all a flat amount of prestige based on the number of cultures that have adopted the innovation scaled by their Learning stat. See sg_values.txt for a detailed breakdown.
+				}
+			}
+		}
+	}
+}
+
+quarterly_playable_pulse = {
+	on_actions = {
+		innovation_persian_court_literature_adopted_pulse
+	}
+}

@@ -49,7 +49,7 @@ innovation_persian_court_literature_iranian = {
 	}
 	
 	modifier = {
-		monthly_prestige_gain_mult = 0.05
+		character_capital_county_monthly_development_growth_add = 0.2
 	}
 	
 	flag = global_regional
@@ -65,7 +65,7 @@ innovation_persian_court_literature_world = {
 	
 	potential = {
 		NOT = { culture_group = culture_group:iranian_group }
-		has_cultural_era_or_later = culture_era_high_medieval #hiding until appropriate era
+		# has_cultural_era_or_later = culture_era_high_medieval #hiding until appropriate era
 	}
 	
 	can_progress = {
@@ -79,6 +79,35 @@ innovation_persian_court_literature_world = {
 	}
 	
 	custom = sg_can_spread_from_neighboring_diff_culture_county
+	
+	flag = global_regional
+	flag = high_medieval_era_regional
+}
+
+innovation_iranian_epic_verse = {
+	group = culture_group_regional
+	culture_era = culture_era_high_medieval
+	icon = @administration_2
+		
+	potential = {
+		culture_group = culture_group:iranian_group
+		has_innovation = innovation_persian_court_literature_iranian
+	}
+	
+	can_progress = {
+		custom_description = {
+			text = innovation_iranian_epic_verse_trigger
+			any_county = {
+				this.culture = prev
+				development_level >= 35
+			}
+		}
+	}
+	
+	modifier = {
+		diplomacy_per_prestige_level = 1
+		prowess_per_prestige_level = 1
+	}
 	
 	flag = global_regional
 	flag = high_medieval_era_regional

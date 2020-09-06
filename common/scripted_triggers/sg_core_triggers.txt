@@ -2,8 +2,12 @@
 can_spread_from_neighboring_diff_culture_county = { 
 	custom_description = {
 		text = can_spread_from_neighboring_diff_culture_county_trigger
-		any_independent_ruler = {
-			this.culture = prev #If any independent ruler of this culture (trimmed down from any_ruler for performance reasons)... 
+		any_ruler = {
+			this.culture = prev #If any ruler of this culture... 
+			OR = {
+				primary_title = { tier >= tier_duchy }
+				is_independent_ruler = yes
+			}
 			OR = {
 				any_realm_county = { #...whose realm contains a county...
 					OR = {
@@ -42,9 +46,12 @@ can_spread_from_neighboring_diff_culture_county = {
 can_spread_from_close_family_member_ruler_or_noble_courtier = {
 	custom_description = {
 		text = can_spread_from_close_family_member_ruler_or_noble_courtier_trigger
-		any_independent_ruler = { 
-			this.culture = prev #If any independent ruler of this culture...
-			primary_title = { tier >= tier_duchy } #... is a significantly powerful ruler...
+		any_ruler = { 
+			this.culture = prev #If any ruler of this culture...
+			OR = { #... is a significantly powerful ruler...
+				primary_title = { tier >= tier_duchy }
+				is_independent_ruler = yes
+			}
 			OR = {
 				any_spouse = { #... has a spouse with a court of the source culture...
 					is_ruler = yes
@@ -65,8 +72,12 @@ can_spread_from_close_family_member_ruler_or_noble_courtier = {
 }
 
 can_show_innovation_due_to_exposure = {
-	any_independent_ruler = {
-		this.culture = prev #If any independent ruler of this culture (trimmed down from any_ruler for performance reasons)...
+	any_ruler = {
+		this.culture = prev #If any ruler of this culture...
+		OR = { #... is a significantly powerful ruler...
+			primary_title = { tier >= tier_duchy }
+			is_independent_ruler = yes
+		}
 		OR = {
 			primary_title = {
 				any_title_to_title_neighboring_and_across_water_county = { #...contains a county or borders another county, even across water...

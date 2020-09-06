@@ -1,7 +1,8 @@
 ﻿# Caucasian Diplomacy (Byzantine)
-on_alliance_removed = { 
+on_alliance_removed = { #hopefully merges instead of overrides, but copied from alliance_on_actions.txt
 	effect = {
-		try_remove_perk_alliance_opinion_effect = { TARGET = scope:second } #clean up the opinion modifier used to limit it to only one free alliance
+		# Remove the opinion modifier from having proposed an alliance via the innovation:
+		try_remove_caucasian_alliance_opinion_effect = { TARGET = scope:second } 
 		scope:second = { try_remove_caucasian_alliance_opinion_effect = { TARGET = root } }
 	}
 }

@@ -22,13 +22,13 @@
  innovation_persian_court_literature_iranian_trigger:1 "A [county|E] of our [culture|E] has not [development_minor_adj|E] sufficiently to serve as a new cultural center for the [CULTURE.GetName] people."
  
  innovation_persian_court_literature_world:1 "Persianate Literary Influence"
- innovation_persian_court_literature_world_desc:1 "Despite having been momentarily eclipsed by Arabic as the language of prestige in the Muslim world, the great literary tradition of the Persians resurged in the latter half of the first millenium, most famously in the Shahnameh by the renowned poet Ferdowsi. For centuries afterward, Parsi literature became the primary influence upon the court languages not only of the sultanates of Persia proper, but also the far reaches of Muslim-ruled India and the steppes of Central Asia and beyond."
+ innovation_persian_court_literature_world_desc:1 "Despite having been momentarily eclipsed by Arabic as the language of prestige in the Muslim world, the great literary tradition of the Persians resurged in the latter half of the first millenium, most famously in the #italic Shahnameh#! by the renowned poet Ferdowsi. For centuries afterward, Persian literature became the primary influence upon the court languages not only of the sultanates of Persia proper, but also the far reaches of Muslim-ruled India and the steppes of Central Asia and beyond."
  sg_persian_court_literature_mechanic:1 "Every [culture|E] that adopts the Persianate Literary Influence innovation will grant us additional [prestige|E]."
  innovation_persian_court_literature_adopted:1 "Innovation Adopted by Foreign Culture" 
  innovation_persian_court_literature_adopted_desc:1 "The [culture_head_notification.GetCulture.GetCollectiveNoun] are beginning to model their written works after our own. Our language and literature will become the envy of the world!"
  
  innovation_iranian_epic_verse:1 "Persian Epic Verse"
- innovation_iranian_epic_verse_desc:1 "The flourishing of Persian culture and letters gave rise to an astounding vibrant poetic tradition. Verses skillfully composed for their wit and brevity began to make their way into the common language, while more elevated, courtly verses embellished the feats of great kings of bygone ages. The most famous of these was the Shahnameh by Ferdowsi, the labor of almost 30 years standing as a testament to the spirit and prowess of the Persian people."
+ innovation_iranian_epic_verse_desc:1 "The flourishing of Persian culture and letters gave rise to an astounding vibrant poetic tradition. Verses skillfully composed for their wit and brevity began to make their way into the common language, while more elevated, courtly verses embellished the feats of great kings of ages past and present. The most famous of these was the #italic Shahnameh#! by Ferdowsi, the monumental labor of almost 30 years serving as a tribute to and inspiration for the spirit and prowess of the Persian people."
  innovation_iranian_epic_verse_trigger:1 "A [county|E] of our [culture|E] has not [development_major_adj|E] sufficiently to begin attracting skilled poets and writers to produce great works in the [CULTURE.GetName] language."
  
  #Byzantine
@@ -37,9 +37,9 @@
  
  innovation_legacy_of_byzantium:1 "Legacy of the Autokrator"
  innovation_legacy_of_byzantium_desc:1 "Tales of the splendor of the imperial court at Constantinople served as a dazzling inspiration to many of the burgeoning powers of Asia Minor and Eastern Europe. Awed by the wealth and grandeur of the Basileus and the absolute authority he exercised over the empire of the Romans, lesser rulers sought to emulate what they perceived as power granted directly by the will of God to exert their will over their subjects."
- innovation_legacy_of_byzantium_trigger:1 "No [eastern_christian_adj|E] [CULTURE.GetName] [independent|E] realms has access to a [county|E] or a [character|E] with knowledge of this innovation."
- sg_can_spread_from_neighboring_diff_culture_county_to_eastern_christian:1 "May spread to a primarily [eastern_christian_adj|E] [culture|E] from a neighboring culture that has this innovation."
- sg_can_spread_from_close_family_member_ruler_or_noble_courtier_to_eastern_christian:1 "May spread to a primarily [eastern_christian_adj|E] [culture|E] from [noble|E] [courtiers|E] or landed [close_family_members|E] of a culture that has this innovation. "
+ innovation_legacy_of_byzantium_trigger:1 "No [independent|E] [eastern_christian_adj|E] [CULTURE.GetName] realm has access to a [county|E] or a [character|E] with knowledge of this innovation."
+ sg_can_spread_from_neighboring_diff_culture_county_to_eastern_christian:1 "May spread to a primarily [eastern_christian_adj|E] culture from a neighboring culture that has this innovation."
+ sg_can_spread_from_close_family_member_ruler_or_noble_courtier_to_eastern_christian:1 "May spread to a primarily [eastern_christian_adj|E] culture from [noble|E] [courtiers|E] or landed [close_family_members|E] of a culture that has this innovation. "
  
  innovation_caucasian_heritage:1 "Caucasian Heritage"
  innovation_caucasian_heritage_desc:1 "The proud peoples of the Caucasus have witnessed the rise of countless empires across the millenia and remain resilient in the face of invasion, persecution, and domination. Their indomitable spirit inspires courage few can match in the face of unfavorable odds, and their battle-hardened warriors are more than capable of defending their mountainous homeland."
@@ -47,9 +47,12 @@
  innovation_caucasian_diplomacy:1 "Caucasian Diplomacy"
  innovation_caucasian_diplomacy_desc:1 "As Muslim invaders and steppe hordes make their incursions into the heart of the Caucasus, it became more and more important to consider pragmatic alliances when dynastic bonds cannot be forged. This relative understanding and cooperation in the face of fierce hostility bore many fruitful military alliances between Georgian, Armenian and Alan states, both with and against their powerful neighbor, the Byzantine Roman Empire."
  sg_unlock_caucasian_diplomacy:1 "[rulers|E] are able to propose one [alliance|E] without a [marriage|E] if both rulers' cultures share this innovation."
+ sg_caucasian_alliance_interaction_opinion:1 "In Regional Alliance"
  
  innovation_knights_of_the_east:1 "Knights of the East"
- innovation_knights_of_the_east_desc:1 "Though the unforgiving terrain of the Caucasus would prove a challenge to most, the resilient kingdoms of Armenia and Georgia developed a proud chivalric tradition stretching back to the dawn of empires. Their heavy cavalry repulsed larger armies time and time again, and even when the Turkic and Mongol hordes finally displaced them from their mountain halls, these noble cavaliers fought on and served as an integral part in the armies of their Christian neighbors."
+ innovation_knights_of_the_east_desc:1 "Though the unforgiving terrain of the Caucasus would prove a challenge to most, the resilient kingdoms of Armenia and Georgia developed a proud chivalric tradition stretching back to the dawn of empires. Their heavy cavalry repulsed larger armies time and time again, and even when the Turkic and Mongol hordes finally displaced them from their mountain halls, these noble cavaliers fought on and served as an integral part in the armies of both their Eastern brothers in faith and their Crusader neighbors."
+ innovation_knights_of_the_east_trigger:1 "The majority of [CULTURE.GetName] [rulers|E] are not [eastern_christian_adj|E]."
+ innovation_knights_of_the_east_outremer_trigger:1 "The majority of [CULTURE.GetName] [rulers|E] are not Christian."
  
  
 

@@ -57,12 +57,30 @@ innovation_legacy_of_byzantium = {
 		can_show_innovation_due_to_exposure = {
 			HAS_INNOVATION_LIST = "has_innovation = innovation_legacy_of_rome has_innovation = innovation_legacy_of_byzantium"
 		}
-		any_independent_ruler = { 
-			filter = { this.culture = prev }
-			percent >= 0.67 #supermajority
-			this.faith.religion = religion:christianity_religion #Byzantine autocratic tradition limited to Eastern variants of Christianity
-			NOT = {
-				OR = {
+		trigger_if = {
+			any_independent_ruler = { #Russians (still must be Eastern Christian)
+				filter = { this.culture = culture:russian }
+				percent >= 0.67 #supermajority
+				faith.religion = religion:christianity_religion
+				NOT = {
+					OR = {
+						this.faith = faith:catholic
+						this.faith = faith:conversos
+						this.faith = faith:cathar
+						this.faith = faith:waldensian
+						this.faith = faith:lollard
+						this.faith = faith:adamites
+						this.faith = faith:insular_celtic
+					}
+				}
+			}	
+		}
+		trigger_else = {
+			any_independent_ruler = { #Byzantine autocratic tradition limited to Eastern variants of Christianity (general case)
+				filter = { this.culture = prev }
+				percent >= 0.67 #supermajority
+				religion = religion:christianity_religion
+				NOR = {
 					this.faith = faith:catholic
 					this.faith = faith:conversos
 					this.faith = faith:cathar
@@ -71,7 +89,7 @@ innovation_legacy_of_byzantium = {
 					this.faith = faith:adamites
 					this.faith = faith:insular_celtic
 				}
-			}
+			}		
 		}
 	}
 	
@@ -85,6 +103,7 @@ innovation_legacy_of_byzantium = {
 				can_spread_from_close_family_member_ruler_or_noble_courtier = {
 					CULTURE = greek
 				}
+				this = culture:russian
 			}
 		}
 	}
@@ -162,21 +181,52 @@ innovation_knights_of_the_east = {
 	
 	potential = {
 		OR = {
-			this.culture_group = culture_group:byzantine_group
-			can_show_innovation_due_to_exposure = {
-				HAS_INNOVATION_LIST = "has_innovation = innovation_knights_of_the_east"
-			}
-		}
-		any_ruler = {
-			filter = { #must be of this culture and sufficiently powerful (in short, not locking out vassals)
-				this.culture = prev 
-				OR = {
-					primary_title = { tier >= tier_duchy }
-					is_independent_ruler = yes
+			trigger_if = { #Non-Byzantine cultures may only see if they are primarily Christian
+				limit = { NOT = { this.culture_group = culture_group:byzantine_group } }
+				can_show_innovation_due_to_exposure = {
+					HAS_INNOVATION_LIST = "has_innovation = innovation_knights_of_the_east"
+				}
+				any_ruler = {#display for all Christians so as to not exclude Christian Crusaders
+					filter = { this.culture = prev }
+					percent >= 0.67
+					religion = religion:christianity_religion
 				}
 			}
-			percent >= 0.67
-			faith.religion = religion:christianity_religion
+			trigger_else = {
+				always = yes #for all Byzantine group cultures regardless of religion
+			}
+		}
+	}
+	
+	can_progress = {
+		trigger_if = {#may only adopt if not an Eastern Christian a Crusader state
+			limit = { this = culture:outremer }
+			custom_description = {
+				text = innovation_knights_of_the_east_outremer_trigger
+				culture = culture:outremer
+			}
+		}
+		trigger_else = {#otherwise, Eastern Christians or Byzantine culture group only
+			custom_description = {
+				text = innovation_knights_of_the_east_trigger
+				OR = {
+					any_ruler = {
+						filter = { this.culture = prev }
+						percent >= 0.67
+						religion = religion:christianity_religion	
+						NOR = {
+							this.faith = faith:catholic
+							this.faith = faith:conversos
+							this.faith = faith:cathar
+							this.faith = faith:waldensian
+							this.faith = faith:lollard
+							this.faith = faith:adamites
+							this.faith = faith:insular_celtic
+						}
+					}
+					culture_group = culture_group:byzantine_group
+				}
+			}
 		}
 	}
 	

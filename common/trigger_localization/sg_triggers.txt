@@ -14,6 +14,12 @@ sg_already_has_an_alliance_deal = {
 	first = sg_already_has_an_alliance_deal
 	first_not = NOT_sg_already_has_an_alliance_deal
 }
+innovation_knights_of_the_east_trigger = {
+	global_not = innovation_knights_of_the_east_trigger
+}
+innovation_knights_of_the_east_outremer_trigger = {
+	global_not = innovation_knights_of_the_east_outremer_trigger
+}
 #Iranians
 innovation_persian_court_literature_iranian_trigger = {
 	global_not = innovation_persian_court_literature_iranian_trigger

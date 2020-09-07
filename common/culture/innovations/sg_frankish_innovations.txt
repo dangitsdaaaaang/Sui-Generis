@@ -1,5 +1,4 @@
-﻿#### Local Types ####
-@administration_1 = "gfx/interface/icons/culture_innovations/innovation_administration_01.dds"
+﻿@administration_1 = "gfx/interface/icons/culture_innovations/innovation_administration_01.dds"
 @administration_2 = "gfx/interface/icons/culture_innovations/innovation_administration_02.dds"
 @administration_3 = "gfx/interface/icons/culture_innovations/innovation_administration_03.dds"
 @civil_construction_1 = "gfx/interface/icons/culture_innovations/innovation_civil_construction_01.dds"
@@ -29,67 +28,35 @@
 @special_maa_01 = "gfx/interface/icons/culture_innovations/innovation_special_maa_01.dds"
 @special_maa_02 = "gfx/interface/icons/culture_innovations/innovation_special_maa_02.dds"
 
-#culture_group_regional
-innovation_reconquista = {
+#Frankish Cultural Innovations
+innovation_french_peerage = { #removed from list of region-locked innovations, clearly specialized for Frankish culture group ("Opus FRANCIGENUM", for goodness' sake)
 	group = culture_group_regional
-	culture_era = culture_era_early_medieval
-	region = world_europe_west_iberia
-	icon = @leadership_2
+	culture_era = culture_era_high_medieval
+	icon = @nobility_03
 
-	potential = { #hide unless relevant, will otherwise inflate innovation count needed to go to the next era
-		any_county_in_region = {
-			region = world_europe_west_iberia
-			culture = root
+	potential = {
+		OR = {
+			this = culture:french
+			this = culture:norman
+			this = culture:occitan
+			this = culture:outremer
+			this = culture:english
 		}
 	}
 	
-	custom = cb_discount_piety_10
-	modifier = {
-		monthly_piety_gain_mult = 0.1
-	}
-
-	flag = global_regional
-	flag = early_medieval_era_regional
-}
-
-innovation_stem_duchies = {
-	group = culture_group_regional
-	culture_era = culture_era_early_medieval
-	region = custom_europe_western_germany
-	icon = @majesty_03
-
-	potential = { #hide unless relevant, will otherwise inflate innovation count needed to go to the next era
-		any_county_in_region = {
-			region = custom_europe_western_germany
-			culture = root
+	can_progress = { #Unlocked by event middle_europe_decisions.0012, apparently passing that decision is evidence of the power/influence of the crown
+		custom_description = {
+			text = "innovation_unlocked_by_decision_trigger"
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_promoted_gothic_innovations
+			}
 		}
 	}
 	
-	modifier = {
-		direct_vassal_opinion = 5
-	}
+	custom = unlock_peerage_contract
 
 	flag = global_regional
-	flag = early_medieval_era_regional
+	flag = high_medieval_era_regional
 }
 
-innovation_ghilman = {
-	group = culture_group_regional
-	culture_era = culture_era_early_medieval
-	region = world_middle_east_arabia
-	icon = @maa_02
-	
-	potential = { #hide unless relevant, will otherwise inflate innovation count needed to go to the next era
-		any_county_in_region = {
-			region = world_middle_east_arabia
-			culture = root
-		}
-	}
-	
-	modifier = {
-		men_at_arms_maintenance = -0.15
-	}
-
-	flag = global_regional
-	flag = early_medieval_era_regional
-}

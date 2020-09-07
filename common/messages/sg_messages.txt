@@ -28,3 +28,12 @@ event_innovation_adopted = {
 	soundeffect = @msg_good_soundeffect
 }
 
+#French Peerage Prestige Homage (Frankish)
+event_peerage_homage = {
+	icon = "diplomacy.dds"
+	title = event_message_title
+	desc = event_message_text_and_effect
+	style = good
+	soundeffect = @msg_good_soundeffect
+}
+

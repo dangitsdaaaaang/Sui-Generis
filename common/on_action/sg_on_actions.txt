@@ -10,16 +10,13 @@ on_alliance_removed = { #hopefully merges instead of overrides, but copied from 
 # Persianate Literary Influence (Persian)
 innovation_persian_court_literature_adopted_pulse = { 
 	trigger = {
-		debug_log = "Persian innovation adoption trigger evaluating"
 		culture = {
 			has_innovation = innovation_persian_court_literature_world #If a non-Iranian culture adopts Persian literature...
 			NOT = { has_variable = sg_adopted_persian_court_literature } 
-			debug_log = "Persian innovation adoption trigger evaluated"
 		}
 	}
 	
 	effect = {	
-		debug_log = "Persian innovation adoption effect running"
 		if = { #Set up the global variable (should not be used anywhere else)
 			limit = { NOT = { has_global_variable = persian_court_literature_adoptors } }
 			set_global_variable = {
@@ -58,8 +55,41 @@ innovation_persian_court_literature_adopted_pulse = {
 	}
 }
 
+#French Peerage Homage (Frankish + English/Scots)
+innovation_peerage_homage = {
+	trigger = {
+		highest_held_title_tier >= tier_kingdom
+		culture = { has_innovation = innovation_french_peerage }
+		any_vassal = {
+			vassal_contract_has_flag = has_peerage_contract
+		}
+		is_available_at_peace_adult = yes
+	}
+	
+	effect = {
+		random_vassal = {
+			limit = { vassal_contract_has_flag = has_peerage_contract }
+			save_scope_as = peer_representative #representative for the event
+		}
+		send_interface_message = {
+			title = innovation_peerage_homage
+			desc = innovation_peerage_homage_desc
+			type = event_peerage_homage
+			left_icon = scope:peer_representative
+			add_prestige = peerage_prestige_homage
+			add_piety = peerage_piety_homage
+		}
+	}
+}
+
 quarterly_playable_pulse = {
 	on_actions = {
 		innovation_persian_court_literature_adopted_pulse
+	}
+}
+
+yearly_playable_pulse = {
+	on_actions = {
+		innovation_peerage_homage
 	}
 }

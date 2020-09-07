@@ -54,5 +54,15 @@
  innovation_knights_of_the_east_trigger:1 "The majority of [CULTURE.GetName] [rulers|E] are not [eastern_christian_adj|E]."
  innovation_knights_of_the_east_outremer_trigger:1 "The majority of [CULTURE.GetName] [rulers|E] are not Christian."
  
+ #Frankish
+ innovation_french_peerage:2 "Peerage"
+ innovation_french_peerage_desc:2 "By rightfully recognizing the most illustrious amongst the noble vassals as peers of the realm, we will foster a sentiment of greater loyalty towards the crown."
+ unlock_peerage_contract:1 "Unlocks the #high $special_contract_peerage_short$#! [feudal_contract|E]"
+ special_contract_peerage:1 "Peerage"
+ special_contract_peerage_desc:1 "#flavor When a [powerful_vassal|E] is elevated to the $special_contract_peerage$, the [vassal|E] will receive a bonus to [taxes|E] from #italic their#! vassals and be better protected from [hostile_schemes|E] on account of their rank within the realm. In return, the [liege|E] will enjoy increased [prestige|E] from placating each of the peers of the realm and increased [piety|E] from currying the favor of the [realm_priest|E]."
+ special_contract_peerage_short:1 "Peerage"
+ 
+ innovation_peerage_homage:1 "[ROOT.Char.GetPrimaryTitle.GetAdjective] Peerage Renders Homage"
+ innovation_peerage_homage_desc:1 "[peer_representative.Custom2('AppropriateGreetingPositive', ROOT.Char)]\nThe lay and ecclesiastical peerage of the [ROOT.Char.GetPrimaryTitle.GetName] humbly offers you our tribute and our gratitude for the prosperity you have brought to the realm. May [ROOT.Char.GetFaith.HighGodName] grant you many more years upon the throne!"
  
 

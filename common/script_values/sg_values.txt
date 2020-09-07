@@ -7,13 +7,23 @@
 @innovation_persian_court_literature_world_tier_5 = 250
 @innovation_persian_court_literature_world_tier_6 = 300
 
-@innovation_persian_court_literature_world_learning_modifier_low = 0.8
-@innovation_persian_court_literature_world_learning_modifier_average = 1.0
-@innovation_persian_court_literature_world_learning_modifier_medium = 1.10
-@innovation_persian_court_literature_world_learning_modifier_decent = 1.15
-@innovation_persian_court_literature_world_learning_modifier_high = 1.25
-@innovation_persian_court_literature_world_learning_modifier_very_high = 1.33
-@innovation_persian_court_literature_world_learning_modifier_extremely_high = 1.5
+@innovation_french_peerage_prestige_base_add = 5
+@innovation_french_peerage_prestige_tier_1_add = 10
+@innovation_french_peerage_prestige_tier_2_add = 15
+@innovation_french_peerage_prestige_tier_3_add = 25
+
+@innovation_french_peerage_piety_base = 25
+@innovation_french_peerage_piety_tier_1 = 50
+@innovation_french_peerage_piety_tier_2 = 75
+@innovation_french_peerage_piety_tier_3 = 100
+
+@innovation_modifier_low = 0.8
+@innovation_modifier_average = 1.0
+@innovation_modifier_medium = 1.10
+@innovation_modifier_decent = 1.15
+@innovation_modifier_high = 1.25
+@innovation_modifier_very_high = 1.33
+@innovation_modifier_extremely_high = 1.5
 
 persian_court_literature_adoptors_tier = {
 	value = @innovation_persian_court_literature_world_base
@@ -44,34 +54,141 @@ persian_court_literature_adoptors_tier = {
 }
 
 persian_court_literature_adoption_learning = {
-	value = @innovation_persian_court_literature_world_learning_modifier_low 
+	value = @innovation_modifier_low 
 	if = {
 		limit = { learning > average_skill_rating }
-		value = @innovation_persian_court_literature_world_learning_modifier_average
+		value = @innovation_modifier_average
 	}
 	if = {
 		limit = { learning > medium_skill_rating }
-		value = @innovation_persian_court_literature_world_learning_modifier_medium
+		value = @innovation_modifier_medium
 	}
 	if = {
 		limit = { learning > decent_skill_rating }
-		value = @innovation_persian_court_literature_world_learning_modifier_decent
+		value = @innovation_modifier_decent
 	}
 	if = {
 		limit = { learning > high_skill_rating }
-		value = @innovation_persian_court_literature_world_learning_modifier_high
+		value = @innovation_modifier_high
 	}
 	if = {
 		limit = { learning > very_high_skill_rating }
-		value = @innovation_persian_court_literature_world_learning_modifier_very_high
+		value = @innovation_modifier_very_high
 	}
 	if = {
 		limit = { learning > extremely_high_skill_rating }
-		value = @innovation_persian_court_literature_world_learning_modifier_extremely_high
+		value = @innovation_modifier_extremely_high
 	}
 }
 
 persian_court_literature_adoption_prestige = {
 	value = persian_court_literature_adoptors_tier
 	multiply = persian_court_literature_adoption_learning
+}
+
+#Frankish Peerage Prestige and Piety Bonuses
+
+peerage_prestige = {
+	value = 0
+	every_vassal = {
+		limit = { vassal_contract_has_flag = has_peerage_contract }
+		if = { 
+			limit = { 
+				opinion = { target = liege value > 75 }
+			}
+			add = @innovation_french_peerage_prestige_tier_3_add
+		}
+		else_if = {
+			limit = { 
+				opinion = { target = liege value > 50 }
+			}
+			add = @innovation_french_peerage_prestige_tier_2_add
+		}
+		else_if = {
+			limit = { 
+				opinion = { target = liege value > 25 }
+			}
+			add = @innovation_french_peerage_prestige_tier_1_add
+		}
+		else_if = {
+			limit = { 
+				opinion = { target = liege value > 0 }
+			}
+			add = @innovation_french_peerage_prestige_base_add
+		}
+		else = {
+			add = 0
+		}
+	}
+}
+
+peerage_piety = {
+	value = 0
+	realm_priest = {
+		if = { 
+			limit = { 
+				opinion = { target = liege value > 75 }
+			}
+			value = @innovation_french_peerage_piety_tier_3
+		}
+		else_if = {
+			limit = { 
+				opinion = { target = liege value > 50 }
+			}
+			value = @innovation_french_peerage_piety_tier_2
+		}
+		else_if = {
+			limit = { 
+				opinion = { target = liege value > 25 }
+			}
+			value = @innovation_french_peerage_piety_tier_1
+		}
+		else_if = {
+			limit = { 
+				opinion = { target = liege value > 0 }
+			}
+			value = @innovation_french_peerage_piety_base
+		}
+		else = {
+			value = 0
+		}
+	}
+}
+
+peerage_homage_diplomacy = {
+	value = @innovation_modifier_low 
+	if = {
+		limit = { diplomacy > average_skill_rating }
+		value = @innovation_modifier_average
+	}
+	if = {
+		limit = { diplomacy > medium_skill_rating }
+		value = @innovation_modifier_medium
+	}
+	if = {
+		limit = { diplomacy > decent_skill_rating }
+		value = @innovation_modifier_decent
+	}
+	if = {
+		limit = { diplomacy > high_skill_rating }
+		value = @innovation_modifier_high
+	}
+	if = {
+		limit = { diplomacy > very_high_skill_rating }
+		value = @innovation_modifier_very_high
+	}
+	if = {
+		limit = { diplomacy > extremely_high_skill_rating }
+		value = @innovation_modifier_extremely_high
+	}
+}
+
+peerage_prestige_homage = {
+	value = peerage_prestige
+	multiply = peerage_homage_diplomacy
+}
+
+peerage_piety_homage = {
+	value = peerage_piety
+	multiply = peerage_homage_diplomacy	
 }

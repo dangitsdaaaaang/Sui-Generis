@@ -40,7 +40,15 @@ innovation_french_peerage = { #removed from list of region-locked innovations, c
 			this = culture:norman
 			this = culture:occitan
 			this = culture:outremer
-			this = culture:english
+			AND = {
+				OR = {
+					this = culture:english
+					this = culture:scottish
+				}
+				can_show_innovation_due_to_exposure = {
+					HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
+				}
+			}
 		}
 	}
 	
@@ -52,9 +60,13 @@ innovation_french_peerage = { #removed from list of region-locked innovations, c
 				target = flag:flag_promoted_gothic_innovations
 			}
 		}
+		can_spread_from_neighboring_diff_culture_county = { 
+			HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
+		}
 	}
 	
 	custom = unlock_peerage_contract
+	custom = sg_can_spread_from_neighboring_diff_culture_county
 
 	flag = global_regional
 	flag = high_medieval_era_regional

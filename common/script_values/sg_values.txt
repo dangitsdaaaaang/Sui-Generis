@@ -88,8 +88,7 @@ persian_court_literature_adoption_prestige = {
 
 #Frankish Peerage Prestige and Piety Bonuses
 
-peerage_prestige = {
-	value = 0
+add_peerage_prestige = {
 	every_vassal = {
 		limit = { vassal_contract_has_flag = has_peerage_contract }
 		if = { 
@@ -116,15 +115,12 @@ peerage_prestige = {
 			}
 			add = @innovation_french_peerage_prestige_base_add
 		}
-		else = {
-			add = 0
-		}
 	}
 }
 
 peerage_piety = {
-	value = 0
 	realm_priest = {
+		value = 0
 		if = { 
 			limit = { 
 				opinion = { target = liege value > 75 }
@@ -148,9 +144,6 @@ peerage_piety = {
 				opinion = { target = liege value > 0 }
 			}
 			value = @innovation_french_peerage_piety_base
-		}
-		else = {
-			value = 0
 		}
 	}
 }
@@ -184,7 +177,7 @@ peerage_homage_diplomacy = {
 }
 
 peerage_prestige_homage = {
-	value = peerage_prestige
+	add = add_peerage_prestige
 	multiply = peerage_homage_diplomacy
 }
 

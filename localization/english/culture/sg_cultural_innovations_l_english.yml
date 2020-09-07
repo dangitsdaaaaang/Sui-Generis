@@ -61,6 +61,7 @@
  special_contract_peerage:1 "Peerage"
  special_contract_peerage_desc:1 "#flavor When a [powerful_vassal|E] is elevated to the $special_contract_peerage$, the [vassal|E] will receive a bonus to [taxes|E] from #italic their#! vassals and be better protected from [hostile_schemes|E] on account of their rank within the realm. In return, the [liege|E] will enjoy increased [prestige|E] from placating each of the peers of the realm and increased [piety|E] from currying the favor of the [realm_priest|E]."
  special_contract_peerage_short:1 "Peerage"
+ special_contract_peerage_is_valid:1 "Must be a [powerful_vassal|E] and hold a [primary_title|E] greater than Duke [title_rank|E]"
  
  innovation_peerage_homage:1 "[ROOT.Char.GetPrimaryTitle.GetAdjective] Peerage Renders Homage"
  innovation_peerage_homage_desc:1 "[peer_representative.Custom2('AppropriateGreetingPositive', ROOT.Char)]\nThe lay and ecclesiastical peerage of the [ROOT.Char.GetPrimaryTitle.GetName] humbly offers you our tribute and our gratitude for the prosperity you have brought to the realm. May [ROOT.Char.GetFaith.HighGodName] grant you many more years upon the throne!"

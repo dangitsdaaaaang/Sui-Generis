@@ -27,3 +27,8 @@ innovation_persian_court_literature_iranian_trigger = {
 innovation_iranian_epic_verse_trigger = {
 	global_not = innovation_iranian_epic_verse_trigger
 }
+#Frankish
+special_contract_peerage_is_valid = {
+	global_not = special_contract_peerage_is_valid
+}
+

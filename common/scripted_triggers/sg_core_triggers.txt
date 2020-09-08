@@ -90,13 +90,11 @@ can_show_innovation_due_to_exposure = {
 }
 
 sg_powerful_rank = {
+	primary_title = { tier >= tier_duchy }
 	OR = {#... is sufficiently powerful...
 		is_independent_ruler = yes
-		AND = {
-			primary_title = { tier >= tier_duchy }
-			any_sub_realm_county = {
-				count > 4
-			}
+		any_sub_realm_county = {
+			count > 4
 		}
 	}
 }

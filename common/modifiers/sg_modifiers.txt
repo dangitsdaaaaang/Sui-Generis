@@ -1,0 +1,5 @@
+﻿#Seigneurialism {Frankish + English/Scots)
+sg_consolidated_domain = {
+	icon = stewardship_positive
+	domain_limit = -2
+}

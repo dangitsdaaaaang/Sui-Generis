@@ -81,14 +81,40 @@ innovation_peerage_homage = {
 		}
 	}
 }
+#Seigneurialism Domain Limit Penalty (Frankish + English/Scots)
+innovation_seigneurialism_domain_limit_penalty_pulse = {
+	trigger = {
+		any_ruler = {
+			culture = { has_innovation = innovation_seigneurialism }
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				sg_powerful_rank = yes 
+				NOT = { has_character_modifier = sg_consolidated_domain }
+			}
+			add_character_modifier = sg_consolidated_domain
+		}
+		else_if = {
+			limit = { 
+				has_character_modifier = sg_consolidated_domain 
+				sg_powerful_rank = no
+			} 
+			remove_character_modifier = sg_consolidated_domain
+		}
+	}
+}
 
 quarterly_playable_pulse = {
 	on_actions = {
 		innovation_persian_court_literature_adopted_pulse
+		innovation_seigneurialism_domain_limit_penalty_pulse
 	}
 }
 
-yearly_playable_pulse = {
+five_year_playable_pulse = {
 	on_actions = {
 		innovation_peerage_homage
 	}

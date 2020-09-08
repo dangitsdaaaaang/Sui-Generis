@@ -29,7 +29,65 @@
 @special_maa_02 = "gfx/interface/icons/culture_innovations/innovation_special_maa_02.dds"
 
 #Frankish Cultural Innovations
-innovation_french_peerage = { #removed from list of region-locked innovations, clearly specialized for Frankish culture group ("Opus FRANCIGENUM", for goodness' sake)
+innovation_seigneurialism = { #removed from list of region-locked innovations, functionally a French "variant" on generic manorialism
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	icon = @administration_1
+
+	potential = {
+		has_innovation = innovation_manorialism
+		OR = {
+			this = culture:french
+			this = culture:norman
+			this = culture:occitan
+			this = culture:outremer
+			AND = {
+				OR = {
+					this = culture:english
+					this = culture:scottish
+				}
+				can_show_innovation_due_to_exposure = {
+					HAS_INNOVATION_LIST = "has_innovation = innovation_seigneurialism"
+				}
+			}
+		}
+		#add in late-game decision to abolish seigneurialism for massive opinion penalty to all same-culture vassals
+	}
+	
+	can_progress = { 
+		custom_description = { 
+			text = "innovation_seigneurialism_trigger"
+			trigger_if = {
+				limit = { 
+					OR = {
+						this = culture:english
+						this = culture:scottish
+					}
+				}
+				can_spread_from_neighboring_diff_culture_county = {
+					HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		domain_tax_mult = 0.25
+		levy_size = 0.15
+		vassal_tax_contribution_mult = -0.25
+		vassal_levy_contribution_mult = -0.33
+		monthly_county_control_change_factor = 0.1
+		county_opinion_add = -15
+	}
+	
+	custom = seigneurialism_domain_limit_penalty
+	custom = sg_can_spread_from_neighboring_diff_culture_county_english_scottish
+
+	flag = global_regional
+	flag = early_medieval_era_regional
+}
+
+innovation_french_peerage = { #removed from list of region-locked innovations
 	group = culture_group_regional
 	culture_era = culture_era_high_medieval
 	icon = @nobility_03
@@ -52,21 +110,28 @@ innovation_french_peerage = { #removed from list of region-locked innovations, c
 		}
 	}
 	
-	can_progress = { #Unlocked by event middle_europe_decisions.0012, apparently passing that decision is evidence of the power/influence of the crown
-		custom_description = {
-			text = "innovation_unlocked_by_decision_trigger"
-			is_target_in_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:flag_promoted_gothic_innovations
+	can_progress = { #Was unlocked by event middle_europe_decisions.0012 - decision was too open to other cultures and not having much to do with the actual development of peerages
+		custom_description = { 
+			text = "innovation_french_peerage_trigger"
+			any_independent_ruler = {
+				culture = prev
 			}
-		}
-		can_spread_from_neighboring_diff_culture_county = { 
-			HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
+			trigger_if = {
+				limit = { 
+					OR = {
+						this = culture:english
+						this = culture:scottish
+					}
+				}
+				can_spread_from_neighboring_diff_culture_county = {
+					HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
+				}
+			}
 		}
 	}
 	
 	custom = unlock_peerage_contract
-	custom = sg_can_spread_from_neighboring_diff_culture_county
+	custom = sg_can_spread_from_neighboring_diff_culture_county_english_scottish
 
 	flag = global_regional
 	flag = high_medieval_era_regional

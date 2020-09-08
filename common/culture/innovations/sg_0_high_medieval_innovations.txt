@@ -52,27 +52,6 @@ innovation_east_settling = {
 	flag = high_medieval_era_regional
 }
 
-innovation_seigneurialism = {
-	group = culture_group_regional
-	culture_era = culture_era_high_medieval
-	region = world_europe_west_francia
-	icon = @administration_1
-
-	potential = { #hide unless relevant, will otherwise inflate innovation count needed to go to the next era
-		any_county_in_region = {
-			region = world_europe_west_francia
-			this.culture = root
-		}
-	}
-	
-	modifier = {
-		domain_tax_mult = 0.05
-	}
-
-	flag = global_regional
-	flag = high_medieval_era_regional
-}
-
 innovation_muladi = {
 	group = culture_group_regional
 	culture_era = culture_era_high_medieval

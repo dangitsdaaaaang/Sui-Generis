@@ -1,5 +1,5 @@
 ﻿powerful_rank = {
-	alias = { powerful_rank_adj }
+	alias = { powerful_rank_adj powerful_rank_ruler }
 }
 
 development_minor = {
@@ -12,5 +12,9 @@ development_major = {
 
 eastern_christian = {
 	alias = { eastern_christian_adj }
+}
+
+peers = {
+
 }
 

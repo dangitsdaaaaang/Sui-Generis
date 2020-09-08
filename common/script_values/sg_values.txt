@@ -1,22 +1,4 @@
-﻿#Persian Literary Influence Innovation Prestige Bonus
-@innovation_persian_court_literature_world_base = 25
-@innovation_persian_court_literature_world_tier_1 = 50
-@innovation_persian_court_literature_world_tier_2 = 75
-@innovation_persian_court_literature_world_tier_3 = 125
-@innovation_persian_court_literature_world_tier_4 = 200
-@innovation_persian_court_literature_world_tier_5 = 250
-@innovation_persian_court_literature_world_tier_6 = 300
-
-@innovation_french_peerage_prestige_base_add = 5
-@innovation_french_peerage_prestige_tier_1_add = 10
-@innovation_french_peerage_prestige_tier_2_add = 15
-@innovation_french_peerage_prestige_tier_3_add = 25
-
-@innovation_french_peerage_piety_base = 25
-@innovation_french_peerage_piety_tier_1 = 50
-@innovation_french_peerage_piety_tier_2 = 75
-@innovation_french_peerage_piety_tier_3 = 100
-
+﻿#Core
 @innovation_modifier_low = 0.8
 @innovation_modifier_average = 1.0
 @innovation_modifier_medium = 1.10
@@ -25,6 +7,27 @@
 @innovation_modifier_very_high = 1.33
 @innovation_modifier_extremely_high = 1.5
 
+#Persian Literary Influence Innovation Prestige Bonus
+@innovation_persian_court_literature_world_base = 25
+@innovation_persian_court_literature_world_tier_1 = 50
+@innovation_persian_court_literature_world_tier_2 = 75
+@innovation_persian_court_literature_world_tier_3 = 125
+@innovation_persian_court_literature_world_tier_4 = 200
+@innovation_persian_court_literature_world_tier_5 = 250
+@innovation_persian_court_literature_world_tier_6 = 300
+
+#Frankish Peerage Prestige and Piety Bonuses
+@innovation_french_peerage_prestige_base_add = 25
+@innovation_french_peerage_prestige_tier_1_add = 40
+@innovation_french_peerage_prestige_tier_2_add = 75
+@innovation_french_peerage_prestige_tier_3_add = 100
+
+@innovation_french_peerage_piety_base = 50
+@innovation_french_peerage_piety_tier_1 = 75
+@innovation_french_peerage_piety_tier_2 = 125
+@innovation_french_peerage_piety_tier_3 = 200
+
+#Parsi Renaissance/Persianate Literary Tradition (Iranian)
 persian_court_literature_adoptors_tier = {
 	value = @innovation_persian_court_literature_world_base
 	if = {
@@ -86,8 +89,7 @@ persian_court_literature_adoption_prestige = {
 	multiply = persian_court_literature_adoption_learning
 }
 
-#Frankish Peerage Prestige and Piety Bonuses
-
+#Peerage (Frankish)
 add_peerage_prestige = {
 	every_vassal = {
 		limit = { vassal_contract_has_flag = has_peerage_contract }

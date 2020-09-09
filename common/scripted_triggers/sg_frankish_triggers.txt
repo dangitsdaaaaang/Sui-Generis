@@ -1,0 +1,19 @@
+﻿#Norman Customary Law (Frankish)
+can_designate_heir_trigger = {#overwrite entry in 00_legal_triggers.txt
+	custom_description = {
+		text = "has_law_allowing_designate_heir"
+		OR = {
+			has_realm_law_flag = can_designate_heirs
+			culture = { has_innovation = innovation_norman_customary_law }
+		}
+	}	
+	custom_description = {
+		text = "dynasty_member_leads_election"
+		NAND = {
+			primary_title = {
+				has_title_law_flag = elective_succession_law
+			}
+			dynasty = primary_heir.dynasty
+		}
+	}	
+}

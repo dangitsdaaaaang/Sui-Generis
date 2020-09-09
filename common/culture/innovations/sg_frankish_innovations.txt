@@ -136,4 +136,26 @@ innovation_french_peerage = { #removed from list of region-locked innovations
 	flag = global_regional
 	flag = high_medieval_era_regional
 }
+#Norman Unique Innovation
+innovation_norman_customary_law = { #not directly related, just to highlight the peculiarity of the relative lack of codified Norman succession
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	icon = @nobility_01
+
+	potential = {
+		has_innovation = innovation_hereditary_rule
+		this = culture:norman
+	}
+	
+	modifier = {
+		player_heir_opinion = 5
+		eligible_child_except_player_heir_opinion = -5
+	}
+	
+	custom = sg_may_designate_heir
+
+	flag = global_regional
+	flag = early_medieval_era_regional
+}
+
 

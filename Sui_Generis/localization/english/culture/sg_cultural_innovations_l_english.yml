@@ -78,6 +78,6 @@
  
  innovation_norman_customary_law:1 "Norman Customary Law"
  innovation_norman_customary_law_desc:1 "Combining aspects of Scandinavian tradition with the laws and customs of the lands they settled, the Normans developed unique traditions that survive even to the present day in areas of the former Duchy of Normandy. One noticeable practice was the designation of one's heir regardless of the social status of the mother, which allowed lesser or illegitimate sons to assume the mantle of leadership, such as Richard I of Normandy, Roger II of Sicily, and more famously, William the Conqueror."
- sg_may_designate_heir:1 "Enables the #italic $designate_heir_interaction$#! interaction"
+ sg_may_designate_heir:1 "Enables the #italic $designate_heir_interaction$#! interaction if the realm has a $confederate_partition_succession_law$, $partition_succession_law$, or $high_partition_succession_law$ $game_concept_succession_law$"
  
 

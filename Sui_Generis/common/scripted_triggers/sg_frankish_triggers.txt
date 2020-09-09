@@ -4,7 +4,14 @@ can_designate_heir_trigger = {#overwrite entry in 00_legal_triggers.txt
 		text = "has_law_allowing_designate_heir"
 		OR = {
 			has_realm_law_flag = can_designate_heirs
-			culture = { has_innovation = innovation_norman_customary_law }
+			AND = {
+				culture = { has_innovation = innovation_norman_customary_law }
+				OR = {
+					has_realm_law = confederate_partition_succession_law
+					has_realm_law = partition_succession_law
+					has_realm_law = high_partition_succession_law
+				}
+			}
 		}
 	}	
 	custom_description = {

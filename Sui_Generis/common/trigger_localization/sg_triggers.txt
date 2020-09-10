@@ -31,4 +31,11 @@ innovation_iranian_epic_verse_trigger = {
 special_contract_peerage_is_valid = {
 	global_not = special_contract_peerage_is_valid
 }
+innovation_seigneurialism_trigger = {
+	global_not = innovation_seigneurialism_trigger
+}
+#Central Germanic
+innovation_german_town_law_trigger = {
+	global_not = innovation_german_town_law_trigger
+}
 

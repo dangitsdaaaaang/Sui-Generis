@@ -14,7 +14,7 @@
  
  innovation_barbary_corsairs:1 "Barbary Corsairs"
  innovation_barbary_corsairs_desc:1 "Though the practice of piracy and raiding had always plagued the Mediterranean, the coastal Berber states were able to vastly enrich themselves at the expense of their European neighbors. Such razzias were such a thorn in the side of Italian, French, and Iberian rulers that the Sicilian Normans invaded North Africa in 1135, and in 1390, a French-Genoese joint military expedition embarked on the short-lived Barbary Crusade."
- sg_unlocks_corsair_raiding:1 "Enables [raiding|E] of foreign [counties|E] both by land and by sea, provided the [doctrines|E] of the ruler's [faith|E] do not forbid it."
+ sg_unlocks_corsair_raiding:1 "Enables [raiding|E] of foreign [counties|E] both by land and by sea, provided the [doctrines|E] of the ruler's [faith|E] do not forbid it"
  
  #Persian
  innovation_persian_court_literature_iranian:1 "Parsi Renaissance"
@@ -38,15 +38,15 @@
  innovation_legacy_of_byzantium:1 "Legacy of the Autokrator"
  innovation_legacy_of_byzantium_desc:1 "Tales of the splendor of the imperial court at Constantinople served as a dazzling inspiration to many of the burgeoning powers of Asia Minor and Eastern Europe. Awed by the wealth and grandeur of the Basileus and the absolute authority he exercised over the empire of the Romans, lesser rulers sought to emulate what they perceived as power granted directly by the will of God to exert their will over their subjects."
  innovation_legacy_of_byzantium_trigger:1 "No [independent|E] [eastern_christian_adj|E] [CULTURE.GetName] realm has access to a [county|E] or a [character|E] with knowledge of this innovation."
- sg_can_spread_from_neighboring_diff_culture_county_to_eastern_christian:1 "May spread to a primarily [eastern_christian_adj|E] culture from a neighboring culture that has this innovation."
- sg_can_spread_from_close_family_member_ruler_or_noble_courtier_to_eastern_christian:1 "May spread to a primarily [eastern_christian_adj|E] culture from [noble|E] [courtiers|E] or landed [close_family_members|E] of a culture that has this innovation. "
+ sg_can_spread_from_neighboring_diff_culture_county_to_eastern_christian:1 "May spread to a primarily [eastern_christian_adj|E] culture from a neighboring culture that has this innovation"
+ sg_can_spread_from_close_family_member_ruler_or_noble_courtier_to_eastern_christian:1 "May spread to a primarily [eastern_christian_adj|E] culture from [noble|E] [courtiers|E] or landed [close_family_members|E] of a culture that has this innovation"
  
  innovation_caucasian_heritage:1 "Caucasian Heritage"
  innovation_caucasian_heritage_desc:1 "The proud peoples of the Caucasus have witnessed the rise of countless empires across the millenia and remain resilient in the face of invasion, persecution, and domination. Their indomitable spirit inspires courage few can match in the face of unfavorable odds, and their battle-hardened warriors are more than capable of defending their mountainous homeland."
  
  innovation_caucasian_diplomacy:1 "Caucasian Diplomacy"
  innovation_caucasian_diplomacy_desc:1 "As Muslim invaders and steppe hordes make their incursions into the heart of the Caucasus, it became more and more important to consider pragmatic alliances when dynastic bonds cannot be forged. This relative understanding and cooperation in the face of fierce hostility bore many fruitful military alliances between Georgian, Armenian and Alan states, both with and against their powerful neighbor, the Byzantine Roman Empire."
- sg_unlock_caucasian_diplomacy:1 "[rulers|E] are able to propose one [alliance|E] without a [marriage|E] if both rulers' cultures share this innovation."
+ sg_unlock_caucasian_diplomacy:1 "[rulers|E] are able to propose one [alliance|E] without a [marriage|E] if both rulers' cultures share this innovation"
  sg_caucasian_alliance_interaction_opinion:1 "In Regional Alliance"
  
  innovation_knights_of_the_east:1 "Knights of the East"
@@ -78,6 +78,16 @@
  
  innovation_norman_customary_law:1 "Norman Customary Law"
  innovation_norman_customary_law_desc:1 "Combining aspects of Scandinavian tradition with the laws and customs of the lands they settled, the Normans developed unique traditions that survive even to the present day in areas of the former Duchy of Normandy. One noticeable practice was the designation of one's heir regardless of the social status of the mother, which allowed lesser or illegitimate sons to assume the mantle of leadership, such as Richard I of Normandy, Roger II of Sicily, and more famously, William the Conqueror."
- sg_may_designate_heir:1 "Enables the #italic $designate_heir_interaction$#! interaction if the realm has a $confederate_partition_succession_law$, $partition_succession_law$, or $high_partition_succession_law$ $game_concept_succession_law$"
+ sg_may_designate_heir:1 "Enables the #italic $designate_heir_interaction$#! interaction if the realm has $confederate_partition_succession_law$, $partition_succession_law$, or $high_partition_succession_law$ $game_concept_succession_law$"
+ 
+ #Central Germanic
+ innovation_east_settling:1 "Ostsiedlung"
+ innovation_east_settling_desc:1 "The lands to the east are sparsely inhabited, but rich in natural resources. Allowing and even encouraging settlers to establish homesteads there will strengthen trade and greatly benefit the [CULTURE.GetName] people."
+ sg_settle_the_borderlands:1 "Foreign [culture|E] [counties|E] directly bordering ours may change to our culture."
+ 
+ innovation_german_town_law:1 "German Town Law"
+ innovation_german_town_law_desc:1 "As a thriving urban tradition developed in the German heartland, settlers seeking opportunities elsewhere carried with them the charters and traditions that had fostered the growth of such prosperous cities and adapted them to their new homes. The most famous of these were the Magdeburg rights and later the Lübeck law, which arbitrated disputes and protected the rights of all citizens regardless of culture or creed. Not only did these laws promote trade and commerce locally, but also allowed for the rise of extensive trading networks all over Christian Eastern Europe."
+ innovation_german_town_law_trigger:1 "No [powerful_rank_adj|E] [CULTURE.GetName] realm has access to a [county|E] with knowledge of this innovation."
+ sg_can_spread_from_neighboring_diff_culture_county_christian:1 "May spread to a primarily Christian culture from a neighboring culture that has this innovation"
  
 

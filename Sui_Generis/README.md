@@ -18,7 +18,7 @@ Currently, the mod features innovations for the following culture groups:
 ## Central Germanic:
 - Stammesherzogtum _(valid for Franconians, Swabians, Bavarians, and Saxons)_: +5 Same Culture Opinion, Central Germanic vassals of a Central Germanic liege are less likely to start or join Independence factions
 - Ostsiedlung: +15% Development/month, may flip counties in bordering realms to your culture, which can be increased if a city in that county has the unique Rathaus building
-- German Town Law _(can be exported to other primarily Christian cultures, but cannot be adopted by any culture that has adopted Seigneurialism)_: Unlocks the unique Rathaus building line, which provides tax income and Development/month
+- German Town Law _(can be exported to other primarily Christian cultures, but cannot be adopted by any culture that has adopted Seigneurialism)_: Unlocks the unique Rathaus building line for city holdings, which provides tax income and Development/month
 ## Persian:
 - Parsi Renaissance _(requires a county of 20 Development or higher)_: +1.0 Development Growth/month in the capital county
 - Persianate Literary Traditions _(can be exported to other non-Iranian cultures)_: +10% Monthly Prestige Gain for adopting cultures, gives bonus Prestige upon adoption to all rulers of Iranian culture who have unlocked Parsi Renaissance.

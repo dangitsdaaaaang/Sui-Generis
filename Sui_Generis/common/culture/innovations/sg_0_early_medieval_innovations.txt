@@ -52,27 +52,6 @@ innovation_reconquista = {
 	flag = early_medieval_era_regional
 }
 
-innovation_stem_duchies = {
-	group = culture_group_regional
-	culture_era = culture_era_early_medieval
-	region = custom_europe_western_germany
-	icon = @majesty_03
-
-	potential = { #hide unless relevant, will otherwise inflate innovation count needed to go to the next era
-		any_county_in_region = {
-			region = custom_europe_western_germany
-			culture = root
-		}
-	}
-	
-	modifier = {
-		direct_vassal_opinion = 5
-	}
-
-	flag = global_regional
-	flag = early_medieval_era_regional
-}
-
 innovation_ghilman = {
 	group = culture_group_regional
 	culture_era = culture_era_early_medieval

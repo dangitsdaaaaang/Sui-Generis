@@ -1,0 +1,14 @@
+﻿l_english:
+ #German Town Law (Central Germanic)
+ building_type_sg_rathaus_01:1 "Rathaus"
+ building_type_sg_rathaus_01_desc:1 "Conflicts and arbitrations are settled at the Rathaus by a council modeled after the tradition of German town law."
+ building_sg_rathaus_01:0 "Rathaus"
+ building_sg_rathaus_01_desc:0 "$building_type_sg_rathaus_01_desc$"
+ building_sg_rathaus_02:1 "Jewish Quarter"
+ building_sg_rathaus_02_desc:1 "Protections issued to the Jews under the law have allowed a thriving community to grow, further facilitating trade and commerce."
+ building_sg_rathaus_03:1 "Municipal Courthouse"
+ building_sg_rathaus_03_desc:1 "Employing legal precedents from the major German trade cities, judgment on civil and criminal matters is rendered at the municipal courthouse."
+ building_sg_rathaus_04:1 "Regional Capital"
+ building_sg_rathaus_04_desc:1 "The development of this trading town into a center of commerce has brought incredible wealth to the region and attracts traders, artisans, and workers in search of wealth and livelihood."
+ 
+

@@ -81,6 +81,10 @@
  sg_may_designate_heir:1 "Enables the #italic $designate_heir_interaction$#! interaction if the realm has $confederate_partition_succession_law$, $partition_succession_law$, or $high_partition_succession_law$ $game_concept_succession_law$"
  
  #Central Germanic
+ innovation_stem_duchies:0 "Stammesherzogtum"
+ innovation_stem_duchies_desc:0 "The ancient laws and customs of the Bavarian, Alamannic, Franconian and Saxon peoples had for hundreds of years  formed the core of the identities of the peoples of Germania. Though the Empire had united the tribal kingdoms into a single polity and granted them a single throne for which to vie, the regional stem duchies persisted and would serve as the powerbases of the great princely houses until they one by one fell into disarray or were dismantled, more often than not at the hands of vengeful Emperors."
+ sg_central_germanic_culture_group_reduced_factionalism:1 "$central_germanic_group$ [culture_group|E] [vassals|E] are less likely to join [independence_factions|E] against $central_germanic_group$ [culture_group|E] [rulers|E]."
+ 
  innovation_east_settling:1 "Ostsiedlung"
  innovation_east_settling_desc:1 "The lands to the east are sparsely inhabited, but rich in natural resources. Allowing and even encouraging settlers to establish homesteads there will strengthen trade and greatly benefit the [CULTURE.GetName] people."
  sg_settle_the_borderlands:1 "Foreign [culture|E] [counties|E] directly bordering ours may change to our culture."

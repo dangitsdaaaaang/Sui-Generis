@@ -29,6 +29,26 @@
 @special_maa_02 = "gfx/interface/icons/culture_innovations/innovation_special_maa_02.dds"
 
 #Frankish Cultural Innovations
+innovation_stem_duchies = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	icon = @majesty_03
+
+	potential = {
+		culture_group = culture_group:central_germanic_group
+		NOT = { this = culture:dutch }
+	}
+	
+	modifier = {
+		same_culture_opinion = 5
+	}
+	
+	custom = sg_central_germanic_culture_group_reduced_factionalism
+
+	flag = global_regional
+	flag = early_medieval_era_regional
+}
+
 innovation_east_settling = {
 	group = culture_group_regional
 	culture_era = culture_era_high_medieval
@@ -86,7 +106,10 @@ innovation_german_town_law = {
 		trigger_else = {
 			custom_description = { 
 				text = "innovation_german_town_law_trigger"
-				sg_powerful_rank = yes
+				any_ruler = {
+					this.culture = prev
+					sg_powerful_rank = yes
+				}
 				can_spread_from_neighboring_diff_culture_county = {
 					HAS_INNOVATION_LIST = "has_innovation = innovation_german_town_law"
 				}

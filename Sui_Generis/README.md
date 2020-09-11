@@ -3,13 +3,13 @@ _Sui Generis_ was designed with two objectives in mind: firstly that each cultur
 
 Currently, the mod features innovations for the following culture groups:
 ## Berbers:
-- Barb Horses _(can be exported to other cultures)_: bonus damage, toughness, and pursuit for light cavalry _(can be exported to other cultures)_
+- Barb Horses _(can be exported to other cultures)_: bonus damage, toughness, and pursuit for light cavalry
 - Barbary Corsairs: enables raiding by land and sea, -25% Embarkation cost and +40% Naval Movement speed
 ## Byzantines:
 - Legacy of Rome (unique to Greeks): +15 Baseline Dread, +2% Monthly Prestige Gain per Dread
 - Legacy of the Autokrator _(can be exported to other primarily Eastern Christian cultures)_: + 10 Baseline Dread, -10% Dread Decay 
 - Caucasian Heritage: +5 Advantage in Desert Mountains and Mountains
-- Caucasian Diplomacy: enables 1 free alliance with other Caucasian/Greek rulers
+- Caucasian Diplomacy _(unique to the Byzantine culture group): enables 1 alliance without marriage with other Caucasian/Greek rulers
 - Knights of the East _(can be exported to other primarily Eastern Christian cultures or Outremer culture)_: unlocks two powerful Heavy Cavalry Men-at-Arms regiments
 ## Frankish:
 - Seigneurialism _(requires Manorialism, can be exported to English and Scottish cultures)_: +25% Domain Tax, +15% Levy Size, +10% County Control Gain **BUT** -2 Domain Limit if ruler is a Duke or higher tier and either independent or holding more than 4 counties, -25% Vassal Tax Contribution Multiplier, -33% Vassal Levy Contribution Multiplier, and -15 Popular Opinion 

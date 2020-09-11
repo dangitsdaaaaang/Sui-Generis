@@ -1,5 +1,4 @@
-﻿#### Local Types ####
-@administration_1 = "gfx/interface/icons/culture_innovations/innovation_administration_01.dds"
+﻿administration_1 = "gfx/interface/icons/culture_innovations/innovation_administration_01.dds"
 @administration_2 = "gfx/interface/icons/culture_innovations/innovation_administration_02.dds"
 @administration_3 = "gfx/interface/icons/culture_innovations/innovation_administration_03.dds"
 @civil_construction_1 = "gfx/interface/icons/culture_innovations/innovation_civil_construction_01.dds"
@@ -29,22 +28,26 @@
 @special_maa_01 = "gfx/interface/icons/culture_innovations/innovation_special_maa_01.dds"
 @special_maa_02 = "gfx/interface/icons/culture_innovations/innovation_special_maa_02.dds"
 
-#culture_group_regional
-innovation_ghilman = {
+#Iberian Cultural Innovations
+innovation_reconquista = {
 	group = culture_group_regional
 	culture_era = culture_era_early_medieval
-	region = world_middle_east_arabia
-	icon = @maa_02
-	
-	potential = { #hide unless relevant, will otherwise inflate innovation count needed to go to the next era
-		any_county_in_region = {
-			region = world_middle_east_arabia
-			culture = root
+	region = world_europe_west_iberia
+	icon = @leadership_2
+
+	potential = { 
+		OR = {
+			culture_group = culture_group:iberian_group
+			culture_group = culture_group:berber_group
+			this = culture:maghrebi
+			this = culture:bedouin
+			this = culture:andalusian
 		}
 	}
 	
+	custom = cb_discount_piety_10
 	modifier = {
-		men_at_arms_maintenance = -0.15
+		martial_per_piety_level = 1
 	}
 
 	flag = global_regional

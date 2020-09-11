@@ -1,12 +1,17 @@
 ﻿# Caucasian Diplomacy (Byzantine)
-on_alliance_removed = { #hopefully merges instead of overrides, but copied from alliance_on_actions.txt
+on_alliance_removed = { #from alliance_on_actions.txt, separated on_action from effect since behavior is to override, not append
+	on_action = {
+		on_alliance_removed_caucasian_diplomacy
+	}
+}
+
+on_alliance_removed_caucasian_diplomacy = {
 	effect = {
 		# Remove the opinion modifier from having proposed an alliance via the innovation:
 		try_remove_caucasian_alliance_opinion_effect = { TARGET = scope:second } 
 		scope:second = { try_remove_caucasian_alliance_opinion_effect = { TARGET = root } }
 	}
 }
-
 # Persianate Literary Influence (Persian)
 innovation_persian_court_literature_adopted_pulse = { 
 	trigger = {
@@ -84,15 +89,12 @@ innovation_peerage_homage = {
 #Seigneurialism Domain Limit Penalty (Frankish + English/Scots)
 innovation_seigneurialism_domain_limit_penalty_pulse = {
 	trigger = {
-		any_ruler = {
-			culture = { has_innovation = innovation_seigneurialism }
-		}
+		culture = { has_innovation = innovation_seigneurialism }
 	}
 	
 	effect = {
 		if = {
 			limit = { 
-				culture = { has_innovation = innovation_seigneurialism }
 				sg_powerful_rank = yes 
 				NOT = { has_character_modifier = sg_consolidated_domain }
 			}
@@ -110,115 +112,107 @@ innovation_seigneurialism_domain_limit_penalty_pulse = {
 #Ostsiedlung Culture Flip (Central Germanic)
 innovation_east_settling_county_culture_change_pulse = {
 	trigger = {
-		any_ruler = {
-			culture = { has_innovation = innovation_east_settling }
-			sg_powerful_rank = yes
-		}
+		culture = { has_innovation = innovation_east_settling }
+		sg_powerful_rank = yes
 	}
 	
 	effect = {
-		if = {
+		save_temporary_scope_as = sponsor
+		every_realm_county = {
 			limit = { 
-				culture = { has_innovation = innovation_east_settling }
-				sg_powerful_rank = yes
-			}
-			save_scope_as = sponsor
-			every_realm_county = {
-				limit = { 
-					culture = scope:sponsor.culture
-					any_title_to_title_neighboring_and_across_water_county = {
-						holder = {
-							character_is_realm_neighbor = scope:sponsor
-						}
-						NOT = {
-							culture.culture_group = culture_group:central_germanic_group
-							has_variable = sg_settlement_eval 
-						}
-						any_province = {
-							has_holding_type = city_holding
-						}
+				culture = scope:sponsor.culture
+				any_title_to_title_neighboring_and_across_water_county = {
+					holder = {
+						character_is_realm_neighbor = scope:sponsor
+					}
+					NOT = {
+						culture.culture_group = culture_group:central_germanic_group
+						has_variable = sg_settlement_eval 
+					}
+					any_province = {
+						has_holding_type = city_holding
 					}
 				}
-				save_scope_as = source_county
-				debug_log = "Ostsiedlung: potential source county [source_county.GetName] identified."
-				random_title_to_title_neighboring_and_across_water_county = {
-					limit = { 
-						NOT = {
-							culture.culture_group = culture_group:central_germanic_group
-							has_variable = sg_settlement_eval 
-						}
-						holder = {
-							character_is_realm_neighbor = scope:sponsor
-						}
-						any_province = {
-							has_holding_type = city_holding
+			}
+			save_temporary_scope_as = source_county
+			debug_log = "Ostsiedlung: potential source county [source_county.GetTitle.GetName] identified."
+			random_title_to_title_neighboring_and_across_water_county = {
+				limit = { 
+					NOT = {
+						culture.culture_group = culture_group:central_germanic_group
+						has_variable = sg_settlement_eval 
+					}
+					holder = {
+						character_is_realm_neighbor = scope:sponsor
+					}
+					any_province = {
+						has_holding_type = city_holding
+					}
+				}
+				save_temporary_scope_as = target_county
+				debug_log = "Ostsiedlung: source county [target_county.GetTitle.GetName] evaluating"
+				random_list = {
+					95 = {
+						set_variable = { name = sg_settlement_eval value = true days = 300 }
+						debug_log = "Ostsiedlung: no culture change in [target_county.GetTitle.GetName]."
+					}
+					2 = {
+						trigger = { scope:sponsor = { culture = culture:bavarian } }
+						set_county_culture = culture:bavarian
+						debug_log = "Ostsiedlung: culture change to Bavarian in [target_county.GetTitle.GetName]."
+						modifier = {
+							add = 3
+							any_province = {
+								has_building_or_higher = sg_rathaus_01
+								debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetTitle.GetName]."
+							}
 						}
 					}
-					save_scope_as = target_county
-					debug_log = "Ostsiedlung: source county [target_county.GetName] evaluating"
-					random_list = {
-						95 = {
-							set_variable = { name = sg_settlement_eval value = true days = 300 }
-							debug_log = "Ostsiedlung: no culture change in [target_county.GetName]."
-						}
-						2 = {
-							trigger = { scope:sponsor = { culture = culture:bavarian } }
-							set_county_culture = culture:bavarian
-							debug_log = "Ostsiedlung: culture change to Bavarian in [target_county.GetName]."
-							modifier = {
-								add = 3
-								any_province = {
-									has_building_or_higher = sg_rathaus_01
-									debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetName]."
-								}
+					2 = {
+						trigger = { scope:sponsor = { culture = culture:dutch } }
+						set_county_culture = culture:dutch
+						debug_log = "Ostsiedlung: culture change to Dutch in [target_county.GetTitle.GetName]."
+						modifier = {
+							add = 3
+							any_province = {
+								has_building_or_higher = sg_rathaus_01
+								debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetTitle.GetName]."
 							}
 						}
-						2 = {
-							trigger = { scope:sponsor = { culture = culture:dutch } }
-							set_county_culture = culture:dutch
-							debug_log = "Ostsiedlung: culture change to Dutch in [target_county.GetName]."
-							modifier = {
-								add = 3
-								any_province = {
-									has_building_or_higher = sg_rathaus_01
-									debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetName]."
-								}
+					}
+					2 = {
+						trigger = { scope:sponsor = { culture = culture:franconian } }
+						set_county_culture = culture:franconian
+						debug_log = "Ostsiedlung: culture change to Franconian in [target_county.GetTitle.GetName]."
+						modifier = {
+							add = 3
+							any_province = {
+								has_building_or_higher = sg_rathaus_01
+								debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetTitle.GetName]."
 							}
 						}
-						2 = {
-							trigger = { scope:sponsor = { culture = culture:franconian } }
-							set_county_culture = culture:franconian
-							debug_log = "Ostsiedlung: culture change to Franconian in [target_county.GetName]."
-							modifier = {
-								add = 3
-								any_province = {
-									has_building_or_higher = sg_rathaus_01
-									debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetName]."
-								}
+					}
+					2 = {
+						trigger = { scope:sponsor = { culture = culture:saxon } }
+						set_county_culture = culture:saxon
+						debug_log = "Ostsiedlung: culture change to Saxon in [target_county.GetTitle.GetName]."
+						modifier = {
+							add = 3
+							any_province = {
+								has_building_or_higher = sg_rathaus_01
+								debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetTitle.GetName]."
 							}
 						}
-						2 = {
-							trigger = { scope:sponsor = { culture = culture:saxon } }
-							set_county_culture = culture:saxon
-							debug_log = "Ostsiedlung: culture change to Saxon in [target_county.GetName]."
-							modifier = {
-								add = 3
-								any_province = {
-									has_building_or_higher = sg_rathaus_01
-									debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetName]."
-								}
-							}
-						}
-						2 = {
-							trigger = { scope:sponsor = { culture = culture:swabian } }
-							set_county_culture = culture:swabian
-							debug_log = "Ostsiedlung: culture change to Swabian in [target_county.GetName]."
-							modifier = {
-								add = 3
-								any_province = {
-									has_building_or_higher = sg_rathaus_01
-									debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetName]."
-								}
+					}
+					2 = {
+						trigger = { scope:sponsor = { culture = culture:swabian } }
+						set_county_culture = culture:swabian
+						debug_log = "Ostsiedlung: culture change to Swabian in [target_county.GetTitle.GetName]."
+						modifier = {
+							add = 3
+							any_province = {
+								has_building_or_higher = sg_rathaus_01
+								debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetTitle.GetName]."
 							}
 						}
 					}

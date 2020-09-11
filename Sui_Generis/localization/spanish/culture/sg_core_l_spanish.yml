@@ -1,0 +1,10 @@
+﻿l_spanish:
+ #Scripted Trigger Clarification Tooltips
+ sg_can_spread_from_neighboring_diff_culture_county:1 "Puede extenderse desde una cultura vecina que ya la haya adoptado"
+ can_spread_from_neighboring_diff_culture_county_trigger:1 "Ningún [county|E] de nuestra [culture|E] limita con ningún [county|E] perteneciente a una cultura que haya adoptado esta innovación."
+ sg_can_spread_from_close_family_member_ruler_or_noble_courtier:1 "Puede extenderse desde [noble|E] [courtiers|E] o [close_family_members|E] que sean [rulers|E] de una cultura que ya la haya adoptado"
+ can_spread_from_close_family_member_ruler_or_noble_courtier_trigger:1 "Ningún [powerful_rank_adj|E] [CULTURE.GetName] gobernante tiene un [noble|E] [courtiers|E] en su corte o [close_family_members|E] de una cultura que haya adoptado esta innovación."
+ 
+ 
+
+

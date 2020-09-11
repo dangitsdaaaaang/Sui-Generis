@@ -1,7 +1,7 @@
 ﻿l_english:
  #Caucasian Diplomacy (Byzantine)
  sg_caucasian_alliance_interaction:0 "Propose Regional Alliance"
- sg_caucasian_alliance_interaction_desc:0 "Though we do not share a bond of blood with [recipient.GetTitledFirstNameNoTooltip], we sons of the Caucasus must establish an alliance to unite against our enemies." 
+ sg_caucasian_alliance_interaction_desc:0 "Though we do not share a bond of blood with [recipient.GetTitledFirstNameNoTooltip], we sons of the Caucasus must establish an alliance to unite against our enemies."
  sg_already_has_an_alliance_deal:0 "You can have one regional [alliance|E] active"
  NOT_sg_already_has_an_alliance_deal:0 "You already have one regional [alliance|E] active"
  SG_CAUCASIAN_ALLIANCE_NOTIFICATION:0 "Our enemies beat at our gates and I believe we both stand to gain from an alliance. I propose that we join our forces and fight them together!"

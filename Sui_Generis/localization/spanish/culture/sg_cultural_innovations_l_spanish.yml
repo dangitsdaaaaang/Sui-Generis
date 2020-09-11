@@ -1,38 +1,38 @@
-﻿l_english:
+﻿l_spanish:
  #Berber
- innovation_barb_horses_berber:1 "Barb Horses"
- innovation_barb_horses_berber_desc:1 "The Barb horse is a northern African breed with great hardiness and stamina and generally possesses a fiery temperament. These prize stallions bore the fierce Berber invaders during the conquest of al-Andalus and became a cornerstone of the elite mounted forces of the Iberian peninsula and beyond."
+ innovation_barb_horses_berber:1 "Caballo Bereber"
+ innovation_barb_horses_berber_desc:1 "El caballo Bereber es una raza del norte africano con gran resistencia y con un temperamento normalmente fiero. Estos ansiados sementales acompañaron a los fieros invasores Bereberes en la conquista de al-Ándalus y se convirtieron en la piedra angular de las fuerzas de élite montadas de la península Ibérica y más allá."
  
- innovation_barb_horses_andalusian:1 "Barb Horses"
- innovation_barb_horses_andalusian_desc:1 "The Barb horse is a northern African breed with great hardiness and stamina and generally possesses a fiery temperament. These prize stallions bore the fierce Berber invaders during the conquest of al-Andalus and became a cornerstone of the elite mounted forces of the Iberian peninsula and beyond."
+ innovation_barb_horses_andalusian:1 "Caballos Bereberes"
+ innovation_barb_horses_andalusian_desc:1 "El caballo Bereber es una raza del norte africano con gran resistencia y con un temperamento normalmente fiero. Estos ansiados sementales acompañaron a los fieros invasores Bereberes en la conquista de al-Ándalus y se convirtieron en la piedra angular de las fuerzas de élite montadas de la península Ibérica y más allá."
  
- innovation_barb_horses_iberian:1 "Barb Horses"
- innovation_barb_horses_iberian_desc:1 "The Barb horse is a northern African breed with great hardiness and stamina and generally possesses a fiery temperament. These prize stallions bore the fierce Berber invaders during the conquest of al-Andalus and became a cornerstone of the elite mounted forces of the Iberian peninsula and beyond."
+ innovation_barb_horses_iberian:1 "Caballo Bereber"
+ innovation_barb_horses_iberian_desc:1 "El caballo Bereber es una raza del norte africano con gran resistencia y con un temperamento normalmente fiero. Estos ansiados sementales acompañaron a los fieros invasores Bereberes en la conquista de al-Ándalus y se convirtieron en la piedra angular de las fuerzas de élite montadas de la península Ibérica y más allá."
  
- innovation_barb_horses_world:1 "Barb Horses"
- innovation_barb_horses_world_desc:1 "The Barb horse is a northern African breed with great hardiness and stamina and generally possesses a fiery temperament. These prize stallions bore the fierce Berber invaders during the conquest of al-Andalus and became a cornerstone of the elite mounted forces of the Iberian peninsula and beyond."
+ innovation_barb_horses_world:1 "Caballo Bereber"
+ innovation_barb_horses_world_desc:1 "El caballo Bereber es una raza del norte africano con gran resistencia y con un temperamento normalmente fiero. Estos ansiados sementales acompañaron a los fieros invasores Bereberes en la conquista de al-Ándalus y se convirtieron en la piedra angular de las fuerzas de élite montadas de la península Ibérica y más allá."
  
- innovation_barbary_corsairs:1 "Barbary Corsairs"
- innovation_barbary_corsairs_desc:1 "Though the practice of piracy and raiding had always plagued the Mediterranean, the coastal Berber states were able to vastly enrich themselves at the expense of their European neighbors. Such razzias were such a thorn in the side of Italian, French, and Iberian rulers that the Sicilian Normans invaded North Africa in 1135, and in 1390, a French-Genoese joint military expedition embarked on the short-lived Barbary Crusade."
- sg_unlocks_corsair_raiding:1 "Enables [raiding|E] of foreign [counties|E] both by land and by sea, provided the [doctrines|E] of the ruler's [faith|E] do not forbid it"
+ innovation_barbary_corsairs:1 "Piratería Berberisca"
+ innovation_barbary_corsairs_desc:1 "Aunque la práctica de la piratería y el saqueo siempre ha plagado el Mediterráneo, los estados bereberes costeros han sido capaces de enriquecerse a expensas de sus vecinos europeos. Esas razias eran tal molestia para los gobernantes de Italia, Francia y España, que los Normando Sicilianos invadieron el Norte de África en 1135, y en 1390, hubo una expedición conjunta franco-genovesa hacia la breve Cruzada Berberisca."
+ sg_unlocks_corsair_raiding:1 "Permite el [raiding|E] de [counties|E] extranjeros por mar y tierra, a no ser que las [doctrines|E] de la [faith|E] del gobernante no lo prohíban."
  
  #Persian
- innovation_persian_court_literature_iranian:1 "Parsi Renaissance"
- innovation_persian_court_literature_iranian_desc:1 "Despite having been momentarily eclipsed by Arabic as the language of prestige in the Muslim world, the great literary tradition of the Persians resurged in the latter half of the first millenium, fueled by a longing for the restoration of a national identity. For centuries afterward, Persian language and culture became the primary influence upon the extravagant courts and sprawling cities not only of Persia proper, but also the far reaches of Muslim-ruled India and the steppes of Central Asia and beyond."
- innovation_persian_court_literature_iranian_trigger:1 "A [county|E] of our [culture|E] has not [development_minor_adj|E] sufficiently to serve as a new cultural center for the [CULTURE.GetName] people."
+ innovation_persian_court_literature_iranian:1 "Renacimiento Parsi"
+ innovation_persian_court_literature_iranian_desc:1 "A pesar de haber sido eclipsado temporalmente por el árabe como idioma de prestigio en el mundo musulmán, la gran literatura de lo persas resurgió en la segunda mitad del primer milenio, auspiciada por un anhelo de restauración de la identidad nacional. Durante siglos, el idioma y la cultura persas se convirtieron en la influencia principal entre las extravagantes cortes y florecientes ciudades no solo de Persia, sino también de lejanos rincones de la India musulmana y las estepas de Ásia Central."
+ innovation_persian_court_literature_iranian_trigger:1 "Un [county|E] de nuestra [culture|E] no se ha [development_minor_adj|E] suficiente como para servir de nuevo centro cultural para la gente [CULTURE.GetName]."
  
- innovation_persian_court_literature_world:1 "Persianate Literary Influence"
- innovation_persian_court_literature_world_desc:1 "Despite having been momentarily eclipsed by Arabic as the language of prestige in the Muslim world, the great literary tradition of the Persians resurged in the latter half of the first millenium, most famously in the #italic Shahnameh#! by the renowned poet Ferdowsi. For centuries afterward, Persian literature became the primary influence upon the court languages not only of the sultanates of Persia proper, but also the far reaches of Muslim-ruled India and the steppes of Central Asia and beyond."
- sg_persian_court_literature_mechanic:1 "Every [culture|E] that adopts the Persianate Literary Influence innovation will grant us additional [prestige|E]."
- innovation_persian_court_literature_adopted:1 "Innovation Adopted by Foreign Culture" 
- innovation_persian_court_literature_adopted_desc:1 "The [culture_head_notification.GetCulture.GetCollectiveNoun] are beginning to model their written works after our own. Our language and literature will become the envy of the world!"
+ innovation_persian_court_literature_world:1 "Influencia Literaria Persa"
+ innovation_persian_court_literature_world_desc:1 "A pesar de haber sido eclipsado temporalmente por el árabe como idioma de prestigio en el mundo musulmán, la gran literatura de los persas resurgió en la segunda mitad del primer milenio, con el famoso ejemplo del #italic Shahnameh#! del renombrado poeta Ferdousí. Durante siglos, el idioma y la cultura persas se convirtieron en la influencia principal entre las extravagantes cortes y florecientes ciudades no solo de Persia, sino también de lejanos rincones de la India musulmana y las estepas de Ásia Central."
+ sg_persian_court_literature_mechanic:1 "Toda [culture|E] que adopte la innovación Influencia Literaria Persa ganará [prestige|E] adicional."
+ innovation_persian_court_literature_adopted:1 "Innovación Adoptada por Cultura Extranjera"
+ innovation_persian_court_literature_adopted_desc:1 "La [culture_head_notification.GetCulture.GetCollectiveNoun]ha comenzado a modelar su escritura siguiendo a la nuestra. ¡Nuestra lengua y literatura será la envidia de todos!"
  
- innovation_iranian_epic_verse:1 "Persian Epic Verse"
- innovation_iranian_epic_verse_desc:1 "The flourishing of Persian culture and letters gave rise to an astoundingly vibrant poetic tradition. Verses skillfully composed for their wit and brevity began to make their way into the common language, while more elevated, courtly verses embellished the feats of great kings of ages past and present. The most famous of these was the #italic Shahnameh#! by Ferdowsi, the monumental labor of almost 30 years serving as a tribute to and inspiration for the spirit and prowess of the Persian people."
- innovation_iranian_epic_verse_trigger:1 "A [county|E] of our [culture|E] has not [development_major_adj|E] sufficiently to begin attracting skilled poets and writers to produce great works in the [CULTURE.GetName] language."
+ innovation_iranian_epic_verse:1 "Verso Persa Épico"
+ innovation_iranian_epic_verse_desc:1 "La floreciente cultura y literatura persa ha impulsado una tradición poética asombrosamente vibrante. Los verbos hábilmente compuestos con ingenio y brevedad se han abierto paso en el lenguaje común, mientras los versos cortesanos embellecen las hazañas de los grandes reyes del pasado y del presente. El más famoso de ellos fue el #italic Shahnameh#! de Ferdousí, una monumental labor de casi 30 años que sirve como tributo e inspiración para el espíritu y destreza del pueblo Persa."
+ innovation_iranian_epic_verse_trigger:1 "Un [county|E] de nuestra [culture|E] no se ha [development_major_adj|E] suficiente para empezar a atraer poetas expertos y escritores que produzcan grandes obras en lengua [CULTURE.GetName]."
  
  #Byzantine
- innovation_legacy_of_rome:1 "Legacy of Rome"
+ innovation_legacy_of_rome:1 "Legado de Roma"
  innovation_legacy_of_rome_desc:1 "Despite the fall of the empire in the West, the imperial tradition of the Romans remains strong in the East where the authority of a strong ruler is still to be respected and feared. Hardened by centuries of battling for survival against myriad foes, true Romans understand that might makes right, and the shining beacon of civilization can only be upheld by a will of iron."
  
  innovation_legacy_of_byzantium:1 "Legacy of the Autokrator"

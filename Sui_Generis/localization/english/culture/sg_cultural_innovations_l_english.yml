@@ -24,7 +24,7 @@
  innovation_persian_court_literature_world:1 "Persianate Literary Influence"
  innovation_persian_court_literature_world_desc:1 "Despite having been momentarily eclipsed by Arabic as the language of prestige in the Muslim world, the great literary tradition of the Persians resurged in the latter half of the first millenium, most famously in the #italic Shahnameh#! by the renowned poet Ferdowsi. For centuries afterward, Persian literature became the primary influence upon the court languages not only of the sultanates of Persia proper, but also the far reaches of Muslim-ruled India and the steppes of Central Asia and beyond."
  sg_persian_court_literature_mechanic:1 "Every [culture|E] that adopts the Persianate Literary Influence innovation will grant us additional [prestige|E]."
- innovation_persian_court_literature_adopted:1 "Innovation Adopted by Foreign Culture" 
+ innovation_persian_court_literature_adopted:1 "Innovation Adopted by Foreign Culture"
  innovation_persian_court_literature_adopted_desc:1 "The [culture_head_notification.GetCulture.GetCollectiveNoun] are beginning to model their written works after our own. Our language and literature will become the envy of the world!"
  
  innovation_iranian_epic_verse:1 "Persian Epic Verse"

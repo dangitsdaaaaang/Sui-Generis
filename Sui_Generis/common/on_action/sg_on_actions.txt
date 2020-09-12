@@ -244,7 +244,7 @@ innovation_reconquista_piety_gain = {
 				}
 			}
 		}
-		barony = {
+		scope:barony = {
 			geographical_region = world_europe_west_iberia
 		}
 	}
@@ -261,31 +261,30 @@ innovation_reconquista_piety_gain = {
 	}
 }
 
-#Iberian Military Orders Knightly Prowess (Iberian)
-innovation_iberian_military_orders_knightly_prowess_pulse = {
-	trigger = {
-		any_held_title = {
-			is_holy_order = yes
-		}
-	}	
+# #Iberian Military Orders Knightly Prowess (Iberian)
+# innovation_iberian_military_orders_knightly_prowess_pulse = {
+	# trigger = {
+		# any_held_title = {
+			# is_holy_order = yes
+		# }
+	# }	
 	
-	effect = {
-		add_character_modifier = sg_military_order_prowess
-		every_courtier = {
-			limit = { 
-				has_trait = order_member 
-				culture = { has_innovation = innovation_iberian_military_orders }
-			}
-			add_character_modifier = sg_military_order_prowess
-		}
-	}
-}
+	# effect = {
+		# add_character_modifier = sg_military_order_prowess
+		# every_courtier = {
+			# limit = { 
+				# has_trait = order_member 
+				# culture = { has_innovation = innovation_iberian_military_orders }
+			# }
+			# add_character_modifier = sg_military_order_prowess
+		# }
+	# }
+# }
 
 quarterly_playable_pulse = {
 	on_actions = {
 		innovation_persian_court_literature_adopted_pulse
 		innovation_seigneurialism_domain_limit_penalty_pulse
-		innovation_iberian_military_orders_knightly_prowess_pulse
 	}
 }
 

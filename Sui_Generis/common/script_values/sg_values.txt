@@ -219,6 +219,10 @@ reconquista_raiding_piety = {
 	value = 25
 	multiply = reconquista_raiding_martial
 }
+reconquista_raiding_piety_loss = {
+	value = reconquista_raiding_piety
+	multiply = -2
+}
 #Iberian Military Orders (Iberian)
 holy_order_piety_cost = { #overwrite value in 00_holy_order_values.txt
 	value = 1000

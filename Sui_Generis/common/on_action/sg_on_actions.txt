@@ -245,17 +245,30 @@ innovation_reconquista_piety_gain = {
 			}
 		}
 		scope:barony = {
-			geographical_region = world_europe_west_iberia
+			title_province = { geographical_region = world_europe_west_iberia }
 		}
 	}
 	
 	effect = {
-		scope:raider = {
-			send_interface_message = {
-				title = innovation_reconquista_piety_gain_toast
-				desc = event_message_effect
-				type = event_toast_effect_good
-				add_piety = reconquista_raiding_piety
+		if = {
+			limit = { NOT = { scope:county.faith.religion = scope:raider.faith.religion } }
+			scope:raider = {
+				send_interface_message = {
+					title = innovation_reconquista_piety_gain_toast
+					desc = event_message_effect
+					type = event_toast_effect_good
+					add_piety = reconquista_raiding_piety
+				}
+			}
+		}
+		else = {
+			scope:raider = {
+				send_interface_message = {
+					title = innovation_reconquista_piety_gain_toast_bad
+					desc = event_message_effect
+					type = event_toast_effect_bad
+					add_piety = reconquista_raiding_piety_loss
+				}
 			}
 		}
 	}

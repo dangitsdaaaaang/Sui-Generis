@@ -1,4 +1,4 @@
-﻿administration_1 = "gfx/interface/icons/culture_innovations/innovation_administration_01.dds"
+﻿@administration_1 = "gfx/interface/icons/culture_innovations/innovation_administration_01.dds"
 @administration_2 = "gfx/interface/icons/culture_innovations/innovation_administration_02.dds"
 @administration_3 = "gfx/interface/icons/culture_innovations/innovation_administration_03.dds"
 @civil_construction_1 = "gfx/interface/icons/culture_innovations/innovation_civil_construction_01.dds"
@@ -32,24 +32,71 @@
 innovation_reconquista = {
 	group = culture_group_regional
 	culture_era = culture_era_early_medieval
+	icon = @leadership_1
+
+	potential = { 
+		culture_group = culture_group:iberian_group
+	}
+	
+	modifier = {
+		martial_per_piety_level = 1
+		raid_speed = -0.5
+	}
+	
+	custom = cb_discount_piety_10
+	custom = sg_reconquista_raiding
+
+	flag = global_regional
+	flag = early_medieval_era_regional
+}
+
+innovation_reconquista_muslim = {
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
 	region = world_europe_west_iberia
 	icon = @leadership_2
 
 	potential = { 
 		OR = {
-			culture_group = culture_group:iberian_group
 			culture_group = culture_group:berber_group
 			this = culture:maghrebi
-			this = culture:bedouin
 			this = culture:andalusian
 		}
 	}
 	
-	custom = cb_discount_piety_10
 	modifier = {
 		martial_per_piety_level = 1
+		raid_speed = -0.5
 	}
+	
+	custom = cb_discount_piety_10
+	custom = sg_reconquista_raiding
 
 	flag = global_regional
 	flag = early_medieval_era_regional
 }
+
+innovation_iberian_military_orders = {
+	group = culture_group_regional
+	culture_era = culture_era_high_medieval
+	icon = @leadership_1
+
+	potential = { 
+		culture_group = culture_group:iberian_group
+	}
+	
+	can_progress = {
+		has_innovation = innovation_knighthood
+	}
+	
+	modifier = {
+		holy_order_hire_cost_mult = -0.15
+		prowess_per_piety_level = 1
+	}
+	
+	custom = sg_holy_order_create_cost_reduction
+
+	flag = global_regional
+	flag = high_medieval_era_regional
+}
+

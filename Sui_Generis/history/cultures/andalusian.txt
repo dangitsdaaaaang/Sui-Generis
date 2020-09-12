@@ -32,4 +32,5 @@
 	discover_innovation = innovation_house_soldiers
 	discover_innovation = innovation_manorialism
 	discover_innovation = innovation_barb_horses_andalusian #
+	discover_innovation = innovation_reconquista_muslim #
 }

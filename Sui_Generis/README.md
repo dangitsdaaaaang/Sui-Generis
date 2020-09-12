@@ -17,7 +17,7 @@ Currently, the mod features innovations for the following culture groups:
 - Norman Customary Law _(unique to Normans, requires Hereditary Rule)_: Unlocks heir designation in the Early Medieval Era while under any partition succession law, regardless of Crown Authority
 ## Iberian:
 - Reconquista/Fatḥ al-Andalus _(available to Iberian culture group, Andalusian, Maghrebi, and Berber cultures)_: Enables raiding different faith counties within the Iberian region for piety, +1 Martial per level of piety
-- Iberian Military Orders: -25% Holy Order Creation Cost, -15% Holy Order Hire Cost, characters of this culture in a Holy Order gain +2 prowess per level of piety
+- Iberian Military Orders: -33% Holy Order Piety Creation Cost, -15% Holy Order Hire Cost, characters of this culture in a Holy Order gain +2 prowess per level of piety
 ## Central Germanic:
 - Stammesherzogtum _(valid for Franconians, Swabians, Bavarians, and Saxons)_: +5 Same Culture Opinion, Central Germanic vassals of a Central Germanic liege are less likely to start or join Independence factions
 - Ostsiedlung: +15% Development/month, may flip counties in bordering realms to your culture, which can be increased if a city in that county has the unique Rathaus building

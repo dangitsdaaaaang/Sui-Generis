@@ -102,6 +102,7 @@
  sg_reconquista_raiding:1 "Enables [raiding|E], though at a significantly slower rate, of foreign [counties|E] in $world_europe_west_iberia$ for [piety|E] #bold if of a different religion#! scaled to the ruler's [martial|E] ability, provided the [doctrines|E] of the ruler's [faith|E] do not forbid it"
  innovation_reconquista_piety_gain_toast:1 "Infidels in [barony.GetNameNoTier] Castigated!"
  innovation_reconquista_piety_gain_toast_bad:1 "Innocents in [barony.GetNameNoTier] Massacred!"
+ 
  innovation_iberian_military_orders:1 "Iberian Military Orders"
  innovation_iberian_military_orders_desc:1 "One of the natural developments of the intertwining of religious devotion and warlikeness was the tradition of military knightly orders - brothers sworn to devote their lives to defend the faithful against the heathen. Often these orders were royally sponsored and granted tracts of land in order to help sustain themselves, becoming powerful influences in their respective realms. Their status and renown for their feats of arms served as an inspiration for many, both noble and lowborn, to take up the sword for Christ."
  sg_holy_order_create_cost_reduction:1 "[holy_order|E] [piety|E] Creation Cost: #P -33%#!"

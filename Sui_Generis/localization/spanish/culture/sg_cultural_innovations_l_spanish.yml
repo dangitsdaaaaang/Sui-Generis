@@ -18,14 +18,14 @@
  
  #Persian
  innovation_persian_court_literature_iranian:1 "Renacimiento Parsi"
- innovation_persian_court_literature_iranian_desc:1 "A pesar de haber sido eclipsado temporalmente por el árabe como idioma de prestigio en el mundo musulmán, la gran literatura de lo persas resurgió en la segunda mitad del primer milenio, auspiciada por un anhelo de restauración de la identidad nacional. Durante siglos, el idioma y la cultura persas se convirtieron en la influencia principal entre las extravagantes cortes y florecientes ciudades no solo de Persia, sino también de lejanos rincones de la India musulmana y las estepas de Ásia Central."
+ innovation_persian_court_literature_iranian_desc:1 "A pesar de haber sido eclipsado temporalmente por el árabe como idioma de prestigio en el mundo musulmán, la gran literatura de los persas resurgió en la segunda mitad del primer milenio, auspiciada por un anhelo de restauración de la identidad nacional. Durante siglos, el idioma y la cultura persas se convirtieron en la influencia principal entre las extravagantes cortes y florecientes ciudades no solo de Persia, sino también de lejanos rincones de la India musulmana y las estepas de Ásia Central."
  innovation_persian_court_literature_iranian_trigger:1 "Un [county|E] de nuestra [culture|E] no se ha [development_minor_adj|E] suficiente como para servir de nuevo centro cultural para la gente [CULTURE.GetName]."
  
  innovation_persian_court_literature_world:1 "Influencia Literaria Persa"
  innovation_persian_court_literature_world_desc:1 "A pesar de haber sido eclipsado temporalmente por el árabe como idioma de prestigio en el mundo musulmán, la gran literatura de los persas resurgió en la segunda mitad del primer milenio, con el famoso ejemplo del #italic Shahnameh#! del renombrado poeta Ferdousí. Durante siglos, el idioma y la cultura persas se convirtieron en la influencia principal entre las extravagantes cortes y florecientes ciudades no solo de Persia, sino también de lejanos rincones de la India musulmana y las estepas de Ásia Central."
  sg_persian_court_literature_mechanic:1 "Toda [culture|E] que adopte la innovación Influencia Literaria Persa ganará [prestige|E] adicional."
  innovation_persian_court_literature_adopted:1 "Innovación Adoptada por Cultura Extranjera"
- innovation_persian_court_literature_adopted_desc:1 "La [culture_head_notification.GetCulture.GetCollectiveNoun]ha comenzado a modelar su escritura siguiendo a la nuestra. ¡Nuestra lengua y literatura será la envidia de todos!"
+ innovation_persian_court_literature_adopted_desc:1 "Los [culture_head_notification.GetCulture.GetCollectiveNoun] han comenzado a modelar su escritura siguiendo a la nuestra. ¡Nuestra lengua y literatura será la envidia de todos!"
  
  innovation_iranian_epic_verse:1 "Verso Persa Épico"
  innovation_iranian_epic_verse_desc:1 "La floreciente cultura y literatura persa ha impulsado una tradición poética asombrosamente vibrante. Los verbos hábilmente compuestos con ingenio y brevedad se han abierto paso en el lenguaje común, mientras los versos cortesanos embellecen las hazañas de los grandes reyes del pasado y del presente. El más famoso de ellos fue el #italic Shahnameh#! de Ferdousí, una monumental labor de casi 30 años que sirve como tributo e inspiración para el espíritu y destreza del pueblo Persa."
@@ -39,7 +39,7 @@
  innovation_legacy_of_byzantium_desc:1 "Las historias sobre el esplendor de la corte imperial en Constantinopla han servido de inspiración a muchos de los nacientes poderes de Asia Menor y Europa Oriental. Impresionados por la riqueza y grandiosidad del Basileo, y la absoluta autoridad que ejerció en el imperio, gobernantes menores intentaron emular lo que ellos percibían como un poder otorgado por Dios para ejercer autoridad sobre sus súbditos."
  innovation_legacy_of_byzantium_trigger:1 "Ningún reino [CULTURE.GetName] [eastern_christian_adj|E] [independent|E] tiene acceso a un [county|E] o a un [character|E] que conozca esta innovación."
  sg_can_spread_from_neighboring_diff_culture_county_to_eastern_christian:1 "Puede extenderse a una cultura [eastern_christian_adj|E] desde una cultura vecina que tenga esta innovación."
- sg_can_spread_from_close_family_member_ruler_or_noble_courtier_to_eastern_christian:1 "Puede extenderse a una cultura [eastern_christian_adj|E] por la acción de un [noble|E] [courtiers|E] o algún [close_family_members|E] con tierras de una cultura que tenga esta innovación"
+ sg_can_spread_from_close_family_member_ruler_or_noble_courtier_to_eastern_christian:1 "Puede extenderse a una cultura [eastern_christian_adj|E] por la acción de un [noble|E] [courtier|E] o algún [close_family_member|E] con tierras de una cultura que tenga esta innovación"
  
  innovation_caucasian_heritage:1 "Patrimonio Caucásico"
  innovation_caucasian_heritage_desc:1 "Las orgullosas gentes del Cáucaso han sido testigos del alzamiento de incontables imperios a lo largo de milenios y permanecen fuertes ante las invasiones, persecuciones y dominación. Su espíritu indomable inspira un coraje que pocos pueden igualar frente a las adversidades, y sus curtidos guerreros son más que capaces de defender su patria montañosa."
@@ -66,13 +66,13 @@
  special_contract_peerage_short:1 "Par"
  special_contract_peerage_is_valid:1 "Debe ser un [powerful_vassal|E] y tener un [title_rank|E] de Duque o mayor"
  
- innovation_peerage_homage:1 "El Par [ROOT.Char.GetPrimaryTitle.GetAdjective] Rinde Homenaje"
- innovation_peerage_homage_desc:1 "[peer_representative.Custom2('AppropriateGreetingPositive', ROOT.Char)]\nEl Par laico y eclesiástico de los [ROOT.Char.GetPrimaryTitle.GetName] te ofrece humildemente nuestro tributo y gratitud por la prosperidad que has traído a nuestro reino. ¡Que [ROOT.Char.GetFaith.HighGodName] te bendiga con muchos años en el trono!"
+ innovation_peerage_homage:1 "La Nobleza [ROOT.Char.GetPrimaryTitle.GetAdjective] Rinde Homenaje"
+ innovation_peerage_homage_desc:1 "[peer_representative.Custom2('AppropriateGreetingPositive', ROOT.Char)]\nLa alta nobleza laica y eclesiástica de los [ROOT.Char.GetPrimaryTitle.GetName] le ofrece humildemente nuestro tributo y gratitud por la prosperidad que ha traído a nuestro reino. ¡Que [ROOT.Char.GetFaith.HighGodName] le bendiga con muchos años en el trono!"
  
  innovation_seigneurialism:1 "Señorialismo"
  innovation_seigneurialism_desc:1 "Al delegar más responsabilidades y privilegios a la baja nobleza, se podría ejercer más control sobre el campesinado para extraer aún más impuestos y gravámenes, a costa de un dominio muy reducido para hacer la administración más manejable. Este sistema se volvió algo infame por obligar a las tierras alodiales que antes eran libres y a sus residentes a quedar atados al feudo del señor, inspirando recuerdos populares de señores tiránicos que oprimían a sus siervos indefensos."
  innovation_seigneurialism_trigger:1 "Ningún reino [CULTURE.GetName] tiene acceso a un [county|E] perteneciente a una [culture|E] que conozca esta innovación."
- seigneurialism_domain_limit_penalty:1 "[powerful_rank_ruler|E] sufre una penalización de [domain_limit|E] adicional que refleja su falta de recursos administrativos para consolidar sus posesiones."
+ seigneurialism_domain_limit_penalty:1 "[powerful_rank_ruler|E] sufre una penalización de [domain_limit|E] adicional que refleja su falta de recursos administrativos para consolidar adecuadamente sus posesiones."
  sg_consolidated_domain:1 "Dominio Señorial Consolidado"
  sg_consolidated_domain_desc:1 "Al carecer de los recursos para ejercer de manera confiable un nivel de control local permitido por la tradición, el dominio de este gobernante debe consolidarse en un territorio más manejable."
  
@@ -82,7 +82,7 @@
  
  #Central Germanic
  innovation_stem_duchies:0 "Stammesherzogtum"
- innovation_stem_duchies_desc:0 "Las antiguas leyes y costumbres de los pueblos bávaros, alamán, franconio y sajón habían formado durante cientos de años el núcleo de las identidades de los pueblos de Germania. Aunque el Imperio había unido los reinos tribales en una sola entidad política y les había concedido un solo trono por el que competir, los ducados troncales regionales persistieron y servirían como bases de poder de las grandes casas principescas hasta que uno por uno cayeran en desorden o fueran desmantelados, la mayoría de las veces a manos de emperadores vengativos."
+ innovation_stem_duchies_desc:0 "Las antiguas leyes y costumbres de los pueblos bávaro, alamán, franconio y sajón habían formado durante cientos de años el núcleo de las identidades de los pueblos de Germania. Aunque el Imperio había unido los reinos tribales en una sola entidad política y les había concedido un solo trono por el que competir, los ducados troncales regionales persistieron y servirían como bases de poder de las grandes casas principescas hasta que uno por uno cayeran en desorden o fueran desmantelados, la mayoría de las veces a manos de emperadores vengativos."
  sg_central_germanic_culture_group_reduced_factionalism:1 "Los [vassals|E] [culture_group|E] $central_germanic_group$ son menos propensos a unirse a [independence_factions|E] contra [rulers|E] de un [culture_group|E] $central_germanic_group$."
  
  innovation_east_settling:1 "Ostsiedlung"

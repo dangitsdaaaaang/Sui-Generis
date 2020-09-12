@@ -187,3 +187,47 @@ peerage_piety_homage = {
 	value = peerage_piety
 	multiply = peerage_homage_diplomacy	
 }
+#Iberian Reconquista (Iberian)
+reconquista_raiding_martial = {
+	value = @innovation_modifier_low 
+	if = {
+		limit = { martial > average_skill_rating }
+		value = @innovation_modifier_average
+	}
+	if = {
+		limit = { martial > medium_skill_rating }
+		value = @innovation_modifier_medium
+	}
+	if = {
+		limit = { martial > decent_skill_rating }
+		value = @innovation_modifier_decent
+	}
+	if = {
+		limit = { martial > high_skill_rating }
+		value = @innovation_modifier_high
+	}
+	if = {
+		limit = { martial > very_high_skill_rating }
+		value = @innovation_modifier_very_high
+	}
+	if = {
+		limit = { martial > extremely_high_skill_rating }
+		value = @innovation_modifier_extremely_high
+	}
+}
+reconquista_raiding_piety = {
+	value = 25
+	multiply = reconquista_raiding_martial
+}
+reconquista_raiding_piety_loss = {
+	value = reconquista_raiding_piety
+	multiply = -2
+}
+#Iberian Military Orders (Iberian)
+holy_order_piety_cost = { #overwrite value in 00_holy_order_values.txt
+	value = 1000
+	if = {
+		limit = { culture = { has_innovation = innovation_iberian_military_orders } }
+		multiply = 0.67
+	}
+}

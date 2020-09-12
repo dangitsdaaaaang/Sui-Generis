@@ -1,6 +1,6 @@
 ﻿# Caucasian Diplomacy (Byzantine)
 on_alliance_removed = { #from alliance_on_actions.txt, separated on_action from effect since behavior is to override, not append
-	on_action = {
+	on_actions = {
 		on_alliance_removed_caucasian_diplomacy
 	}
 }
@@ -135,7 +135,7 @@ innovation_east_settling_county_culture_change_pulse = {
 				}
 			}
 			save_temporary_scope_as = source_county
-			debug_log = "Ostsiedlung: potential source county [source_county.GetTitle.GetName] identified."
+			debug_log = "Ostsiedlung: potential source county [COUNTY.GetTitle.GetName] identified."
 			random_title_to_title_neighboring_and_across_water_county = {
 				limit = { 
 					NOT = {
@@ -150,69 +150,69 @@ innovation_east_settling_county_culture_change_pulse = {
 					}
 				}
 				save_temporary_scope_as = target_county
-				debug_log = "Ostsiedlung: source county [target_county.GetTitle.GetName] evaluating"
+				debug_log = "Ostsiedlung: source county [COUNTY.GetTitle.GetName] evaluating"
 				random_list = {
 					95 = {
 						set_variable = { name = sg_settlement_eval value = true days = 300 }
-						debug_log = "Ostsiedlung: no culture change in [target_county.GetTitle.GetName]."
+						debug_log = "Ostsiedlung: no culture change in [COUNTY.GetTitle.GetName]."
 					}
 					2 = {
 						trigger = { scope:sponsor = { culture = culture:bavarian } }
 						set_county_culture = culture:bavarian
-						debug_log = "Ostsiedlung: culture change to Bavarian in [target_county.GetTitle.GetName]."
+						debug_log = "Ostsiedlung: culture change to Bavarian in [COUNTY.GetTitle.GetName]."
 						modifier = {
 							add = 3
 							any_province = {
 								has_building_or_higher = sg_rathaus_01
-								debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetTitle.GetName]."
+								debug_log = "Ostsiedlung: Rathaus identified in [COUNTY.GetTitle.GetName]."
 							}
 						}
 					}
 					2 = {
 						trigger = { scope:sponsor = { culture = culture:dutch } }
 						set_county_culture = culture:dutch
-						debug_log = "Ostsiedlung: culture change to Dutch in [target_county.GetTitle.GetName]."
+						debug_log = "Ostsiedlung: culture change to Dutch in [COUNTY.GetTitle.GetName]."
 						modifier = {
 							add = 3
 							any_province = {
 								has_building_or_higher = sg_rathaus_01
-								debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetTitle.GetName]."
+								debug_log = "Ostsiedlung: Rathaus identified in [COUNTY.GetTitle.GetName]."
 							}
 						}
 					}
 					2 = {
 						trigger = { scope:sponsor = { culture = culture:franconian } }
 						set_county_culture = culture:franconian
-						debug_log = "Ostsiedlung: culture change to Franconian in [target_county.GetTitle.GetName]."
+						debug_log = "Ostsiedlung: culture change to Franconian in [COUNTY.GetTitle.GetName]."
 						modifier = {
 							add = 3
 							any_province = {
 								has_building_or_higher = sg_rathaus_01
-								debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetTitle.GetName]."
+								debug_log = "Ostsiedlung: Rathaus identified in [COUNTY.GetTitle.GetName]."
 							}
 						}
 					}
 					2 = {
 						trigger = { scope:sponsor = { culture = culture:saxon } }
 						set_county_culture = culture:saxon
-						debug_log = "Ostsiedlung: culture change to Saxon in [target_county.GetTitle.GetName]."
+						debug_log = "Ostsiedlung: culture change to Saxon in [COUNTY.GetTitle.GetName]."
 						modifier = {
 							add = 3
 							any_province = {
 								has_building_or_higher = sg_rathaus_01
-								debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetTitle.GetName]."
+								debug_log = "Ostsiedlung: Rathaus identified in [COUNTY.GetTitle.GetName]."
 							}
 						}
 					}
 					2 = {
 						trigger = { scope:sponsor = { culture = culture:swabian } }
 						set_county_culture = culture:swabian
-						debug_log = "Ostsiedlung: culture change to Swabian in [target_county.GetTitle.GetName]."
+						debug_log = "Ostsiedlung: culture change to Swabian in [COUNTY.GetTitle.GetName]."
 						modifier = {
 							add = 3
 							any_province = {
 								has_building_or_higher = sg_rathaus_01
-								debug_log = "Ostsiedlung: Rathaus identified in [target_county.GetTitle.GetName]."
+								debug_log = "Ostsiedlung: Rathaus identified in [COUNTY.GetTitle.GetName]."
 							}
 						}
 					}
@@ -221,6 +221,78 @@ innovation_east_settling_county_culture_change_pulse = {
 		}
 	}
 }
+
+# Reconquista (Iberian + Maghrebi/Andalusian/Berbers)
+# Called when a raid action finishes
+# root is the raid army
+# scope:raider is the person owning the raid army
+# scope:barony is the barony title that got raided
+# scope:county is the county title for the barony
+on_raid_action_completion = { #from army_on_actions.txt
+	on_actions = {
+		innovation_reconquista_piety_gain
+	}
+}
+
+innovation_reconquista_piety_gain = {
+	trigger = {
+		scope:raider = { 
+			culture = { 
+				OR = {
+					has_innovation = innovation_reconquista
+					has_innovation = innovation_reconquista_muslim
+				}
+			}
+		}
+		scope:barony = {
+			title_province = { geographical_region = world_europe_west_iberia }
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { NOT = { scope:county.faith.religion = scope:raider.faith.religion } }
+			scope:raider = {
+				send_interface_message = {
+					title = innovation_reconquista_piety_gain_toast
+					desc = event_message_effect
+					type = event_toast_effect_good
+					add_piety = reconquista_raiding_piety
+				}
+			}
+		}
+		else = {
+			scope:raider = {
+				send_interface_message = {
+					title = innovation_reconquista_piety_gain_toast_bad
+					desc = event_message_effect
+					type = event_toast_effect_bad
+					add_piety = reconquista_raiding_piety_loss
+				}
+			}
+		}
+	}
+}
+
+# #Iberian Military Orders Knightly Prowess (Iberian)
+# innovation_iberian_military_orders_knightly_prowess_pulse = {
+	# trigger = {
+		# any_held_title = {
+			# is_holy_order = yes
+		# }
+	# }	
+	
+	# effect = {
+		# add_character_modifier = sg_military_order_prowess
+		# every_courtier = {
+			# limit = { 
+				# has_trait = order_member 
+				# culture = { has_innovation = innovation_iberian_military_orders }
+			# }
+			# add_character_modifier = sg_military_order_prowess
+		# }
+	# }
+# }
 
 quarterly_playable_pulse = {
 	on_actions = {

@@ -41,6 +41,4 @@
 	discover_innovation = innovation_royal_prerogative
 	discover_innovation = innovation_currency_02
 	discover_innovation = innovation_chronicle_writing
-	#
-	discover_innovation = innovation_knights_of_the_east
 }

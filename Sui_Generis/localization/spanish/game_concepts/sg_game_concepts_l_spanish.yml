@@ -2,7 +2,7 @@
  game_concept_powerful_rank:0 "Poderoso (Rango del Título)"
  game_concept_powerful_rank_adj:0 "Poderoso"
  game_concept_powerful_rank_ruler:0 "Gobernantes Poderosos"
- game_concept_powerful_rank_desc:0 "[rulers|E] #bold Poderosos#! son gobernantes cuyo [primary_titles|E] es [title_tier|E] de Duque o mayor, y son [independent|E] o controlan más de 4 [counties|E]. No debe confundirse el término con [powerful_vassals|E]."
+ game_concept_powerful_rank_desc:0 "Un [ruler|E] #bold Poderoso#! es un gobernante cuyos [primary_titles|E] son [title_tier|E] de Duque o mayor, y es [independent|E] o controla más de 4 [counties|E]. No debe confundirse el término con [powerful_vassals|E]."
  game_concept_development_minor:0 "Nivel de Desarrollo: Floreciente (Innovaciones)"
  game_concept_development_minor_adj:0 "Desarrollado"
  game_concept_development_minor_desc:0 "Un [county|E] #bold floreciente#! es aquél que ha alcanzado un [development|E] de 20 o más, y está suficientemente desarrollado para ser centro cultural y comercial."

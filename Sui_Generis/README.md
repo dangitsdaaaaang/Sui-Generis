@@ -9,12 +9,15 @@ Currently, the mod features innovations for the following culture groups:
 - Legacy of Rome (unique to Greeks): +15 Baseline Dread, +2% Monthly Prestige Gain per Dread
 - Legacy of the Autokrator _(can be exported to other primarily Eastern Christian cultures)_: + 10 Baseline Dread, -10% Dread Decay 
 - Caucasian Heritage: +5 Advantage in Desert Mountains and Mountains
-- Caucasian Diplomacy _(unique to the Byzantine culture group): enables 1 alliance without marriage with other Caucasian/Greek rulers
+- Caucasian Diplomacy _(unique to the Byzantine culture group)_: enables 1 alliance without marriage with other Caucasian/Greek rulers
 - Knights of the East _(can be exported to other primarily Eastern Christian cultures or Outremer culture)_: unlocks two powerful Heavy Cavalry Men-at-Arms regiments
 ## Frankish:
 - Seigneurialism _(requires Manorialism, can be exported to English and Scottish cultures)_: +25% Domain Tax, +15% Levy Size, +10% County Control Gain **BUT** -2 Domain Limit if ruler is a Duke or higher tier and either independent or holding more than 4 counties, -25% Vassal Tax Contribution Multiplier, -33% Vassal Levy Contribution Multiplier, and -15 Popular Opinion 
 - Peerage _(can be exported to English and Scottish cultures)_: Unlocks unique Peerage vassal contract available only to Duke-tier or higher Powerful Vassals, which partially negates Vassal Tax Contribution Multiplier penalty from Seigneurialism and grants a Hostile Scheme Resistance bonus. Independent lieges who grant Peerage titles receive a periodic homage of prestige and piety based on the opinions of their Peers and the Realm Priest 
 - Norman Customary Law _(unique to Normans, requires Hereditary Rule)_: Unlocks heir designation in the Early Medieval Era while under any partition succession law, regardless of Crown Authority
+## Iberian:
+- Reconquista/Fatḥ al-Andalus _(available to Iberian culture group, Andalusian, Maghrebi, and Berber cultures)_: Enables raiding different faith counties within the Iberian region for piety, +1 Martial per level of piety
+- Iberian Military Orders: -25% Holy Order Creation Cost, -15% Holy Order Hire Cost, characters of this culture in a Holy Order gain +2 prowess per level of piety
 ## Central Germanic:
 - Stammesherzogtum _(valid for Franconians, Swabians, Bavarians, and Saxons)_: +5 Same Culture Opinion, Central Germanic vassals of a Central Germanic liege are less likely to start or join Independence factions
 - Ostsiedlung: +15% Development/month, may flip counties in bordering realms to your culture, which can be increased if a city in that county has the unique Rathaus building

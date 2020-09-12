@@ -67,7 +67,7 @@
  special_contract_peerage_is_valid:1 "Must be a [powerful_vassal|E] and have a greater [title_rank|E] of Duke or higher"
  
  innovation_peerage_homage:1 "[ROOT.Char.GetPrimaryTitle.GetAdjective] Peerage Renders Homage"
- innovation_peerage_homage_desc:1 "[peer_representative.Custom2('AppropriateGreetingPositive', ROOT.Char)]\nThe lay and ecclesiastical peerage of the [ROOT.Char.GetPrimaryTitle.GetName] humbly offers you our tribute and our gratitude for the prosperity you have brought to the realm. May [ROOT.Char.GetFaith.HighGodName] grant you many more years upon the throne!" #TODO: Expand with more contextual clues to the actual status of the realm
+ innovation_peerage_homage_desc:1 "[peer_representative.Custom2('AppropriateGreetingPositive', ROOT.Char)]\nThe lay and ecclesiastical peerage of the [ROOT.Char.GetPrimaryTitle.GetName] humbly offers you our tribute and our gratitude for the prosperity you have brought to the realm. May [ROOT.Char.GetFaith.HighGodName] grant you many more years upon the throne!"
  
  innovation_seigneurialism:1 "Seigneurialism"
  innovation_seigneurialism_desc:1 "By delegating more responsibilities and privileges to the lower nobility, more control could be exerted over the peasantry to extract even more taxes and levies, though from a greatly reduced domain to make administration more manageable. This system became somewhat infamous for forcing formerly free alloidal lands and their residents to become bound to the lord's manor, inspiring popular memories of tyrannical lords oppressing their helpless serfs."

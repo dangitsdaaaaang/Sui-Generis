@@ -1,6 +1,6 @@
 ﻿l_english:
  #Scripted Trigger Clarification Tooltips
- sg_can_spread_from_neighboring_diff_culture_county:1 "May spread from a neighboring [culture|E] that has already adopted it" 
+ sg_can_spread_from_neighboring_diff_culture_county:1 "May spread from a neighboring [culture|E] that has already adopted it"
  can_spread_from_neighboring_diff_culture_county_trigger:1 "No [county|E] of our [culture|E] borders any [counties|E] belonging to a culture that has adopted this innovation."
  sg_can_spread_from_close_family_member_ruler_or_noble_courtier:1 "May spread from [noble|E] [courtiers|E] or [close_family_members|E] who are [rulers|E] of a culture that has already adopted it"
  can_spread_from_close_family_member_ruler_or_noble_courtier_trigger:1 "No [powerful_rank_adj|E] [CULTURE.GetName] ruler has [noble|E] [courtiers|E] at court or [close_family_members|E] of a culture that has adopted this innovation."

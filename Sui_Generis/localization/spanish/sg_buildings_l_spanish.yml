@@ -1,0 +1,14 @@
+﻿l_spanish:
+ #German Town Law (Central Germanic)
+ building_type_sg_rathaus_01:1 "Rathaus"
+ building_type_sg_rathaus_01_desc:1 "Los conflictos y arbitrios se zanjan en la «Rathaus» por un consejo elegido de acuerdo a las tradiciones locales de la ley Alemana."
+ building_sg_rathaus_01:0 "Rathaus"
+ building_sg_rathaus_01_desc:0 "$building_type_sg_rathaus_01_desc$"
+ building_sg_rathaus_02:1 "Barrio judío"
+ building_sg_rathaus_02_desc:1 "Las protecciones otorgadas a los judíos bajo el amparo de la ley han permitido que crezca una comunidad próspera, facilitando aún más el comercio y los negocios."
+ building_sg_rathaus_03:1 "Tribunal Municipal"
+ building_sg_rathaus_03_desc:1 "Utilizando precedentes legales de las grandes ciudades comerciales alemanas, los juicios sobre asuntos civiles y criminales se desarrollaban en el juzgado municipal."
+ building_sg_rathaus_04:1 "Capital Regional"
+ building_sg_rathaus_04_desc:1 "El desarrollo de un pueblo comercial en un centro de comercio ha traído riquezas increíbles a la región y ha atraído a comerciantes, artesanos y trabajadores en busca de riqueza y trabajo."
+ 
+

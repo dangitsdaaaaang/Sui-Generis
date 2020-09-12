@@ -1,0 +1,18 @@
+﻿l_spanish:
+ game_concept_powerful_rank:0 "Poderoso (Rango del Título)"
+ game_concept_powerful_rank_adj:0 "Poderoso"
+ game_concept_powerful_rank_ruler:0 "Gobernantes Poderosos"
+ game_concept_powerful_rank_desc:0 "[rulers|E] #bold Poderosos#! son gobernantes cuyo [primary_titles|E] es [title_tier|E] de Duque o mayor, y son [independent|E] o controlan más de 4 [counties|E]. No debe confundirse el término con [powerful_vassals|E]."
+ game_concept_development_minor:0 "Nivel de Desarrollo: Floreciente (Innovaciones)"
+ game_concept_development_minor_adj:0 "Desarrollado"
+ game_concept_development_minor_desc:0 "Un [county|E] #bold floreciente#! es aquél que ha alcanzado un [development|E] de 20 o más, y está suficientemente desarrollado para ser centro cultural y comercial."
+ game_concept_development_major:0 "Nivel de Desarrollo: Prospero (Innovaciones)"
+ game_concept_development_major_adj:0 "Desarrollado"
+ game_concept_development_major_desc:0 "Un [county|E] #bold prospero#! es aquél que ha alcanzado un [development|E] de 35 o más y atrae a mercaderes y trabajadores de todas las regiones en busca de riqueza y trabajo."
+ game_concept_eastern_christian:0 "Tradiciones del Cristianismo Oriental (Religión)"
+ game_concept_eastern_christian_adj:0 "Cristianismo Oriental"
+ game_concept_eastern_christian_desc:0 "Las [faiths|E] del #bold Cristianismo Oriental#! son aquellas que observan las tradiciones anteriores a la supremacía del Papa en Roma, y por tanto, no están subordinadas ni provienen de una reacción a la autoridad de la Iglesia Católica Romana. Estas incluyen #bold $orthodox$#!, #bold $coptic$#!, #bold $armenian_apostolic$#!, #bold $iconoclast$#!, #bold $bogomilist$#!, #bold $paulician$#!, #bold $nestorian$#!, #bold $messalian$#!, y #bold $bosnian_church$#!."
+ game_concept_peers:0 "Pares del Reino"
+ game_concept_peers_desc:0 "$special_contract_peerage_short$ es un [feudal_contract|E] único desbloqueado por la innovación $innovation_french_peerage$. Los #bold Pares#! solo pueden ser designado si son [powerful_vassals|E] dentro del [realm|E] y tienen un [title_rank|E] de Duque o mayor."
+ 
+ 

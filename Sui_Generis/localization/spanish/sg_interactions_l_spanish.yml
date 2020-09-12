@@ -1,0 +1,10 @@
+﻿l_spanish:
+ #Caucasian Diplomacy (Byzantine)
+ sg_caucasian_alliance_interaction:0 "Proponer Alianza Regional"
+ sg_caucasian_alliance_interaction_desc:0 "Aunque no compartimos ni una gota de sangre con [recipient.GetTitledFirstNameNoTooltip], nosotros los hijos del Cáucaso debemos establecer alianzas para unirnos contra nuestros enemigos."
+ sg_already_has_an_alliance_deal:0 "Solo puedes tener una [alliance|E] regional activa"
+ NOT_sg_already_has_an_alliance_deal:0 "Ya tienes una [alliance|E] regional activa"
+ SG_CAUCASIAN_ALLIANCE_NOTIFICATION:0 "Nuestros enemigos golpean nuestras puertas, y creo que los dos ganamos con una alianza. ¡Propongo que unamos nuestras fuerzas y luchemos juntos!"
+ #Norman Customary Law (Frankish)
+ I_LACK_LAW_ALLOWING_DESIGNATE_HEIR:1 "No tienes [crown_authority|E] absoluta o la [innovation|E] del Derecho Consuetudinario Normando"
+ 

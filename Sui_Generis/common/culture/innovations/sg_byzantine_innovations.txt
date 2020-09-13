@@ -127,10 +127,13 @@ innovation_cataphracts = { #overwrite vanilla entry in 00_cultural_regiment_type
 	icon = @special_maa_01
 
 	potential = { #cavalry that does extremely poorly in mountains... probably not best for Armenians/Georgians.
-		has_innovation = innovation_arched_saddle
 		this = culture:greek
 #		this = culture:armenian
 #		this = culture:georgian
+	}
+	
+	can_progress = {
+		has_innovation = innovation_arched_saddle
 	}
 
 	unlock_maa = cataphract 
@@ -182,7 +185,6 @@ innovation_knights_of_the_east = {
 	
 	
 	potential = {
-		has_innovation = innovation_arched_saddle
 		OR = {
 			trigger_if = { #Non-Byzantine cultures may only see if they are primarily Christian
 				limit = { NOT = { this.culture_group = culture_group:byzantine_group } }
@@ -202,6 +204,7 @@ innovation_knights_of_the_east = {
 	}
 	
 	can_progress = {
+		has_innovation = innovation_arched_saddle
 		trigger_if = {#may only adopt if not an Eastern Christian a Crusader state
 			limit = { this = culture:outremer }
 			custom_description = {

@@ -37,3 +37,19 @@ event_peerage_homage = {
 	soundeffect = @msg_good_soundeffect
 }
 
+event_reconquista_toast_effect_good = {
+	display = toast
+	title = event_message_title
+	desc = event_message_text_and_effect
+	style = good
+	soundeffect = @toast_soundeffect_good
+}
+
+event_reconquista_toast_effect_bad = {
+	display = toast
+	title = event_message_title
+	desc = event_message_text_and_effect
+	style = bad
+	soundeffect = @toast_soundeffect_bad
+}
+

@@ -35,7 +35,6 @@ innovation_seigneurialism = { #removed from list of region-locked innovations, f
 	icon = @administration_1
 
 	potential = {
-		has_innovation = innovation_manorialism
 		OR = {
 			this = culture:french
 			this = culture:norman
@@ -55,6 +54,7 @@ innovation_seigneurialism = { #removed from list of region-locked innovations, f
 	}
 	
 	can_progress = { 
+		has_innovation = innovation_manorialism
 		custom_description = { 
 			text = "innovation_seigneurialism_trigger"
 			trigger_if = {

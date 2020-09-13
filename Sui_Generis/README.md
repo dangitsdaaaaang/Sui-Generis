@@ -17,11 +17,11 @@ Currently, the mod features innovations for the following culture groups:
 - Norman Customary Law _(unique to Normans, requires Hereditary Rule)_: Unlocks heir designation in the Early Medieval Era while under any partition succession law, regardless of Crown Authority
 ## Iberian:
 - Reconquista/Fatḥ al-Andalus _(available to the Iberian culture group, as well as Andalusian, Maghrebi, and Berber cultures with a presence in the Iberian region)_: Enables raiding, though at a significantly slower rate, of foreign counties within the Iberian region for piety **if of a different religion** scaled to the ruler's martial skill, +1 Martial per level of piety
-- Iberian Military Orders: -33% Holy Order Piety Creation Cost, -15% Holy Order Hire Cost, +1 Prowess per Level of Piety
+- Iberian Military Orders _(available only to the Iberian culture group)_: -33% Holy Order Piety Creation Cost, +2% Piety per Knight, +25% Knight Effectiveness
 ## Central Germanic:
 - Stammesherzogtum _(valid for Franconians, Swabians, Bavarians, and Saxons)_: +5 Same Culture Opinion, Central Germanic vassals of a Central Germanic liege are less likely to start or join Independence factions
 - Ostsiedlung: +15% Development/month, may flip counties in bordering realms to your culture, which can be increased if a city in that county has the unique Rathaus building
-- German Town Law _(can be exported to other primarily Christian cultures, but cannot be adopted by any culture that has adopted Seigneurialism)_: Unlocks the unique Rathaus building line for city holdings, which provides tax income and Development/month
+- German Town Law _(can be exported to other primarily Christian cultures, but cannot be adopted by any culture that has adopted Seigneurialism)_: Unlocks the unique Rathaus building line for city holdings, which provides a bonus to Development/month
 ## Persian:
 - Parsi Renaissance _(requires a county of 20 Development or higher)_: +1.0 Development Growth/month in the capital county
 - Persianate Literary Traditions _(can be exported to other non-Iranian cultures)_: +10% Monthly Prestige Gain for adopting cultures, gives bonus Prestige upon adoption to all rulers of Iranian culture who have unlocked Parsi Renaissance.

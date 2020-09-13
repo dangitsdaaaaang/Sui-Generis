@@ -101,10 +101,16 @@
  innovation_reconquista_muslim_desc:1 "For centuries, Christian and Moorish rulers battled for not only religious, but also cultural supremacy over the Iberian peninsula. Though at first the lack of cohesion among the Christian natives faciliated the rapid conquest and integration of the muwalladun into the Muslim world, fierce resistance, difficult terrain, and a developing warrior culture in the north proved too difficult to dispel. By the late 10th century, threatened by an ever-emboldened foe, the various Moorish taifas were faced with a terrible choice: unite the squabbling factions and repel the aggression of their northern neighbors by the sword or die by it."
  sg_reconquista_raiding:1 "Enables [raiding|E], though at a significantly slower rate, of foreign [counties|E] in $world_europe_west_iberia$ for [piety|E] #bold if of a different religion#! scaled to the ruler's [martial|E] ability, provided the [doctrines|E] of the ruler's [faith|E] do not forbid it"
  innovation_reconquista_piety_gain_toast:1 "Infidels in [barony.GetNameNoTier] Castigated!"
- innovation_reconquista_piety_gain_toast_bad:1 "Innocents in [barony.GetNameNoTier] Massacred!"
+ innovation_reconquista_piety_gain_toast_desc:1 "The [barony.GetProvince.GetCounty.GetFaith.GetAdjective] infidels of [barony.GetNameNoTier] have received divine judgment by our blades!"
+ innovation_reconquista_piety_toast_bad:1 "Innocents in [barony.GetNameNoTier] Massacred!"
+ innovation_reconquista_piety_toast_bad_catholic_desc:1 "Many [barony.GetProvince.GetCounty.GetFaith.GetAdherentNamePlural] fell by our hand today, but the Lord knows those who are His."
+ innovation_reconquista_piety_toast_bad_desc: "Many [barony.GetProvince.GetCounty.GetFaith.GetAdherentNamePlural] fell by our hand today - may [raider.GetFaith.HighGodName] forgive us!"
  
  innovation_iberian_military_orders:1 "Iberian Military Orders"
  innovation_iberian_military_orders_desc:1 "One of the natural developments of the intertwining of religious devotion and warlikeness was the tradition of military knightly orders - brothers sworn to devote their lives to defend the faithful against the heathen. Often these orders were royally sponsored and granted tracts of land in order to help sustain themselves, becoming powerful influences in their respective realms. Their status and renown for their feats of arms served as an inspiration for many, both noble and lowborn, to take up the sword for Christ."
  sg_holy_order_create_cost_reduction:1 "[holy_order|E] [piety|E] Creation Cost: #P -33%#!"
+ 
+ # innovation_alcazares:1 "Alcazabas"
+ # innovation_alcazares_desc:1 "One of the defining characteristics of Andalusian cities was the presence of a central, typically double-walled citadel, referred to as al-qaṣabah or al-qaṣr and later rendered in the Ibero-Romance languages as alcazaba, alcáçoba, or alcázar. Serving both as expansive palaces and extensive fortifications, they left a remarkable impression on the Christians to the north, who left them largely intact or emulated their construction in their own cities. 
 
 

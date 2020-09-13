@@ -65,8 +65,8 @@ innovation_reconquista_muslim = {
 	}
 	
 	modifier = {
-		martial_per_piety_level = 1
 		raid_speed = -0.5
+		controlled_province_advantage = 4
 	}
 	
 	custom = cb_discount_piety_10
@@ -90,8 +90,8 @@ innovation_iberian_military_orders = {
 	}
 	
 	modifier = {
-		holy_order_hire_cost_mult = -0.15
-		prowess_per_piety_level = 1
+		monthly_piety_gain_per_knight_mult = 0.02
+		knight_effectiveness_mult = 0.25
 	}
 	
 	custom = sg_holy_order_create_cost_reduction

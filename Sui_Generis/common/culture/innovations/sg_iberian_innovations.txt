@@ -119,7 +119,7 @@ innovation_alcazares = {
 	can_progress = {
 		trigger_if = {
 			limit = { 
-				NOT = { culture:andalusian = { has_innovation = innovation_alcazares }
+				NOT = { culture:andalusian = { has_innovation = innovation_alcazares } }
 				OR = {
 					culture_group = culture_group:iberian_group 
 					can_show_innovation_due_to_exposure = {

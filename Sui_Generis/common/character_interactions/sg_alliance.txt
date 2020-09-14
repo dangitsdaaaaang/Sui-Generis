@@ -17,6 +17,7 @@
 			NOT = { is_allied_to = scope:actor }
 			NOT = { target_is_vassal_or_below = scope:actor } # [OC] Can only sign with external rulers/peer vassals, though the alliance is preserved if they somehow become your vassals
 			NOT = { target_is_liege_or_above = scope:actor }
+			NOT = { culture = scope:actor.culture }
 			is_ruler = yes
 			primary_title.tier > tier_barony
 		}

@@ -1,4 +1,4 @@
-﻿#Core
+﻿﻿#Core
 @innovation_modifier_low = 0.8
 @innovation_modifier_average = 1.0
 @innovation_modifier_medium = 1.10

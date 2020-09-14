@@ -100,3 +100,33 @@ innovation_iberian_military_orders = {
 	flag = high_medieval_era_regional
 }
 
+innovation_alcazares = {
+	group = culture_group_regional
+	culture_era = culture_era_high_medieval
+	icon = @fortifications
+	
+	potential = { 
+		OR = {
+			this = culture:andalusian
+			culture_group = culture_group:iberian_group
+		}
+	}
+	
+	can_progress = {
+		trigger_if = {
+			limit = { culture_group = culture_group:iberian_group }
+			culture:andalusian = { has_innovation = innovation_alcazares }
+		}
+	}
+	
+	modifier = {
+		hostile_raid_time = 0.2
+		fort_level = 1
+		garrison_size = 0.5
+		castle_holding_build_gold_cost = 0.25
+	}
+	
+	flag = global_regional
+	flag = high_medieval_era_regional
+}
+

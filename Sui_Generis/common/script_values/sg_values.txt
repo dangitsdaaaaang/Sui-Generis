@@ -29,58 +29,74 @@
 
 #Parsi Renaissance/Persianate Literary Tradition (Iranian)
 persian_court_literature_adoptors_tier = {
-	value = @innovation_persian_court_literature_world_base
 	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 5 } #tier 1 at 5-9 cultures
-		value = @innovation_persian_court_literature_world_tier_1
+		limit = { global_var:persian_court_literature_adoptors >= 35 }
+		if = {
+			limit = { global_var:persian_court_literature_adoptors >= 50 }
+			if = {
+				limit = { global_var:persian_court_literature_adoptors >= 100 }
+				value = @innovation_persian_court_literature_world_tier_6	#tier 6 at 100 cultures or above
+			}
+			else = {
+				value = @innovation_persian_court_literature_world_tier_5	#tier 5 at 50-99 cultures
+			}
+		}
+		else = {
+			value = @innovation_persian_court_literature_world_tier_4		#tier 4 at 35-49 cultures
+		}
 	}
-	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 10 } #tier 2 at 10-19 cultures 
-		value = @innovation_persian_court_literature_world_tier_2
+	else_if = {
+		limit = { global_var:persian_court_literature_adoptors >= 10 }
+		if = {
+			limit = { global_var:persian_court_literature_adoptors >= 20 }
+			value = @innovation_persian_court_literature_world_tier_3		#tier 3 at 20-34 cultures
+		}
+		else = {
+			value = @innovation_persian_court_literature_world_tier_2		#tier 2 at 10-19 cultures
+		}
 	}
-	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 20 } #tier 3 at 20-34 cultures 
-		value = @innovation_persian_court_literature_world_tier_3
+	else_if = {
+		limit = { global_var:persian_court_literature_adoptors >= 5 }
+		value = @innovation_persian_court_literature_world_tier_1			#tier 1 at 5-9 cultures
 	}
-	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 35 } #tier 4 at 35-49 cultures 
-		value = @innovation_persian_court_literature_world_tier_4
-	}
-	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 50 } #tier 5 at 50-99 cultures 
-		value = @innovation_persian_court_literature_world_tier_5
-	}
-	if = {
-		limit = { global_var:persian_court_literature_adoptors >= 100 } #tier 6 at 100 cultures or above
-		value = @innovation_persian_court_literature_world_tier_6
+	else = {
+		value = @innovation_persian_court_literature_world_base				#tier 0 at 0-4 cultures
 	}
 }
 
 persian_court_literature_adoption_learning = {
-	value = @innovation_modifier_low 
 	if = {
+		limit = { learning > high_skill_rating }
+		if = {
+			limit = { learning > very_high_skill_rating }
+			if = {
+				limit = { learning > extremely_high_skill_rating }
+				value = @innovation_modifier_extremely_high
+			}
+			else = {
+				value = @innovation_modifier_very_high
+			}
+		}
+		else = {
+			value = @innovation_modifier_high
+		}
+	}
+	else_if = {
+		limit = { learning > medium_skill_rating }
+		if = {
+			limit = { learning > decent_skill_rating }
+			value = @innovation_modifier_decent
+		}
+		else = {
+			value = @innovation_modifier_medium
+		}
+	}
+	else_if = {
 		limit = { learning > average_skill_rating }
 		value = @innovation_modifier_average
 	}
-	if = {
-		limit = { learning > medium_skill_rating }
-		value = @innovation_modifier_medium
-	}
-	if = {
-		limit = { learning > decent_skill_rating }
-		value = @innovation_modifier_decent
-	}
-	if = {
-		limit = { learning > high_skill_rating }
-		value = @innovation_modifier_high
-	}
-	if = {
-		limit = { learning > very_high_skill_rating }
-		value = @innovation_modifier_very_high
-	}
-	if = {
-		limit = { learning > extremely_high_skill_rating }
-		value = @innovation_modifier_extremely_high
+	else = {
+		value = @innovation_modifier_low
 	}
 }
 
@@ -92,18 +108,23 @@ persian_court_literature_adoption_prestige = {
 #Peerage (Frankish)
 add_peerage_prestige = {
 	every_vassal = {
-		limit = { vassal_contract_has_flag = has_peerage_contract }
-		if = { 
-			limit = { 
-				opinion = { target = liege value > 75 }
-			}
-			add = @innovation_french_peerage_prestige_tier_3_add
+		limit = {
+			vassal_contract_has_flag = has_peerage_contract
+			opinion = { target = liege value > 0 }
 		}
-		else_if = {
+		if = {
 			limit = { 
 				opinion = { target = liege value > 50 }
 			}
-			add = @innovation_french_peerage_prestige_tier_2_add
+			if = { 
+				limit = { 
+					opinion = { target = liege value > 75 }
+				}
+				add = @innovation_french_peerage_prestige_tier_3_add
+			}
+			else = {
+				add = @innovation_french_peerage_prestige_tier_2_add
+			}
 		}
 		else_if = {
 			limit = { 
@@ -111,10 +132,7 @@ add_peerage_prestige = {
 			}
 			add = @innovation_french_peerage_prestige_tier_1_add
 		}
-		else_if = {
-			limit = { 
-				opinion = { target = liege value > 0 }
-			}
+		else = {
 			add = @innovation_french_peerage_prestige_base_add
 		}
 	}
@@ -123,58 +141,70 @@ add_peerage_prestige = {
 peerage_piety = {
 	realm_priest = {
 		value = 0
-		if = { 
-			limit = { 
-				opinion = { target = liege value > 75 }
-			}
-			value = @innovation_french_peerage_piety_tier_3
-		}
-		else_if = {
-			limit = { 
-				opinion = { target = liege value > 50 }
-			}
-			value = @innovation_french_peerage_piety_tier_2
-		}
-		else_if = {
-			limit = { 
-				opinion = { target = liege value > 25 }
-			}
-			value = @innovation_french_peerage_piety_tier_1
-		}
-		else_if = {
+		if = {
 			limit = { 
 				opinion = { target = liege value > 0 }
 			}
-			value = @innovation_french_peerage_piety_base
+			if = {
+				limit = { 
+					opinion = { target = liege value > 50 }
+				}
+				if = { 
+					limit = { 
+						opinion = { target = liege value > 75 }
+					}
+					value = @innovation_french_peerage_piety_tier_3
+				}
+				else = {
+					value = @innovation_french_peerage_piety_tier_2
+				}
+			}
+			else_if = {
+				limit = { 
+					opinion = { target = liege value > 25 }
+				}
+				value = @innovation_french_peerage_piety_tier_1
+			}
+			else = {
+				value = @innovation_french_peerage_piety_base
+			}
 		}
 	}
 }
 
 peerage_homage_diplomacy = {
-	value = @innovation_modifier_low 
 	if = {
+		limit = { diplomacy > high_skill_rating }
+		if = {
+			limit = { diplomacy > very_high_skill_rating }
+			if = {
+				limit = { diplomacy > extremely_high_skill_rating }
+				value = @innovation_modifier_extremely_high
+			}
+			else = {
+				value = @innovation_modifier_very_high
+			}
+		}
+		else = {
+			value = @innovation_modifier_high
+		}
+	}
+	else_if = {
+		limit = { diplomacy > medium_skill_rating }
+		if = {
+			limit = { diplomacy > decent_skill_rating }
+			value = @innovation_modifier_decent
+		}
+		else = {
+			value = @innovation_modifier_medium
+		}
+	}
+	else_if = {
 		limit = { diplomacy > average_skill_rating }
 		value = @innovation_modifier_average
 	}
-	if = {
-		limit = { diplomacy > medium_skill_rating }
-		value = @innovation_modifier_medium
-	}
-	if = {
-		limit = { diplomacy > decent_skill_rating }
-		value = @innovation_modifier_decent
-	}
-	if = {
-		limit = { diplomacy > high_skill_rating }
-		value = @innovation_modifier_high
-	}
-	if = {
-		limit = { diplomacy > very_high_skill_rating }
-		value = @innovation_modifier_very_high
-	}
-	if = {
-		limit = { diplomacy > extremely_high_skill_rating }
-		value = @innovation_modifier_extremely_high
+	else = {
+		value = @innovation_modifier_low
 	}
 }
 
@@ -189,30 +219,38 @@ peerage_piety_homage = {
 }
 #Iberian Reconquista (Iberian)
 reconquista_raiding_martial = {
-	value = @innovation_modifier_low 
 	if = {
+		limit = { martial > high_skill_rating }
+		if = {
+			limit = { martial > very_high_skill_rating }
+			if = {
+				limit = { martial > extremely_high_skill_rating }
+				value = @innovation_modifier_extremely_high
+			}
+			else = {
+				value = @innovation_modifier_very_high
+			}
+		}
+		else = {
+			value = @innovation_modifier_high
+		}
+	}
+	else_if = {
+		limit = { martial > medium_skill_rating }
+		if = {
+			limit = { martial > decent_skill_rating }
+			value = @innovation_modifier_decent
+		}
+		else = {
+			value = @innovation_modifier_medium
+		}
+	}
+	else_if = {
 		limit = { martial > average_skill_rating }
 		value = @innovation_modifier_average
 	}
-	if = {
-		limit = { martial > medium_skill_rating }
-		value = @innovation_modifier_medium
-	}
-	if = {
-		limit = { martial > decent_skill_rating }
-		value = @innovation_modifier_decent
-	}
-	if = {
-		limit = { martial > high_skill_rating }
-		value = @innovation_modifier_high
-	}
-	if = {
-		limit = { martial > very_high_skill_rating }
-		value = @innovation_modifier_very_high
-	}
-	if = {
-		limit = { martial > extremely_high_skill_rating }
-		value = @innovation_modifier_extremely_high
+	else = {
+		value = @innovation_modifier_low
 	}
 }
 reconquista_raiding_piety = {

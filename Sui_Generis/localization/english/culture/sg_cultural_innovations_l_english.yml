@@ -1,4 +1,8 @@
 ﻿l_english:
+ #Arabic
+ innovation_ghilman:1 "Ghilman"
+ innovation_ghilman:1 "The reliance on slave-soldiers as a professional fighting force was preferable to relying on local warlords or militias to supply soldiers. Drawn from Turkish slaves captured and raised in their masters' personal households, ghulam slave-soldiers became a staple throughout the Muslim world not only of the military, but also of government. Some were given command of large territories and carved out autonomous, if not sometimes outright independent, states."
+ innovation_ghilman_trigger:1 "Is not $levantine$, $egyptian$, $bedouin$, or $yemeni$, #bold or#! no [county|E] of our culture borders another belonging to a culture that has adopted this innovation."
  #Berber
  innovation_barb_horses_berber:1 "Barb Horses"
  innovation_barb_horses_berber_desc:1 "The Barb horse is a northern African breed with great hardiness and stamina and generally possesses a fiery temperament. These prize stallions bore the fierce Berber invaders during the conquest of al-Andalus and became a cornerstone of the elite mounted forces of the Iberian peninsula and beyond."
@@ -46,7 +50,7 @@
  
  innovation_caucasian_diplomacy:1 "Caucasian Diplomacy"
  innovation_caucasian_diplomacy_desc:1 "As Muslim invaders and steppe hordes made their incursions into the heart of the Caucasus, it became more and more important to consider pragmatic alliances when dynastic bonds could not be forged. This relative understanding and cooperation in the face of fierce hostility bore many fruitful military alliances between Georgian, Armenian and Alan states, both with and against their powerful neighbor, the Byzantine Roman Empire."
- sg_unlock_caucasian_diplomacy:1 "[rulers|E] are able to propose one [alliance|E] without a [marriage|E] if both rulers' cultures share this innovation"
+ sg_unlock_caucasian_diplomacy:1 "[rulers|E] are able to propose one [alliance|E] without a [marriage|E] if both rulers are of a different culture but share this innovation"
  sg_caucasian_alliance_interaction_opinion:1 "In Regional Alliance"
  
  innovation_knights_of_the_east:1 "Knights of the East"
@@ -78,7 +82,7 @@
  
  innovation_norman_customary_law:1 "Norman Customary Law"
  innovation_norman_customary_law_desc:1 "Combining aspects of Scandinavian tradition with the laws and customs of the lands they settled, the Normans developed unique traditions that survive even to the present day in areas of the former Duchy of Normandy. One noticeable practice was the designation of one's heir regardless of the social status of the mother, which allowed lesser or illegitimate sons to assume the mantle of leadership, such as Richard I of Normandy, Roger II of Sicily, and more famously, William the Conqueror."
- sg_may_designate_heir:1 "Enables the #italic $designate_heir_interaction$#! interaction if the realm has $confederate_partition_succession_law$, $partition_succession_law$, or $high_partition_succession_law$ $game_concept_succession_law$"
+ sg_may_designate_heir:1 "Enables the #italic $designate_heir_interaction$#! interaction if the realm has $confederate_partition_succession_law$ or $partition_succession_law$. Passing $high_partition_succession_law$ will disable this interaction."
  
  #Central Germanic
  innovation_stem_duchies:0 "Stammesherzogtum"
@@ -110,7 +114,7 @@
  innovation_iberian_military_orders_desc:1 "One of the natural developments of the intertwining of religious devotion and warlikeness was the tradition of military knightly orders - brothers sworn to devote their lives to defend the faithful against the heathen. Often these orders were royally sponsored and granted tracts of land in order to help sustain themselves, becoming powerful influences in their respective realms. Their status and renown for their feats of arms served as an inspiration for many, both noble and lowborn, to take up the sword for Christ."
  sg_holy_order_create_cost_reduction:1 "[holy_order|E] [piety|E] Creation Cost: #P -33%#!"
  
- # innovation_alcazares:1 "Alcazabas"
- # innovation_alcazares_desc:1 "One of the defining characteristics of Andalusian cities was the presence of a central, typically double-walled citadel, referred to as al-qaṣabah or al-qaṣr and later rendered in the Ibero-Romance languages as alcazaba, alcáçoba, or alcázar. Serving both as expansive palaces and extensive fortifications, they left a remarkable impression on the Christians to the north, who left them largely intact or emulated their construction in their own cities. 
-
+ innovation_alcazares:1 "Alcazabas"
+ innovation_alcazares_desc:1 "One of the defining characteristics of Andalusian cities was the presence of a central, typically double-walled citadel, referred to as al-qaṣabah or al-qaṣr and later rendered in the Ibero-Romance languages as alcazaba, alcáçoba, or alcázar. Serving both as expansive palaces and extensive fortifications, they left a remarkable impression on the Christians to the north, who left them largely intact or emulated their construction in their own cities."
+ 
 

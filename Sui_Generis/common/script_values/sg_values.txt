@@ -187,6 +187,7 @@ peerage_piety_homage = {
 	value = peerage_piety
 	multiply = peerage_homage_diplomacy	
 }
+
 #Iberian Reconquista (Iberian)
 reconquista_raiding_martial = {
 	value = @innovation_modifier_low 
@@ -223,6 +224,7 @@ reconquista_raiding_piety_loss = {
 	value = reconquista_raiding_piety
 	multiply = -1.5
 }
+
 #Iberian Military Orders (Iberian)
 holy_order_piety_cost = { #overwrite value in 00_holy_order_values.txt
 	value = 1000

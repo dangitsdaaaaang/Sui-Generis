@@ -29,22 +29,56 @@
 @special_maa_01 = "gfx/interface/icons/culture_innovations/innovation_special_maa_01.dds"
 @special_maa_02 = "gfx/interface/icons/culture_innovations/innovation_special_maa_02.dds"
 
-#culture_group_regional
+#Arabic
 innovation_ghilman = {
 	group = culture_group_regional
 	culture_era = culture_era_early_medieval
-	region = world_middle_east_arabia
 	icon = @maa_02
 	
-	potential = { #hide unless relevant, will otherwise inflate innovation count needed to go to the next era
-		any_county_in_region = {
-			region = world_middle_east_arabia
-			culture = root
+	potential = { 
+		OR = {
+			AND = {
+				culture_group = culture_group:arabic_group
+				NOT = { this = culture:andalusian }
+				NOT = { this = culture:maghrebi }
+			}
+			AND = {
+				can_show_innovation_due_to_exposure = {
+					HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"
+				}
+				any_ruler = {#must be a primarily Muslim culture
+					filter = { 
+						this.culture = prev 
+						sg_powerful_rank = yes
+					}
+					percent >= 0.67
+					religion = religion:islam_religion
+				}
+			}
+		}
+	}
+	
+	can_progress = {
+		custom_description = {
+			text = innovation_ghilman_trigger
+			OR = {	
+				can_spread_from_neighboring_diff_culture_county = { 
+					HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"			
+				}
+				AND = {
+					culture_group = culture_group:arabic_group
+					NOT = { this = culture:andalusian }
+					NOT = { this = culture:maghrebi }
+				}
+			}
 		}
 	}
 	
 	modifier = {
-		men_at_arms_maintenance = -0.15
+		men_at_arms_maintenance = -0.33
+		men_at_arms_cap = 2
+		levy_size = -0.25
+		levy_reinforcement_rate = -0.5
 	}
 
 	flag = global_regional

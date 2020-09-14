@@ -154,6 +154,7 @@ innovation_caucasian_heritage = {
 	modifier = {
 		desert_mountains_advantage = 5
 		mountains_advantage = 5
+		controlled_province_advantage = 5
 	}
 	
 	flag = global_regional

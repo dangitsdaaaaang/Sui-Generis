@@ -5,6 +5,7 @@ can_raid_trigger = { #overwrite entry in 00_scripted_rule_triggers.txt
 		faith = { has_doctrine = unreformed_faith_doctrine }
 		culture = { has_innovation = innovation_barbary_corsairs }
 		culture = { has_innovation = innovation_reconquista }
+		culture = { has_innovation = innovation_reconquista_muslim }
 	}
 	NOT = {
 		faith = {

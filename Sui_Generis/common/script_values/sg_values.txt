@@ -29,6 +29,7 @@
 
 #Parsi Renaissance/Persianate Literary Tradition (Iranian)
 persian_court_literature_adoptors_tier = {
+	value = @innovation_persian_court_literature_world_base #tier 0 at 0-4 cultures
 	if = {
 		limit = { global_var:persian_court_literature_adoptors >= 35 }
 		if = {
@@ -59,12 +60,10 @@ persian_court_literature_adoptors_tier = {
 		limit = { global_var:persian_court_literature_adoptors >= 5 }
 		value = @innovation_persian_court_literature_world_tier_1			#tier 1 at 5-9 cultures
 	}
-	else = {
-		value = @innovation_persian_court_literature_world_base				#tier 0 at 0-4 cultures
-	}
 }
 
 persian_court_literature_adoption_learning = {
+	value = @innovation_modifier_low
 	if = {
 		limit = { learning > high_skill_rating }
 		if = {
@@ -94,9 +93,6 @@ persian_court_literature_adoption_learning = {
 	else_if = {
 		limit = { learning > average_skill_rating }
 		value = @innovation_modifier_average
-	}
-	else = {
-		value = @innovation_modifier_low
 	}
 }
 
@@ -173,6 +169,7 @@ peerage_piety = {
 }
 
 peerage_homage_diplomacy = {
+	value = @innovation_modifier_low
 	if = {
 		limit = { diplomacy > high_skill_rating }
 		if = {
@@ -203,9 +200,6 @@ peerage_homage_diplomacy = {
 		limit = { diplomacy > average_skill_rating }
 		value = @innovation_modifier_average
 	}
-	else = {
-		value = @innovation_modifier_low
-	}
 }
 
 peerage_prestige_homage = {
@@ -219,6 +213,7 @@ peerage_piety_homage = {
 }
 #Iberian Reconquista (Iberian)
 reconquista_raiding_martial = {
+	value = @innovation_modifier_low
 	if = {
 		limit = { martial > high_skill_rating }
 		if = {
@@ -248,9 +243,6 @@ reconquista_raiding_martial = {
 	else_if = {
 		limit = { martial > average_skill_rating }
 		value = @innovation_modifier_average
-	}
-	else = {
-		value = @innovation_modifier_low
 	}
 }
 reconquista_raiding_piety = {

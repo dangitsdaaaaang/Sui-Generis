@@ -103,18 +103,30 @@ innovation_iberian_military_orders = {
 innovation_alcazares = {
 	group = culture_group_regional
 	culture_era = culture_era_high_medieval
+	region = world_europe_west_iberia
 	icon = @fortifications
 	
 	potential = { 
 		OR = {
 			this = culture:andalusian
 			culture_group = culture_group:iberian_group
+			can_show_innovation_due_to_exposure = {
+				HAS_INNOVATION_LIST = "has_innovation = innovation_alcazares"
+			}
 		}
 	}
 	
 	can_progress = {
 		trigger_if = {
-			limit = { culture_group = culture_group:iberian_group }
+			limit = { 
+				NOT = { culture:andalusian = { has_innovation = innovation_alcazares }
+				OR = {
+					culture_group = culture_group:iberian_group 
+					can_show_innovation_due_to_exposure = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_alcazares"
+					}
+				}
+			}
 			culture:andalusian = { has_innovation = innovation_alcazares }
 		}
 	}

@@ -1,5 +1,8 @@
 ﻿l_spanish:
  #Berber
+ innovation_ghilman:1 "Ghilman"
+ innovation_ghilman:1 "La dependencia de soldados esclavos como fuerza de combate profesional era preferible a la de los caudillos locales o las milicias para el suministro de soldados. Extraídos de los esclavos turcos capturados y criados en las casas personales de sus amos, los esclavos-soldado «ghulam» se convirtieron en un elemento básico en todo el mundo musulmán, no solo del ejército, sino también del gobierno. A algunos se les dio el mando de grandes territorios y se forjaron estados autónomos, si no a veces totalmente independientes."
+ innovation_ghilman_trigger:1 "No es $levantine$, $egyptian$, $bedouin$, o $yemeni$, #bold o#! ningún [county|E] de nuestra cultura limita con otro perteneciente a una cultura que haya adoptado esta innovación."
  innovation_barb_horses_berber:1 "Caballo Bereber"
  innovation_barb_horses_berber_desc:1 "El caballo Bereber es una raza del norte africano con gran resistencia y con un temperamento normalmente fiero. Estos ansiados sementales acompañaron a los fieros invasores Bereberes en la conquista de al-Ándalus y se convirtieron en la piedra angular de las fuerzas de élite montadas de la península Ibérica y más allá."
  
@@ -110,3 +113,5 @@
  innovation_iberian_military_orders_desc:1 "Uno de los desarrollos naturales de la devoción religiosa y la belicosidad fue la tradición de las órdenes de caballería militar: hermanos que juraron dedicar sus vidas a defender a los fieles contra los paganos. A menudo, estas órdenes fueron patrocinadas por la realeza y se les otorgaron extensiones de tierra para ayudar a mantenerse, convirtiéndose en influencias poderosas en sus respectivos reinos. Su estatus y renombre por sus hazañas de armas sirvieron de inspiración para que muchos, tanto nobles como humildes, tomaran la espada por Cristo."
  sg_holy_order_create_cost_reduction:1 "Coste de [piety|E] por la creación de una [holy_order|E]: #P -33%#!"
  
+ innovation_alcazares:1 "Alcazabas"
+ innovation_alcazares_desc:1 "Una de las características definitorias de las ciudades andalusíes era la presencia de una ciudadela central de muralla doble, llamada al-qasabah o al-qasr, y más tarde incorporada a las lenguas romances como alcazaba, alcáçoba o alcázar. Servía como gran palacio y fortificación, y dejaron atónitos a los Cristianos del norte, que las dejaron intactas o incluso imitaron su construcción en sus ciudades."

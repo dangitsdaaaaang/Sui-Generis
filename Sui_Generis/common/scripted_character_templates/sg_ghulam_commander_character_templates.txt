@@ -1,0 +1,98 @@
+﻿# ghulam_commander_character = {
+	# age = { 20 50 }
+	# trait = ghulam_commander #TODO - create trait, ask Delnar for custom scimitar icon?
+	# #Education
+	# random_traits_list = {
+		# count = 1
+		# education_martial_1 = {
+			# weight = { base = 5 }
+		# }
+		# education_martial_2 = {
+			# weight = { base = 10 }
+		# }
+		# education_martial_3 = {
+			# weight = { base = 20 }
+		# }
+		# education_martial_4 = {
+			# weight = { base = 10 }
+		# }
+	# }
+	# #Personality
+	# random_traits_list = {
+		# count = 3
+		# ambitious = {}
+		# arrogant = {}
+		# just = {}
+		# brave = {}
+		# diligent = {}
+		# wrathful = {}
+		# humble = {}
+		# callous = {}
+		# stubborn = {}
+		# vengeful = {}
+	# }
+	# #Commander
+	# random_traits_list = {
+		# count = 1
+		# unyielding_defender = {
+			# weight = { base = 5 }
+		# }
+		# forder = {
+			# weight = { base = 5 }
+		# }
+		# logistician = {
+			# weight = { base = 10 }
+		# }
+		# military_engineer = {
+			# weight = { base = 10 }
+		# }
+		# organizer = {
+			# weight = { base = 10 }
+		# }
+		# rough_terrain_expert = {
+			# weight = { base = 20 }
+		# }
+		# aggressive_attacker = {
+			# weight = { base = 20 }
+		# }
+		# reckless = {
+			# weight = { base = 20 }
+		# }
+		# open_terrain_expert = {
+			# weight = { base = 20 }
+		# }
+		# desert_warrior = {
+			# trigger = {
+				# root = {
+					# any_sub_realm_barony = {
+						# title_province = {
+							# terrain = desert
+						# }
+					# }
+				# }
+			# }
+			# weight = { base = 50 }
+		# }
+		# jungle_stalker = {
+			# trigger = {
+				# root = {
+					# any_sub_realm_barony = {
+						# title_province = {
+							# terrain = jungle
+						# }
+					# }
+				# }
+			# }
+			# weight = { base = 50 }
+		# }
+		# holy_warrior = {
+			# weight = { base = 50 }
+		# }
+	# }
+	# faith = root.faith
+	# culture = culture:oghuz #placeholder, should take from a random list of Turkic cultures
+	# martial = {
+		# min_template_high_skill
+		# max_template_high_skill
+	# }
+# }

@@ -1,0 +1,39 @@
+﻿# pool_ghulam_commander_succession = { #copied from 00_mercenary.txt
+	# valid_character = {
+		# is_capable_adult = yes
+		
+	# }
+	
+	# character_score = {
+		# base = 1
+		
+		# modifier = {
+			# add = 10
+			# has_same_culture_as = scope:base
+		# }
+		# compare_modifier = {
+			# value = martial
+		# }
+		# modifier = {
+			# add = 10
+			# age > 30
+		# }
+		# modifier = {
+			# add = 20
+			# scope:base.faith = faith
+		# }
+	# }
+	
+	
+	# config = {
+		# background = commander
+		# age = { 20 40 }
+	# }
+	
+	# selection_count = 25
+	
+	# pool = culture_group
+	# court = yes
+	# gender = commander
+	# culture = company
+# }

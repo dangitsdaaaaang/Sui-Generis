@@ -1,0 +1,52 @@
+﻿# councillor_ghulam_commander = {
+	# skill = martial
+	
+	# auto_fill = yes #filled upon death/removal of former commander by other means
+	# special_council_position = yes 
+	# inherit = yes #heir of the Mamluk government type will take over
+	# can_fire = no #can only be removed by character interaction
+	# can_reassign = no 
+	
+	# name = councillor_ghulam_commander
+	# tooltip = game_concept_ghulam_commander_desc
+
+	# modifier = {
+		# name = councillor_ghulam_commander_modifier
+		# army_maintenance_mult = -0.05
+		# men_at_arms_limit = 1
+		# monthly_martial_lifestyle_xp_gain_mult = 0.05
+		# scale = council_scaled_by_leased_baronies #TBI
+	# }
+	
+	# modifier = { #no levies for mamluke companies
+		# name = councillor_ghulam_commander_levy_modifier
+		# levy_size = -10
+	# }
+
+	# council_owner_modifier = {
+		# name = liege_ghulam_commander_modifer
+		# army_maintenance_mult = -0.075
+		# prowess = 1
+		# scale = council_scaled_by_leased_baronies
+	# }
+
+	# valid_character = { # refer to pool_ghulam_commander_succession for how this character is selected
+		# exists = root.liege_or_court_owner
+		# can_be_ghulam_commander_trigger = { COURT_OWNER = root.liege_or_court_owner }
+	# }
+
+	# on_get_position = {
+		# got_council_position_effect = yes
+	# }
+	
+	# on_lose_position = { #if removed by character interaction - WIP
+	
+	# }
+
+	# on_fired_from_position = {
+		# fired_from_council_position_effect = yes
+	# }
+
+	# portrait_animation = marshal
+# }
+

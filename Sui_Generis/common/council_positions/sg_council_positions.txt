@@ -3,30 +3,20 @@
 	
 	# auto_fill = yes #filled upon death/removal of former commander by other means
 	# special_council_position = yes 
-	# inherit = yes #heir of the Mamluk government type will take over
 	# can_fire = no #can only be removed by character interaction
 	# can_reassign = no 
 	
 	# name = councillor_ghulam_commander
 	# tooltip = game_concept_ghulam_commander_desc
-
-	# modifier = {
-		# name = councillor_ghulam_commander_modifier
-		# army_maintenance_mult = -0.05
-		# men_at_arms_limit = 1
-		# monthly_martial_lifestyle_xp_gain_mult = 0.05
-		# scale = council_scaled_by_leased_baronies #TBI
-	# }
 	
-	# modifier = { #no levies for mamluke companies
-		# name = councillor_ghulam_commander_levy_modifier
-		# levy_size = -10
-	# }
+	# modifier = {
+		
+	#}
 
 	# council_owner_modifier = {
 		# name = liege_ghulam_commander_modifer
 		# army_maintenance_mult = -0.075
-		# prowess = 1
+		# men_at_arms_cap = 1
 		# scale = council_scaled_by_leased_baronies
 	# }
 

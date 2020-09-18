@@ -1,4 +1,5 @@
-﻿@administration_1 = "gfx/interface/icons/culture_innovations/innovation_administration_01.dds"
+﻿#### Local Types ####
+@administration_1 = "gfx/interface/icons/culture_innovations/innovation_administration_01.dds"
 @administration_2 = "gfx/interface/icons/culture_innovations/innovation_administration_02.dds"
 @administration_3 = "gfx/interface/icons/culture_innovations/innovation_administration_03.dds"
 @civil_construction_1 = "gfx/interface/icons/culture_innovations/innovation_civil_construction_01.dds"
@@ -28,88 +29,47 @@
 @special_maa_01 = "gfx/interface/icons/culture_innovations/innovation_special_maa_01.dds"
 @special_maa_02 = "gfx/interface/icons/culture_innovations/innovation_special_maa_02.dds"
 
-#Iberian Cultural Innovations
-innovation_reconquista = {
+#culture_group_regional
+
+innovation_longboats = {
 	group = culture_group_regional
-	culture_era = culture_era_early_medieval
-	icon = @leadership_1
-
-	potential = { 
-		culture_group = culture_group:iberian_group
-	}
+	culture_era = culture_era_tribal
+	region = world_europe_north
+	icon = @misc_inventions
 	
-	modifier = {
-		martial_per_piety_level = 1
-		raid_speed = -0.5
-	}
-	
-	custom = cb_discount_piety_10
-	custom = sg_reconquista_raiding
-
-	flag = global_regional
-	flag = early_medieval_era_regional
-}
-
-innovation_reconquista_muslim = {
-	group = culture_group_regional
-	culture_era = culture_era_early_medieval
-	region = world_europe_west_iberia
-	icon = @leadership_2
-
-	potential = { 
+	potential = {
 		OR = {
-			culture_group = culture_group:berber_group
-			this = culture:maghrebi
-			this = culture:andalusian
+			culture_group = culture_group:north_germanic_group
+			any_county_in_region = {
+				region = world_europe_north
+				culture = prev
+			}
 		}
 	}
 	
 	modifier = {
-		raid_speed = -0.5
-		controlled_province_advantage = 4
+		embarkation_cost_mult = -0.75
+		naval_movement_speed_mult = 0.25
 	}
-	
-	custom = cb_discount_piety_10
-	custom = sg_reconquista_raiding
+
+	custom = unlocks_naval_raiding
+	custom = unlocks_sailable_major_rivers
 
 	flag = global_regional
-	flag = early_medieval_era_regional
+	flag = tribal_era_regional
 }
 
-innovation_iberian_military_orders = {
+innovation_elephantry = {
 	group = culture_group_regional
-	culture_era = culture_era_high_medieval
-	icon = @leadership_1
-
-	potential = { 
-		culture_group = culture_group:iberian_group
-	}
+	culture_era = culture_era_tribal
+	region = world_innovation_elephants
+	icon = @elephant
 	
-	can_progress = {
-		has_innovation = innovation_knighthood
-	}
-	
-	modifier = {
-		monthly_piety_gain_per_knight_mult = 0.02
-		knight_effectiveness_mult = 0.25
-	}
-	
-	custom = sg_holy_order_create_cost_reduction
-
-	flag = global_regional
-	flag = high_medieval_era_regional
-}
-
-innovation_alcazares = {
-	group = culture_group_regional
-	culture_era = culture_era_high_medieval
-	region = world_europe_west_iberia
-	icon = @fortifications
-	
-	potential = { 
+	potential = {
 		OR = {
-			this = culture:andalusian
-			culture_group = culture_group:iberian_group
+			culture_group = culture_group:indo_aryan_group
+			culture_group = culture_group:dravidian_group
+			culture_group = culture_group:burman_group
 			any_county_in_region = {
 				region = world_europe_west_iberia
 				culture = prev
@@ -117,30 +77,82 @@ innovation_alcazares = {
 		}
 	}
 	
-	can_progress = {
-		trigger_if = {
-			limit = { 
-				NOT = { culture:andalusian = { has_innovation = innovation_alcazares } }
-				OR = {
-					culture_group = culture_group:iberian_group 
-					any_county_in_region = {
-						region = world_europe_west_iberia
-						culture = prev
-					}
-				}
+	unlock_maa = war_elephant
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_war_camels = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_innovation_camels
+	icon = @camel
+
+	unlock_maa = camel_rider
+
+	flag = global_regional
+	flag = tribal_era_regional
+}
+
+innovation_wootz_steel = { #TODO: make exportable variant of Damascene steel
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_india_deccan
+	icon = @weapons_and_armor_01
+	
+	potential = {
+		OR = {
+			culture_group = culture_group:indo_aryan_group
+			culture_group = culture_group:dravidian_group
+			any_county_in_region = {
+				region = world_india_deccan
+				culture = prev
 			}
-			culture:andalusian = { has_innovation = innovation_alcazares }
 		}
 	}
 	
 	modifier = {
-		hostile_raid_time = 0.2
-		fort_level = 1
-		garrison_size = 0.5
-		castle_holding_build_gold_cost = 0.25
+		prowess = 1
 	}
-	
+	maa_upgrade = {
+		type = heavy_infantry
+		damage = 2
+	}
+	maa_upgrade = {
+		type = heavy_cavalry
+		damage = 2
+	}
+
 	flag = global_regional
-	flag = high_medieval_era_regional
+	flag = tribal_era_regional
 }
 
+innovation_african_canoes = {
+	group = culture_group_regional
+	culture_era = culture_era_tribal
+	region = world_africa_west
+	icon = @majesty_01
+	
+	potential = {
+		OR = {
+			culture_group = culture_group:yoruba_group	
+			culture_group = culture_group:sahelian_group	
+			any_county_in_region = {
+				region = world_africa_west
+				culture = prev
+			}
+		}
+	}
+	
+	modifier = {
+		embarkation_cost_mult = -0.25
+		raid_speed = 0.1
+	}
+	
+	custom = unlocks_naval_raiding
+	custom = unlocks_sailable_major_rivers
+
+	flag = global_regional
+	flag = tribal_era_regional
+}

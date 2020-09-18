@@ -1,13 +1,13 @@
 ﻿#SG Script Values
 
 #Persian Literary Influence Innovation Prestige Bonus
-@innovation_persian_court_literature_world_base = 25
-@innovation_persian_court_literature_world_tier_1 = 50
-@innovation_persian_court_literature_world_tier_2 = 75
-@innovation_persian_court_literature_world_tier_3 = 125
-@innovation_persian_court_literature_world_tier_4 = 200
-@innovation_persian_court_literature_world_tier_5 = 250
-@innovation_persian_court_literature_world_tier_6 = 300
+@innovation_persian_court_literature_world_base = 50
+@innovation_persian_court_literature_world_tier_1 = 100
+@innovation_persian_court_literature_world_tier_2 = 150
+@innovation_persian_court_literature_world_tier_3 = 200
+@innovation_persian_court_literature_world_tier_4 = 250
+@innovation_persian_court_literature_world_tier_5 = 300
+@innovation_persian_court_literature_world_tier_6 = 400
 
 #Frankish Peerage Prestige and Piety Bonuses
 @innovation_french_peerage_prestige_base_add = 25
@@ -29,6 +29,36 @@
 @innovation_skill_rating_very_high = 1.33
 @innovation_skill_rating_extremely_high = 1.5
 
+#Tier Level Scaling
+@innovation_tier_county = 1.0
+@innovation_tier_duchy = 1.33
+@innovation_tier_kingdom = 1.5
+@innovation_tier_empire = 1.75
+
+#Tier Scaling 
+tier_scaling_factor = {
+	value = @innovation_tier_county
+	if = {
+		limit = { primary_title = { tier > tier_duchy } }
+		if = {
+			limit = { primary_title = { tier > tier_kingdom } }
+			value = @innovation_tier_empire
+		}
+		else = {
+			value = @innovation_tier_kingdom
+		}
+	}
+	if = {
+		limit = { primary_title = { tier > tier_barony } }
+		if = { 
+			limit = { primary_title = { tier > tier_county } }
+			value = @innovation_tier_duchy
+		}
+		else = {
+			value = @innovation_tier_county
+		}
+	}
+} 
 #Parsi Renaissance/Persianate Literary Tradition (Iranian)
 persian_court_literature_adoptors_tier = {
 	value = @innovation_persian_court_literature_world_base 				#tier 0 at 0-4 cultures
@@ -101,6 +131,7 @@ persian_court_literature_adoption_learning = {
 persian_court_literature_adoption_prestige = {
 	value = persian_court_literature_adoptors_tier
 	multiply = persian_court_literature_adoption_learning
+	multiply = tier_scaling_factor
 }
 
 #Peerage (Frankish)

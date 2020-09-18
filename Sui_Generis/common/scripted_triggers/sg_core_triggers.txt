@@ -34,6 +34,41 @@ can_spread_from_neighboring_diff_culture_county = {
 	}
 }
 
+can_spread_from_neighboring_diff_culture_county_new = { 
+	custom_description = {
+		text = can_spread_from_neighboring_diff_culture_county_trigger
+		any_ruler = { #If any ruler...
+			this.culture = root.culture #... of this culture...
+			sg_powerful_rank = yes
+			any_realm_county = {#... with a county within their direct governance of a different culture with the innovation... 
+				OR = {
+					culture = { OR = { $HAS_INNOVATION_LIST$ } }
+					holder = { 
+						culture = { OR = { $HAS_INNOVATION_LIST$ } }
+					}
+					any_title_to_title_neighboring_and_across_water_county = { #...or if his/her realm is neighboring another county...
+						NOT = { culture = root.culture } #... of a different culture...
+						OR = {
+							culture = { OR = { $HAS_INNOVATION_LIST$ } } #... that has the innovation...
+							holder = {#... or whose holder...
+								OR = {#... is of a culture or has a liege or county of that culture in their direct governance...
+									culture = { OR = { $HAS_INNOVATION_LIST$ } }
+									any_liege_or_above = {
+										culture = { OR = { $HAS_INNOVATION_LIST$ } }
+									}
+									any_sub_realm_county = {
+										culture = { OR = { $HAS_INNOVATION_LIST$ } }
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		} #... then progress can begin, and the hard-coded spread rate modifiers can modulate the research rate.
+	}
+}
+
 can_spread_from_close_family_member_ruler_or_noble_courtier = {
 	custom_description = {
 		text = can_spread_from_close_family_member_ruler_or_noble_courtier_trigger
@@ -43,14 +78,39 @@ can_spread_from_close_family_member_ruler_or_noble_courtier = {
 			OR = {
 				any_spouse = { #... has a spouse with a court of the source culture...
 					is_ruler = yes
-					culture = culture:$CULTURE$
+					culture = { OR = { $HAS_INNOVATION_LIST$ } }
 				}
 				any_close_family_member = { #... or a father/mother/child/sibling/grandparent with a court of the source culture...
 					is_ruler = yes
-					culture = culture:$CULTURE$
+					culture = { OR = { $HAS_INNOVATION_LIST$ } }
 				}
 				any_courtier = { #... or a courtier of the source culture of noble birth ...
-					culture = culture:$CULTURE$
+					culture = { OR = { $HAS_INNOVATION_LIST$ } }
+					is_imprisoned  = no
+					is_lowborn = no
+				}
+			}
+		} #... then progress toward understanding the innovation can begin.
+	}
+}
+
+can_spread_from_close_family_member_ruler_or_noble_courtier_new = {
+	custom_description = {
+		text = can_spread_from_close_family_member_ruler_or_noble_courtier_trigger
+		any_ruler = { 
+			this.culture = root.culture #If any ruler of this culture...
+			sg_powerful_rank = yes
+			OR = {
+				any_spouse = { #... has a spouse with a court of the source culture...
+					is_ruler = yes
+					culture = { OR = { $HAS_INNOVATION_LIST$ } }
+				}
+				any_close_family_member = { #... or a father/mother/child/sibling/grandparent with a court of the source culture...
+					is_ruler = yes
+					culture = { OR = { $HAS_INNOVATION_LIST$ } }
+				}
+				any_courtier = { #... or a courtier of the source culture of noble birth ...
+					culture = { OR = { $HAS_INNOVATION_LIST$ } }
 					is_imprisoned  = no
 					is_lowborn = no
 				}
@@ -71,6 +131,36 @@ can_show_innovation_due_to_exposure = {
 				}
 				any_title_to_title_neighboring_and_across_water_county = { #...or if his/her realm is neighboring another county...
 					NOT = { culture = root } #... of a different culture...
+					OR = {
+						culture = { OR = { $HAS_INNOVATION_LIST$ } } #... that has a culture with the innovation...
+						holder = {#... or is held by someone of a culture with the innovation...
+							culture = { OR = { $HAS_INNOVATION_LIST$ } }
+							any_liege_or_above = {
+								culture = { OR = { $HAS_INNOVATION_LIST$ } }
+								any_vassal = {
+									culture = { OR = { $HAS_INNOVATION_LIST$ } }
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	} #... then knowledge of the innovation's existence is gained.
+}
+
+can_show_innovation_due_to_exposure_new = {
+	any_ruler = { #If any ruler...
+		this.culture = root.culture #... is sufficiently powerful...
+		sg_powerful_rank = yes
+		any_realm_county = {#... with a county within their realm of a different culture with the innovation...
+			OR = {
+				culture = { OR = { $HAS_INNOVATION_LIST$ } }
+				holder = {#... or whose holder is of a culture with the innovation...
+					culture = { OR = { $HAS_INNOVATION_LIST$ } }
+				}
+				any_title_to_title_neighboring_and_across_water_county = { #...or if his/her realm is neighboring another county...
+					NOT = { culture = root.culture } #... of a different culture...
 					OR = {
 						culture = { OR = { $HAS_INNOVATION_LIST$ } } #... that has a culture with the innovation...
 						holder = {#... or is held by someone of a culture with the innovation...

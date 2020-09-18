@@ -42,34 +42,20 @@ innovation_ghilman = {
 				NOT = { this = culture:andalusian }
 				NOT = { this = culture:maghrebi }
 			}
-			AND = {
-				can_show_innovation_due_to_exposure = {
-					HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"
-				}
-				any_ruler = {#must be a primarily Muslim culture
-					filter = { 
-						this.culture = prev 
-						sg_powerful_rank = yes
-					}
-					percent >= 0.67
-					religion = religion:islam_religion
-				}
-			}
+			has_variable = innovation_ghilman_potential
 		}
 	}
 	
 	can_progress = {
 		custom_description = {
 			text = innovation_ghilman_trigger
-			OR = {	
-				can_spread_from_neighboring_diff_culture_county = { 
-					HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"			
-				}
-				AND = {
+			OR = {
+					AND = {
 					culture_group = culture_group:arabic_group
 					NOT = { this = culture:andalusian }
 					NOT = { this = culture:maghrebi }
 				}
+				has_variable = innovation_ghilman_can_progress
 			}
 		}
 	}

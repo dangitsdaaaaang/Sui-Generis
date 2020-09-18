@@ -54,58 +54,13 @@ innovation_legacy_of_byzantium = {
 		
 	potential = {
 		NOT = { this = culture:greek }
-		trigger_if = {
-			limit = { this = culture:russian}
-			any_independent_ruler = { #Russians (still must be Eastern Christian)
-				filter = { this.culture = culture:russian }
-				percent >= 0.67 #supermajority
-				faith.religion = religion:christianity_religion
-				NOT = {
-					OR = {
-						this.faith = faith:catholic
-						this.faith = faith:conversos
-						this.faith = faith:cathar
-						this.faith = faith:waldensian
-						this.faith = faith:lollard
-						this.faith = faith:adamites
-						this.faith = faith:insular_celtic
-					}
-				}
-			}	
-		}
-		trigger_else = {
-			can_show_innovation_due_to_exposure = {
-				HAS_INNOVATION_LIST = "has_innovation = innovation_legacy_of_rome has_innovation = innovation_legacy_of_byzantium"
-			}
-			any_independent_ruler = { #Byzantine autocratic tradition limited to Eastern variants of Christianity (general case)
-				filter = { this.culture = prev }
-				percent >= 0.67 #supermajority
-				religion = religion:christianity_religion
-				NOR = {
-					this.faith = faith:catholic
-					this.faith = faith:conversos
-					this.faith = faith:cathar
-					this.faith = faith:waldensian
-					this.faith = faith:lollard
-					this.faith = faith:adamites
-					this.faith = faith:insular_celtic
-				}
-			}		
-		}
+		has_variable =sg_culture_religion_eastern_christianity_religion	
 	}
 	
 	can_progress = {
 		custom_description = {
 			text = innovation_legacy_of_byzantium_trigger
-			OR = {	
-				can_spread_from_neighboring_diff_culture_county = { 
-					HAS_INNOVATION_LIST = "has_innovation = innovation_legacy_of_rome has_innovation = innovation_legacy_of_byzantium"			
-				}
-				can_spread_from_close_family_member_ruler_or_noble_courtier = {
-					CULTURE = greek
-				}
-				this = culture:russian
-			}
+			has_variable = innovation_legacy_of_byzantium_can_progress
 		}
 	}
 	

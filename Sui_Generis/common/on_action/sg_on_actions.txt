@@ -228,7 +228,7 @@ on_raid_action_completion = { #from army_on_actions.txt
 
 innovation_reconquista_piety_gain = {
 	trigger = {
-		scope:raider = { 
+		scope:raider = { #must have the requisite innovations
 			culture = { 
 				OR = {
 					has_innovation = innovation_reconquista
@@ -236,7 +236,7 @@ innovation_reconquista_piety_gain = {
 				}
 			}
 		}
-		scope:barony = {
+		scope:barony = { #must be raiding within Iberia
 			title_province = { geographical_region = world_europe_west_iberia }
 		}
 	}
@@ -245,7 +245,7 @@ innovation_reconquista_piety_gain = {
 		if = {
 			limit = { 
 				scope:raider = {
-					faith = {
+					faith = { #Raiding against any faith that one would be able to declare a Holy War
 						faith_hostility_level = {
 							target = scope:county.faith
 							value >= religious_cb_enabled_hostility_level
@@ -265,7 +265,7 @@ innovation_reconquista_piety_gain = {
 		else_if = {
 			limit = { scope:raider.faith = faith:catholic }
 			scope:raider = {
-				send_interface_message = { #Caedite eos. Novit enim Dominus qui sunt eius.
+				send_interface_message = { #Special Catholic flavor text if Catholics are raiding co-religionists, based on 'Caedite eos.'
 					title = innovation_reconquista_piety_toast_bad
 					desc = innovation_reconquista_piety_toast_bad_catholic_desc
 					type = event_reconquista_toast_effect_bad
@@ -274,7 +274,7 @@ innovation_reconquista_piety_gain = {
 			}
 		}
 		else = {
-			scope:raider = {
+			scope:raider = { #Raiding against co-religionists or those generally presumed to be non-hostile
 				send_interface_message = {
 					title = innovation_reconquista_piety_toast_bad
 					desc = innovation_reconquista_piety_toast_bad_desc
@@ -288,8 +288,14 @@ innovation_reconquista_piety_gain = {
 
 quarterly_playable_pulse = {
 	on_actions = {
+		#Action pulses
 		innovation_persian_court_literature_adopted_pulse
 		innovation_seigneurialism_domain_limit_penalty_pulse
+		
+		#Evaluation pulses
+		innovation_ghilman_potential_eval_pulse
+		innovation_barb_horses_potential_eval_pulse
+		innovation_legacy_of_byzantium_can_progress_eval_pulse
 	}
 }
 
@@ -301,6 +307,9 @@ five_year_playable_pulse = {
 
 yearly_playable_pulse = {
 	on_actions = {
+		sg_culture_islam_religion_eval_pulse
+		sg_culture_eastern_christianity_religion_eval_pulse
+		
 		innovation_east_settling_county_culture_change_pulse
 	}
 }

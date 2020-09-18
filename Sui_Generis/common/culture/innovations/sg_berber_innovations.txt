@@ -132,15 +132,11 @@ innovation_barb_horses_world = {
 				this = culture:catalan
 			}
 		}
-		can_show_innovation_due_to_exposure = {
-			HAS_INNOVATION_LIST = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
-		}
+		has_variable = innovation_barb_horses_potential
 	}
 	
 	can_progress = {
-		can_spread_from_neighboring_diff_culture_county = { 
-			HAS_INNOVATION_LIST = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
-		}
+		has_variable = innovation_barb_horses_can_progress
 	}
 	
 	maa_upgrade = {

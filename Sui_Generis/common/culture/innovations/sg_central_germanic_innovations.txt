@@ -28,7 +28,7 @@
 @special_maa_01 = "gfx/interface/icons/culture_innovations/innovation_special_maa_01.dds"
 @special_maa_02 = "gfx/interface/icons/culture_innovations/innovation_special_maa_02.dds"
 
-#Frankish Cultural Innovations
+#Central Germanic Cultural Innovations
 innovation_stem_duchies = {
 	group = culture_group_regional
 	culture_era = culture_era_early_medieval
@@ -80,21 +80,11 @@ innovation_german_town_law = {
 				culture_group = culture_group:central_germanic_group
 				has_innovation = innovation_development_02
 			}
-			can_show_innovation_due_to_exposure = {
-				HAS_INNOVATION_LIST = "has_innovation = innovation_german_town_law"
-			}
+			has_variable = innovation_german_town_law_potential
 		}
 		NOT = { 
 			has_innovation = innovation_seigneurialism
 			#placeholder for Italian communal government
-		}
-		any_ruler = {
-			filter = {
-				this.culture = prev
-				sg_powerful_rank = yes
-			}
-			percent >= 0.67
-			faith.religion = religion:christianity_religion
 		}
 	}
 	
@@ -106,13 +96,7 @@ innovation_german_town_law = {
 		trigger_else = {
 			custom_description = { 
 				text = "innovation_german_town_law_trigger"
-				any_ruler = {
-					this.culture = prev
-					sg_powerful_rank = yes
-				}
-				can_spread_from_neighboring_diff_culture_county = {
-					HAS_INNOVATION_LIST = "has_innovation = innovation_german_town_law"
-				}
+				has_variable = innovation_german_town_law_can_progress
 			}
 		}
 	}

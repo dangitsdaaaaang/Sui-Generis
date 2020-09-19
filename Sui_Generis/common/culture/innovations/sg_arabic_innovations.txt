@@ -50,7 +50,7 @@ innovation_ghilman = {
 		custom_description = {
 			text = innovation_ghilman_trigger
 			OR = {
-					AND = {
+				AND = {
 					culture_group = culture_group:arabic_group
 					NOT = { this = culture:andalusian }
 					NOT = { this = culture:maghrebi }

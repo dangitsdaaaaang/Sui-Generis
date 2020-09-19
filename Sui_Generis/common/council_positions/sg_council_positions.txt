@@ -11,10 +11,10 @@
 	
 	# modifier = {
 		
-	#}
+	# }
 
 	# council_owner_modifier = {
-		# name = liege_ghulam_commander_modifer
+		# name = liege_ghulam_commander_modifier
 		# army_maintenance_mult = -0.075
 		# men_at_arms_cap = 1
 		# scale = council_scaled_by_leased_baronies

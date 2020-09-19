@@ -1,8 +1,11 @@
 ﻿#Innovation Potential/Valid Evaluators
 sg_culture_islam_religion_eval_pulse = {
 	trigger = {
-		sg_powerful_rank = yes
-		culture = { NOT = { has_variable = culture_religion_eval } }
+		culture = { 
+			culture_head = prev
+			NOT = { has_variable = culture_islam_religion_eval } 
+			NOT = { has_variable = culture_christianity_religion_eval }
+		}
 	}
 	
 	effect = {
@@ -21,8 +24,8 @@ sg_culture_islam_religion_eval_pulse = {
 				}
 			}
 			culture = { 
-				set_variable = { name = culture_religion_eval value = true days = 300 }
-				set_variable = { name = sg_culture_religion_islam_religion value = true }
+				set_variable = { name = culture_islam_religion_eval  days = 300 }
+				set_variable = { name = sg_culture_religion_islam_religion  }
 			}
 		}
 		else_if = { 
@@ -39,19 +42,71 @@ sg_culture_islam_religion_eval_pulse = {
 			}
 			culture = {
 				remove_variable = sg_culture_religion_islam_religion
-				set_variable = { name = culture_religion_eval value = true days = 300 }
+				set_variable = { name = culture_islam_religion_eval  days = 300 }
 			}
 		}
 		else = {
-			culture = { set_variable = { name = culture_religion_eval value = true days = 60 } }
+			culture = { set_variable = { name = culture_islam_religion_eval  days = 300 } }
+		}
+	}
+}
+
+sg_culture_christianity_religion_eval_pulse = {
+	trigger = {
+		culture = { 
+			culture_head = prev
+			NOT = { has_variable = culture_islam_religion_eval }
+			NOT = { has_variable = culture_christianity_religion_eval } 
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = {
+				culture = { 
+					NOT = { has_variable = sg_culture_christianity_religion }
+				}
+				any_ruler = { 
+					filter = { this.culture = root.culture }
+					percent >= 0.67 
+					faith.religion = religion:christianity_religion
+				}
+			}
+			culture = { 
+				set_variable = { name = sg_culture_christianity_religion  }
+				set_variable = { name = culture_christianity_religion_eval  days = 300 }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = { has_variable = sg_culture_christianity_religion }
+				any_ruler = {
+					filter = { 
+						culture = root.culture 
+						sg_powerful_rank = yes
+					}
+					percent < 0.67
+					faith.religion = religion:christianity_religion
+				}
+			}
+			culture = {
+				remove_variable = sg_culture_christianity_religion
+				set_variable = { name = culture_christianity_religion_eval  days = 300 }
+			}
+		}
+		else = {
+			culture = { set_variable = { name = culture_christianity_religion_eval  days = 300 } }
 		}
 	}
 }
 
 sg_culture_eastern_christianity_religion_eval_pulse = {
 	trigger = {
-		sg_powerful_rank = yes
-		culture = { NOT = { has_variable = culture_religion_eval } }
+		culture = { 
+			culture_head = prev
+			NOT = { has_variable = culture_islam_religion_eval }
+			NOT = { has_variable = culture_eastern_christianity_religion_eval } 
+		}
 	}
 	
 	effect = {
@@ -78,8 +133,8 @@ sg_culture_eastern_christianity_religion_eval_pulse = {
 				}
 			}
 			culture = { 
-				set_variable = { name = sg_culture_religion_eastern_christianity_religion value = true }
-				set_variable = { name = culture_religion_eval value = true days = 300 }
+				set_variable = { name = sg_culture_religion_eastern_christianity_religion  }
+				set_variable = { name = culture_eastern_christianity_religion_eval  days = 300 }
 			}
 		}
 		else_if = {
@@ -107,11 +162,11 @@ sg_culture_eastern_christianity_religion_eval_pulse = {
 			}
 			culture = {
 				remove_variable = sg_culture_religion_eastern_christianity_religion
-				set_variable = { name = culture_religion_eval value = true days = 300 }
+				set_variable = { name = culture_eastern_christianity_religion_eval  days = 300 }
 			}
 		}
 		else = {
-			culture = { set_variable = { name = culture_religion_eval value = true days = 60 } }
+			culture = { set_variable = { name = culture_eastern_christianity_religion_eval  days = 300 } }
 		}
 	}
 }
@@ -121,14 +176,6 @@ innovation_ghilman_potential_eval_pulse = {
 	trigger = {
 		culture = {
 			culture_head = prev
-			OR = {
-				AND = {
-					culture_group = culture_group:arabic_group
-					NOT = { this = culture:andalusian }
-					NOT = { this = culture:maghrebi }
-				}
-				has_variable = sg_culture_religion_islam_religion
-			}
 			NOT = { has_variable = innovation_ghilman_potential_eval }
 		}
 	}
@@ -137,42 +184,37 @@ innovation_ghilman_potential_eval_pulse = {
 		if = {
 			limit = {
 				culture = {
+					NOT = { has_variable = innovation_ghilman_potential }
 					OR = {
-						AND = {
-							culture_group = culture_group:arabic_group
-							NOT = { this = culture:andalusian }
-							NOT = { this = culture:maghrebi }
-						}
 						can_show_innovation_due_to_exposure_new = {
 							HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"
 						}
 					}
 				}
-				NOT = { has_variable = innovation_ghilman_potential }
 			}
 			culture = { 
-				set_variable = { name = innovation_ghilman_potential value = true } 
-				set_variable = { name = innovation_ghilman_potential_eval value = true days = 60 }
+				set_variable = { name = innovation_ghilman_potential } 
+				set_variable = { name = innovation_ghilman_potential_eval  days = 60 }
 			}
 		}
 		else_if = {
 			limit = {
 				culture = {
+					has_variable = innovation_ghilman_potential
 					NOT = { 
 						can_show_innovation_due_to_exposure_new = {
 							HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"
 						}
 					}
-					has_variable = innovation_ghilman_potential
 				}
 			}
 			culture = { 
 				remove_variable = innovation_ghilman_potential 
-				set_variable = { name = innovation_ghilman_potential_eval value = true days = 60 }
+				set_variable = { name = innovation_ghilman_potential_eval  days = 60 }
 			}
 		}
 		else = {
-			culture = { set_variable = { name = innovation_ghilman_potential_eval value = true days = 60 } }
+			culture = { set_variable = { name = innovation_ghilman_potential_eval  days = 60 } }
 		}
 	}
 	
@@ -182,31 +224,18 @@ innovation_ghilman_potential_eval_pulse = {
 }	
 
 innovation_ghilman_can_progress_eval_pulse = {
-	trigger = {
-		culture = {
-			culture_head = prev
-			has_variable = innovation_ghilman_potential
-		}
-	}
-	
 	effect = {
 		if = {
 			limit = {
 				culture = {
-					OR = {
-						AND = {
-							culture_group = culture_group:arabic_group
-							NOT = { this = culture:andalusian }
-							NOT = { this = culture:maghrebi }
-						}
-						can_spread_from_neighboring_diff_culture_county_new = { 
-							HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"			
-						}
+					has_variable = innovation_ghilman_potential
+					can_spread_from_neighboring_diff_culture_county_new = { 
+						HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"			
 					}
 				}
 			}
 			culture = { 
-				set_variable = { name = innovation_ghilman_can_progress value = true }
+				set_variable = { name = innovation_ghilman_can_progress }
 			}
 		}
 		else_if = {
@@ -214,8 +243,11 @@ innovation_ghilman_can_progress_eval_pulse = {
 				culture = { 
 					has_variable = innovation_ghilman_can_progress
 					NOT = {
-						can_spread_from_neighboring_diff_culture_county_new = { 
-							HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"			
+						OR = {
+							has_variable = innovation_ghilman_potential
+							can_spread_from_neighboring_diff_culture_county_new = { 
+								HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"			
+							}
 						}
 					}	
 				}
@@ -247,8 +279,8 @@ innovation_barb_horses_potential_eval_pulse = {
 				}
 			}
 			culture = {
-				set_variable = { name = innovation_barb_horses_potential value = true }	
-				set_variable = { name = innovation_barb_horses_potential_eval value = true days = 60 }
+				set_variable = { name = innovation_barb_horses_potential }	
+				set_variable = { name = innovation_barb_horses_potential_eval  days = 60 }
 			}
 		}
 		else_if = {
@@ -264,11 +296,11 @@ innovation_barb_horses_potential_eval_pulse = {
 			}
 			culture = {
 				remove_variable = innovation_barb_horses_potential
-				set_variable = { name = innovation_barb_horses_potential_eval value = true days = 60 }
+				set_variable = { name = innovation_barb_horses_potential_eval days = 60 }
 			}
 		}
 		else = {
-			culture = { set_variable = { name = innovation_barb_horses_potential_eval value = true days = 60 } }
+			culture = { set_variable = { name = innovation_barb_horses_potential_eval days = 60 } }
 		}
 	}
 	
@@ -278,17 +310,11 @@ innovation_barb_horses_potential_eval_pulse = {
 }
 
 innovation_barb_horses_can_progress_eval_pulse = {
-	trigger = {
-		culture = {
-			culture_head = prev
-			has_variable = innovation_barb_horses_potential
-		}
-	}
-	
 	effect = {
 		if = {
 			limit = {
 				culture = {
+					has_variable = innovation_barb_horses_potential
 					NOT = { has_variable = innovation_barb_horses_can_progress }
 					can_spread_from_neighboring_diff_culture_county_new = { 
 						HAS_INNOVATION_LIST = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
@@ -296,7 +322,7 @@ innovation_barb_horses_can_progress_eval_pulse = {
 				}
 			}
 			culture = { 
-				set_variable = { name = innovation_barb_horses_can_progress value = true }
+				set_variable = { name = innovation_barb_horses_can_progress }
 			}
 		}
 		else_if = {
@@ -304,8 +330,11 @@ innovation_barb_horses_can_progress_eval_pulse = {
 				culture = {
 					has_variable = innovation_barb_horses_can_progress
 					NOT = {
-						can_spread_from_neighboring_diff_culture_county_new = { 
-							HAS_INNOVATION_LIST = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
+						OR = {
+							has_variable = innovation_barb_horses_potential
+							can_spread_from_neighboring_diff_culture_county_new = { 
+								HAS_INNOVATION_LIST = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
+							}
 						}
 					}
 				}
@@ -344,8 +373,8 @@ innovation_legacy_of_byzantium_can_progress_eval_pulse = {
 				}
 			}
 			culture = { 
-				set_variable = { name = innovation_legacy_of_byzantium_can_progress value = true } 
-				set_variable = { name = innovation_legacy_of_byzantium_can_progress_eval value = true days = 60 }
+				set_variable = { name = innovation_legacy_of_byzantium_can_progress } 
+				set_variable = { name = innovation_legacy_of_byzantium_can_progress_eval days = 60 }
 			}
 		}
 		else_if = {
@@ -365,11 +394,410 @@ innovation_legacy_of_byzantium_can_progress_eval_pulse = {
 			}
 			culture = {
 				remove_variable = innovation_legacy_of_byzantium_can_progress
-				set_variable = { name = innovation_legacy_of_byzantium_can_progress_eval value = true days = 60 }
+				set_variable = { name = innovation_legacy_of_byzantium_can_progress_eval  days = 60 }
 			}
 		}
 		else = {
-			culture = { set_variable = { name = innovation_legacy_of_byzantium_can_progress_eval value = true days = 60 } }
+			culture = { set_variable = { name = innovation_legacy_of_byzantium_can_progress_eval  days = 60 } }
+		}
+	}
+}
+#Knights of the East (Byzantine)
+innovation_knights_of_the_east_potential_eval_pulse = {
+	trigger = {
+		culture = {
+			culture_head = prev
+			NOT = { has_variable = innovation_knights_of_the_east_potential_eval }
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					NOT = { has_variable = innovation_knights_of_the_east_potential }
+					has_variable = sg_culture_christianity_religion
+					can_show_innovation_due_to_exposure_new = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_knights_of_the_east"
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_knights_of_the_east_potential }	
+				set_variable = { name = innovation_knights_of_the_east_potential_eval days = 60 }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_knights_of_the_east_potential
+					NOT = {
+						OR = {
+							has_variable = sg_culture_christianity_religion
+							can_show_innovation_due_to_exposure_new = {
+								HAS_INNOVATION_LIST = "has_innovation = innovation_knights_of_the_east"
+							}
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_knights_of_the_east_potential
+				set_variable = { name = innovation_knights_of_the_east_potential_eval days = 60 }
+			}
+		}
+		else = {
+			culture = { set_variable = { name = innovation_knights_of_the_east_potential_eval days = 60 } }
+		}
+	}
+}
+#German Town Law (Central Germanic)
+innovation_german_town_law_potential_eval_pulse = {
+	trigger = {
+		culture = {
+			culture_head = prev
+			NOT = { has_variable = innovation_german_town_law_potential_eval }
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					NOT = { has_variable = innovation_german_town_law_potential }
+					has_variable = sg_culture_christianity_religion
+					can_show_innovation_due_to_exposure_new = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_german_town_law"
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_german_town_law_potential }	
+				set_variable = { name = innovation_german_town_law_potential_eval days = 60 }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_german_town_law_potential
+					NOT = {
+						OR = {
+							has_variable = sg_culture_christianity_religion
+							can_show_innovation_due_to_exposure_new = {
+								HAS_INNOVATION_LIST = "has_innovation = innovation_german_town_law"
+							}
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_german_town_law_potential
+				set_variable = { name = innovation_german_town_law_potential_eval days = 60 }
+			}
+		}
+		else = {
+			culture = { set_variable = { name = innovation_german_town_law_potential_eval days = 60 } }
+		}
+	}
+	
+	on_actions = {
+		innovation_german_town_law_can_progress_eval_pulse
+	}
+}
+
+innovation_german_town_law_can_progress_eval_pulse = {
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					has_variable = innovation_german_town_law_potential
+					NOT = { has_variable = innovation_german_town_law_can_progress }
+					can_spread_from_neighboring_diff_culture_county_new = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_german_town_law"
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_german_town_law_can_progress }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_german_town_law_can_progress
+					NOT = {
+						OR = {
+							has_variable = innovation_german_town_law_potential
+							can_spread_from_neighboring_diff_culture_county_new = {
+								HAS_INNOVATION_LIST = "has_innovation = innovation_german_town_law"
+							}
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_german_town_law_can_progress
+			}
+		}
+	}
+}
+#Seigneurialism (Frankish)
+innovation_seigneurialism_potential_eval_pulse = {
+	trigger = {
+		culture = {
+			culture_head = prev
+			NOT = { has_variable = innovation_seigneurialism_potential_eval }
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					NOT = { has_variable = innovation_seigneurialism_potential }
+					can_show_innovation_due_to_exposure_new = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_seigneurialism"
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_seigneurialism_potential }	
+				set_variable = { name = innovation_seigneurialism_potential_eval days = 60 }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_seigneurialism_potential
+					NOT = {
+						can_show_innovation_due_to_exposure_new = {
+							HAS_INNOVATION_LIST = "has_innovation = innovation_seigneurialism"
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_seigneurialism_potential
+				set_variable = { name = innovation_seigneurialism_potential_eval days = 60 }
+			}
+		}
+		else = {
+			culture = { set_variable = { name = innovation_seigneurialism_potential_eval days = 60 } }
+		}
+	}
+	
+	on_actions = {
+		innovation_seigneurialism_can_progress_eval_pulse
+	}
+}
+
+innovation_seigneurialism_can_progress_eval_pulse = {
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					has_variable = innovation_seigneurialism_potential
+					NOT = { has_variable = innovation_seigneurialism_can_progress }
+					can_spread_from_neighboring_diff_culture_county_new = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_seigneurialism"
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_seigneurialism_can_progress }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_seigneurialism_can_progress
+					NOT = {
+						OR = {
+							has_variable = innovation_seigneurialism_potential
+							can_spread_from_neighboring_diff_culture_county_new = {
+								HAS_INNOVATION_LIST = "has_innovation = innovation_seigneurialism"
+							}
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_seigneurialism_can_progress
+			}
+		}
+	}
+}
+
+#Peerage (Frankish)
+innovation_french_peerage_potential_eval_pulse = {
+	trigger = {
+		culture = {
+			culture_head = prev
+			NOT = { has_variable = innovation_french_peerage_potential_eval }
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					NOT = { has_variable = innovation_french_peerage_potential }
+					can_show_innovation_due_to_exposure_new = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_french_peerage_potential }	
+				set_variable = { name = innovation_french_peerage_potential_eval days = 60 }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_french_peerage_potential
+					NOT = {
+						can_show_innovation_due_to_exposure_new = {
+							HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_french_peerage_potential
+				set_variable = { name = innovation_french_peerage_potential_eval days = 60 }
+			}
+		}
+		else = {
+			culture = { set_variable = { name = innovation_french_peerage_potential_eval days = 60 } }
+		}
+	}
+	
+	on_actions = {
+		innovation_french_peerage_can_progress_eval_pulse
+	}
+}
+
+innovation_french_peerage_can_progress_eval_pulse = {
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					has_variable = innovation_french_peerage_potential
+					NOT = { has_variable = innovation_french_peerage_can_progress }
+					can_spread_from_neighboring_diff_culture_county_new = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_french_peerage_can_progress }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_french_peerage_can_progress
+					NOT = {
+						OR = {
+							has_variable = innovation_french_peerage_potential
+							can_spread_from_neighboring_diff_culture_county_new = {
+								HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
+							}
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_french_peerage_can_progress
+			}
+		}
+	}
+}
+
+#Persianate Literary Influence (Iranian)
+innovation_persian_court_literature_potential_eval_pulse = {
+	trigger = {
+		culture = {
+			culture_head = prev
+			NOT = { has_variable = innovation_persian_court_literature_potential_eval }
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					NOT = { has_variable = innovation_persian_court_literature_potential }
+					can_show_innovation_due_to_exposure_new = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_persian_court_literature_iranian has_innovation = innovation_persian_court_literature_world"
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_persian_court_literature_potential }	
+				set_variable = { name = innovation_persian_court_literature_potential_eval days = 60 }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_persian_court_literature_potential
+					NOT = {
+						can_show_innovation_due_to_exposure_new = {
+							HAS_INNOVATION_LIST = "has_innovation = innovation_persian_court_literature_iranian has_innovation = innovation_persian_court_literature_world"
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_persian_court_literature_potential
+				set_variable = { name = innovation_persian_court_literature_potential_eval days = 60 }
+			}
+		}
+		else = {
+			culture = { set_variable = { name = innovation_persian_court_literature_potential_eval days = 60 } }
+		}
+	}
+	
+	on_actions = {
+		innovation_persian_court_literature_can_progress_eval_pulse
+	}
+}
+
+innovation_persian_court_literature_can_progress_eval_pulse = {
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					has_variable = innovation_persian_court_literature_potential
+					NOT = { has_variable = innovation_persian_court_literature_can_progress }
+					can_spread_from_neighboring_diff_culture_county_new = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_persian_court_literature_iranian has_innovation = innovation_persian_court_literature_world"
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_persian_court_literature_can_progress }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_persian_court_literature_can_progress
+					NOT = {
+						OR = {
+							has_variable = innovation_persian_court_literature_potential
+							can_spread_from_neighboring_diff_culture_county_new = {
+								HAS_INNOVATION_LIST = "has_innovation = innovation_persian_court_literature_iranian has_innovation = innovation_persian_court_literature_world"
+							}
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_persian_court_literature_can_progress
+			}
 		}
 	}
 }

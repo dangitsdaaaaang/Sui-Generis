@@ -141,27 +141,20 @@ innovation_knights_of_the_east = {
 	
 	
 	potential = {
-		OR = {
-			trigger_if = { #Non-Byzantine cultures may only see if they are primarily Christian
-				limit = { NOT = { this.culture_group = culture_group:byzantine_group } }
-				can_show_innovation_due_to_exposure = {
-					HAS_INNOVATION_LIST = "has_innovation = innovation_knights_of_the_east"
-				}
-				any_ruler = {#display for all Christians so as to not exclude Christian Crusaders
-					filter = { this.culture = prev }
-					percent >= 0.67
-					religion = religion:christianity_religion
-				}
+		OR = { #must be Christian and exposed to the innovation to have visibility if not Georgian or Armenian
+			AND = {
+				culture_group = culture_group:byzantine_group
+				NOT = { this = culture:greek }
+				NOT = { this = culture:alan }
+				NOT = { this = culture:assyrian }
 			}
-			trigger_else = {
-				always = yes #for all Byzantine group cultures regardless of religion
-			}
+			has_variable = innovation_knights_of_the_east_potential
 		}
 	}
 	
-	can_progress = {
+	can_progress = { #does not have to spread via county adjacency
 		has_innovation = innovation_arched_saddle
-		trigger_if = {#may only adopt if not an Eastern Christian a Crusader state
+		trigger_if = {#may only adopt if not an Eastern Christian as a true Crusader state
 			limit = { this = culture:outremer }
 			custom_description = {
 				text = innovation_knights_of_the_east_outremer_trigger
@@ -172,20 +165,7 @@ innovation_knights_of_the_east = {
 			custom_description = {
 				text = innovation_knights_of_the_east_trigger
 				OR = {
-					any_ruler = {
-						filter = { this.culture = prev }
-						percent >= 0.67
-						religion = religion:christianity_religion	
-						NOR = {
-							this.faith = faith:catholic
-							this.faith = faith:conversos
-							this.faith = faith:cathar
-							this.faith = faith:waldensian
-							this.faith = faith:lollard
-							this.faith = faith:adamites
-							this.faith = faith:insular_celtic
-						}
-					}
+					has_variable = sg_culture_religion_eastern_christianity_religion
 					culture_group = culture_group:byzantine_group
 				}
 			}

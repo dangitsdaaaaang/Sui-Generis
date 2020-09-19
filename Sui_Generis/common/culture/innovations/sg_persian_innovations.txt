@@ -60,20 +60,21 @@ innovation_persian_court_literature_iranian = {
 
 innovation_persian_court_literature_world = {
 	group = culture_group_regional
-	culture_era = culture_era_high_medieval
+	culture_era = culture_era_early_medieval
 	icon = @administration_2
 	
 	potential = {
 		NOT = { culture_group = culture_group:iranian_group }
-		can_show_innovation_due_to_exposure = {
-			HAS_INNOVATION_LIST = "has_innovation = innovation_persian_court_literature_iranian has_innovation = innovation_persian_court_literature_world"
+		OR = {
+			this = culture:levantine #set in history
+			has_variable = innovation_persian_court_literature_potential
 		}
-		has_cultural_era_or_later = culture_era_high_medieval #hiding until appropriate era
 	}
 	
 	can_progress = {
-		can_spread_from_neighboring_diff_culture_county = { 
-			HAS_INNOVATION_LIST = "has_innovation = innovation_persian_court_literature_iranian has_innovation = innovation_persian_court_literature_world"
+		OR = {
+			this = culture:levantine #set in history
+			has_variable = innovation_persian_court_literature_can_progress
 		}
 	}
 	
@@ -84,7 +85,7 @@ innovation_persian_court_literature_world = {
 	custom = sg_can_spread_from_neighboring_diff_culture_county
 	
 	flag = global_regional
-	flag = high_medieval_era_regional
+	flag = early_medieval_era_regional
 }
 
 innovation_iranian_epic_verse = {

@@ -45,9 +45,7 @@ innovation_seigneurialism = { #removed from list of region-locked innovations, f
 					this = culture:english
 					this = culture:scottish
 				}
-				can_show_innovation_due_to_exposure = {
-					HAS_INNOVATION_LIST = "has_innovation = innovation_seigneurialism"
-				}
+				has_variable = innovation_seigneurialism_potential
 			}
 		}
 		#add in late-game decision to abolish seigneurialism for massive opinion penalty to all same-culture vassals
@@ -64,9 +62,7 @@ innovation_seigneurialism = { #removed from list of region-locked innovations, f
 						this = culture:scottish
 					}
 				}
-				can_spread_from_neighboring_diff_culture_county = {
-					HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
-				}
+				has_variable = innovation_seigneurialism_can_progress
 			}
 		}
 	}
@@ -103,9 +99,7 @@ innovation_french_peerage = { #removed from list of region-locked innovations
 					this = culture:english
 					this = culture:scottish
 				}
-				can_show_innovation_due_to_exposure = {
-					HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
-				}
+				has_variable = innovation_french_peerage_potential
 			}
 		}
 	}
@@ -123,9 +117,7 @@ innovation_french_peerage = { #removed from list of region-locked innovations
 						this = culture:scottish
 					}
 				}
-				can_spread_from_neighboring_diff_culture_county = {
-					HAS_INNOVATION_LIST = "has_innovation = innovation_french_peerage"
-				}
+				has_variable = innovation_french_peerage_can_progress
 			}
 		}
 	}

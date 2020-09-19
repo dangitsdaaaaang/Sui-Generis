@@ -39,7 +39,7 @@ innovation_persian_court_literature_adopted_pulse = {
 		}	
 		
 		culture = {
-			set_variable = { name = sg_adopted_persian_court_literature value = true } #prevent a recursion over every character on every pulse
+			set_variable = { name = sg_adopted_persian_court_literature  } #prevent a recursion over every character on every pulse
 			culture_head = { save_scope_as = culture_head_notification }  #mark culture head as culture representative for display in the notification 	
 				
 			every_ruler = {
@@ -156,7 +156,7 @@ innovation_east_settling_county_culture_change_pulse = {
 				}
 				random_list = { #TODO: notification event for culture flip
 					90 = {
-						set_variable = { name = sg_settlement_eval value = true days = 300 }
+						set_variable = { name = sg_settlement_eval  days = 300 }
 					}
 					4 = {
 						trigger = { scope:sponsor = { culture = culture:bavarian } }
@@ -296,6 +296,11 @@ quarterly_playable_pulse = {
 		innovation_ghilman_potential_eval_pulse
 		innovation_barb_horses_potential_eval_pulse
 		innovation_legacy_of_byzantium_can_progress_eval_pulse
+		innovation_knights_of_the_east_potential_eval_pulse
+		innovation_german_town_law_potential_eval_pulse
+		innovation_seigneurialism_potential_eval_pulse
+		innovation_french_peerage_potential_eval_pulse
+		innovation_persian_court_literature_potential_eval_pulse
 	}
 }
 
@@ -307,9 +312,11 @@ five_year_playable_pulse = {
 
 yearly_playable_pulse = {
 	on_actions = {
+		#Evaluation pulses
 		sg_culture_islam_religion_eval_pulse
+		sg_culture_christianity_religion_eval_pulse
 		sg_culture_eastern_christianity_religion_eval_pulse
-		
+		#Action pulses
 		innovation_east_settling_county_culture_change_pulse
 	}
 }

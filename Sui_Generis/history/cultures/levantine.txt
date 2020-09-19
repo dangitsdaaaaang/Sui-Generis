@@ -32,4 +32,5 @@
 	discover_innovation = innovation_house_soldiers
 	discover_innovation = innovation_hereditary_rule
 	discover_innovation = innovation_ghilman #
+	discover_innovation = innovation_persian_court_literature_world #
 }

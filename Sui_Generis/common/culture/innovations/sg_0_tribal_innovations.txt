@@ -95,7 +95,7 @@ innovation_war_camels = {
 	flag = tribal_era_regional
 }
 
-innovation_wootz_steel = { #TODO: make exportable variant of Damascene steel
+innovation_wootz_steel = {
 	group = culture_group_regional
 	culture_era = culture_era_tribal
 	region = world_india_deccan
@@ -113,16 +113,18 @@ innovation_wootz_steel = { #TODO: make exportable variant of Damascene steel
 	}
 	
 	modifier = {
-		prowess = 1
+		prowess = 2
 	}
 	maa_upgrade = {
 		type = heavy_infantry
-		damage = 2
+		damage = 5
 	}
 	maa_upgrade = {
 		type = heavy_cavalry
-		damage = 2
+		damage = 5
 	}
+	
+	custom = sg_innovation_wootz_steel_prowess_bonus
 
 	flag = global_regional
 	flag = tribal_era_regional

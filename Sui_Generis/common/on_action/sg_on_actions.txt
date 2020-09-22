@@ -301,6 +301,7 @@ quarterly_playable_pulse = {
 		innovation_seigneurialism_potential_eval_pulse
 		innovation_french_peerage_potential_eval_pulse
 		innovation_persian_court_literature_potential_eval_pulse
+		innovation_wootz_steel_arabia_potential_eval_pulse
 	}
 }
 

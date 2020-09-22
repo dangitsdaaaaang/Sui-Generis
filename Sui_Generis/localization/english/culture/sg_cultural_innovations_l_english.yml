@@ -1,8 +1,15 @@
 ﻿l_english:
  #Arabic
- innovation_ghilman:1 "Ghilman"
- innovation_ghilman:1 "The reliance on slave-soldiers as a professional fighting force was preferable to relying on local warlords or militias to supply soldiers. Drawn from Turkish slaves captured and raised in their masters' personal households, ghulam slave-soldiers became a staple throughout the Muslim world not only of the military, but also of government. Some were given command of large territories and carved out autonomous, if not sometimes outright independent, states."
+ #innovation_ghilman:1 "Ghilman"
+ #innovation_ghilman_desc:1 "The reliance on slave-soldiers as a professional fighting force was preferable to relying on local warlords or militias to supply soldiers. Drawn from Turkish slaves captured and raised in their masters' personal households, ghulam slave-soldiers became a staple throughout the Muslim world not only of the military, but also of government. Some were given command of large territories and carved out autonomous, if not sometimes outright independent, states."
  innovation_ghilman_trigger:1 "Is not $levantine$, $egyptian$, $bedouin$, or $yemeni$, #bold or#! no [county|E] of our culture borders another belonging to a culture that has adopted this innovation."
+ 
+ innovation_wootz_steel_arabia:1 "Damascene Steel"
+ innovation_wootz_steel_arabia_desc:1 "Arriving on the Arabian peninsula via the westerly tradewinds from South India, prized Indian wootz metal became an almost mythical commodity until the advent of Damascus steel. Arms forged from this uniquely durable alloy were famous throughout the Middle East and Europe for their quality."
+ innovation_wootz_steel_arabia_trigger: "No [CULTURE.GetName] [county|E] has constructed the #bold $building_type_blacksmiths_01$#! [duchy_building|E] and has [development_minor_adj|E] sufficiently to produce Damascene steel."
+ sg_innovation_wootz_steel_prowess_bonus:1 "May commission an artisanal #italic ukku#! weapon for personal use"
+ sg_innovation_wootz_steel_world_prowess_bonus:1 "May commission an artisanal Damascene steel weapon for personal use"
+ 
  #Berber
  innovation_barb_horses_berber:1 "Barb Horses"
  innovation_barb_horses_berber_desc:1 "The Barb horse is a northern African breed with great hardiness and stamina and generally possesses a fiery temperament. These prize stallions bore the fierce Berber invaders during the conquest of al-Andalus and became a cornerstone of the elite mounted forces of the Iberian peninsula and beyond."
@@ -59,8 +66,8 @@
  innovation_knights_of_the_east_outremer_trigger:1 "The majority of [CULTURE.GetName] [rulers|E] must be Christian to attract enough young nobles willing to serve among their ranks."
  
  #Frankish
- innovation_french_peerage:2 "Peerage"
- innovation_french_peerage_desc:2 "By rightfully recognizing the most illustrious amongst the noble vassals as peers of the realm, we will foster a sentiment of greater loyalty towards the crown."
+ #innovation_french_peerage:2 "Peerage"
+ #innovation_french_peerage_desc:2 "By rightfully recognizing the most illustrious amongst the noble vassals as peers of the realm, the monarchy may foster a sentiment of greater loyalty towards the crown."
  innovation_french_peerage_trigger:1 "No [independent|E] [CULTURE.GetName] realm exists or has access to a [county|E] belonging to a [culture|E] with knowledge of this innovation."
  unlock_peerage_contract:1 "Unlocks the #high $special_contract_peerage_short$#! [feudal_contract|E] to allow the appointment of [peers|E]"
  sg_can_spread_from_neighboring_diff_culture_county_english_scottish:1 "May spread to the $english$ and $scottish$ from a neighboring [culture|E] that has already adopted it"
@@ -73,8 +80,8 @@
  innovation_peerage_homage:1 "[ROOT.Char.GetPrimaryTitle.GetAdjective] Peerage Renders Homage"
  innovation_peerage_homage_desc:1 "[peer_representative.Custom2('AppropriateGreetingPositive', ROOT.Char)]\nThe lay and ecclesiastical peerage of the [ROOT.Char.GetPrimaryTitle.GetName] humbly offers you our tribute and our gratitude for the prosperity you have brought to the realm. May [ROOT.Char.GetFaith.HighGodName] grant you many more years upon the throne!"
  
- innovation_seigneurialism:1 "Seigneurialism"
- innovation_seigneurialism_desc:1 "By delegating more responsibilities and privileges to the lower nobility, more control could be exerted over the peasantry to extract even more taxes and levies, though from a greatly reduced domain to make administration more manageable. This system became somewhat infamous for forcing formerly free alloidal lands and their residents to become bound to the lord's manor, inspiring popular memories of tyrannical lords oppressing their helpless serfs."
+ #innovation_seigneurialism:1 "Seigneurialism"
+ #innovation_seigneurialism_desc:1 "By delegating more responsibilities and privileges to the lower nobility, more control could be exerted over the peasantry to extract even more taxes and levies, though from a greatly reduced domain to make administration more manageable. This system became somewhat infamous for forcing formerly free alloidal lands and their residents to become bound to the lord's manor, inspiring popular memories of tyrannical lords oppressing their helpless serfs."
  innovation_seigneurialism_trigger:1 "No [CULTURE.GetName] realm has access to a [county|E] belonging to a [culture|E] with knowledge of this innovation."
  seigneurialism_domain_limit_penalty:1 "[powerful_rank_ruler|E] suffer an additional [domain_limit|E] penalty to reflect the strain on their administrative resources of consolidating their holdings."
  sg_consolidated_domain:1 "Consolidated Seigneurial Domain"
@@ -85,12 +92,12 @@
  sg_may_designate_heir:1 "Enables the #italic $designate_heir_interaction$#! interaction if the realm has $confederate_partition_succession_law$ or $partition_succession_law$ succession. Passing $high_partition_succession_law$ succession will disable this interaction."
  
  #Central Germanic
- innovation_stem_duchies:0 "Stammesherzogtum"
- innovation_stem_duchies_desc:0 "The ancient laws and customs of the Bavarian, Alamannic, Franconian and Saxon peoples had for hundreds of years  formed the core of the identities of the peoples of Germania. Though the Empire had united the tribal kingdoms into a single polity and granted them a single throne for which to vie, the regional stem duchies persisted and would serve as the powerbases of the great princely houses until they one by one fell into disarray or were dismantled, more often than not at the hands of vengeful Emperors."
+ #innovation_stem_duchies:0 "Stammesherzogtum"
+ #innovation_stem_duchies_desc:0 "The ancient laws and customs of the Bavarian, Alamannic, Franconian and Saxon peoples had for hundreds of years  formed the core of the identities of the peoples of Germania. Though the Empire had united the tribal kingdoms into a single polity and granted them a single throne for which to vie, the regional stem duchies persisted and would serve as the powerbases of the great princely houses until they one by one fell into disarray or were dismantled, more often than not at the hands of vengeful Emperors."
  sg_central_germanic_culture_group_reduced_factionalism:1 "$central_germanic_group$ [culture_group|E] [vassals|E] are less likely to join [independence_factions|E] against $central_germanic_group$ [culture_group|E] [rulers|E]."
  
- innovation_east_settling:1 "Ostsiedlung"
- innovation_east_settling_desc:1 "The lands to the east are sparsely inhabited, but rich in natural resources. Allowing and even encouraging settlers to establish homesteads there will strengthen trade and greatly benefit the [CULTURE.GetName] people."
+ #innovation_east_settling:1 "Ostsiedlung"
+ #innovation_east_settling_desc:1 "The lands to the east are sparsely inhabited, but rich in natural resources. Allowing and even encouraging settlers to establish homesteads there will strengthen trade and greatly benefit the [CULTURE.GetName] people."
  sg_settle_the_borderlands:1 "Foreign [culture|E] [counties|E] directly bordering ours may change to our culture."
  
  innovation_german_town_law:1 "German Town Law"
@@ -99,8 +106,8 @@
  sg_can_spread_from_neighboring_diff_culture_county_christian:1 "May spread to a primarily Christian culture from a neighboring culture that has this innovation"
  
  #Iberian
- innovation_reconquista:1 "Reconquista"
- innovation_reconquista_desc:1 "For centuries, Christian and Moorish rulers battled for not only religious, but also cultural supremacy over the Iberian peninsula. However, the hostilities tended to ebb and flow between the rivalling faiths just as much as they did between rulers of the same faith, and it was not uncommon for men who considered each other infidels to fight alongside each other against a common enemy. Guided more by expediency and opportunity for expansion than true zeal, the warrior-kings of Christian Spain often sought religious conflict, regardless of who they fought with or against, as a means to bring glory and wealth to their kingdoms."
+ #innovation_reconquista:1 "Reconquista"
+ #innovation_reconquista_desc:1 "For centuries, Christian and Moorish rulers battled for not only religious, but also cultural supremacy over the Iberian peninsula. However, the hostilities tended to ebb and flow between the rivalling faiths just as much as they did between rulers of the same faith, and it was not uncommon for men who considered each other infidels to fight alongside each other against a common enemy. Guided more by expediency and opportunity for expansion than true zeal, the warrior-kings of Christian Spain often sought religious conflict, regardless of who they fought with or against, as a means to bring glory and wealth to their kingdoms."
  innovation_reconquista_muslim:1 "Fatḥ al-Andalus"
  innovation_reconquista_muslim_desc:1 "For centuries, Christian and Moorish rulers battled for not only religious, but also cultural supremacy over the Iberian peninsula. Though at first the lack of cohesion among the Christian natives faciliated the rapid conquest and integration of the muwalladun into the Muslim world, fierce resistance, difficult terrain, and a developing warrior culture in the north proved too difficult to dispel. By the late 10th century, threatened by an ever-emboldened foe, the various Moorish taifas were faced with a terrible choice: unite the squabbling factions and repel the aggression of their northern neighbors by the sword or die by it."
  sg_reconquista_raiding:1 "Enables [raiding|E], though at a significantly slower rate, of foreign [counties|E] in $world_europe_west_iberia$ for [piety|E] #bold if of a different religion#! scaled to the ruler's [martial|E] ability, provided the [doctrines|E] of the ruler's [faith|E] do not forbid it"

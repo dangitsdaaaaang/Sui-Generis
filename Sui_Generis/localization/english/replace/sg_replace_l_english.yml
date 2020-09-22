@@ -1,0 +1,18 @@
+﻿l_english:
+ #Arabic
+ innovation_ghilman_desc:1 "The reliance on slave-soldiers as a professional fighting force was preferable to relying on local warlords or militias to supply soldiers. Drawn from Turkish slaves captured and raised in their masters' personal households, ghulam slave-soldiers became a staple throughout the Muslim world not only of the military, but also of government. Some were given command of large territories and carved out autonomous, if not sometimes outright independent, states."
+ 
+ #Frankish
+ innovation_french_peerage_desc:2 "By rightfully recognizing the most illustrious amongst the noble vassals as peers of the realm, the monarchy may foster a sentiment of greater loyalty towards the crown."
+ 
+ innovation_seigneurialism_desc:1 "By delegating more responsibilities and privileges to the lower nobility, more control could be exerted over the peasantry to extract even more taxes and levies, though from a greatly reduced domain to make administration more manageable. This system became somewhat infamous for forcing formerly free alloidal lands and their residents to become bound to the lord's manor, inspiring popular memories of tyrannical lords oppressing their helpless serfs."
+ 
+ #Central Germanic
+ innovation_stem_duchies_desc:0 "The ancient laws and customs of the Bavarian, Alamannic, Franconian and Saxon peoples had for hundreds of years  formed the core of the identities of the peoples of Germania. Though the Empire had united the tribal kingdoms into a single polity and granted them a single throne for which to vie, the regional stem duchies persisted and would serve as the powerbases of the great princely houses until they one by one fell into disarray or were dismantled, more often than not at the hands of vengeful Emperors."
+ 
+ innovation_east_settling_desc:1 "The lands to the east are sparsely inhabited, but rich in natural resources. Allowing and even encouraging settlers to establish homesteads there will strengthen trade and greatly benefit the [CULTURE.GetName] people."
+ 
+ #Iberian
+ innovation_reconquista_desc:1 "For centuries, Christian and Moorish rulers battled for not only religious, but also cultural supremacy over the Iberian peninsula. However, the hostilities tended to ebb and flow between the rivalling faiths just as much as they did between rulers of the same faith, and it was not uncommon for men who considered each other infidels to fight alongside each other against a common enemy. Guided more by expediency and opportunity for expansion than true zeal, the warrior-kings of Christian Spain often sought religious conflict, regardless of who they fought with or against, as a means to bring glory and wealth to their kingdoms."
+ 
+

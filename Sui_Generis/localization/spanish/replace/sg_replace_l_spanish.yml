@@ -1,0 +1,16 @@
+﻿l_spanish:
+ #Árabe
+ innovation_ghilman_desc:1 "La dependencia de soldados esclavos como fuerza de combate profesional era preferible a la de los caudillos locales o las milicias para el suministro de soldados. Extraídos de los esclavos turcos capturados y criados en las casas personales de sus amos, los esclavos-soldado «ghulam» se convirtieron en un elemento básico en todo el mundo musulmán, no solo del ejército, sino también del gobierno. A algunos se les dio el mando de grandes territorios y se forjaron estados autónomos, si no a veces totalmente independientes."
+ 
+ #Frankish
+ innovation_french_peerage_desc:2 "Al reconocer legítimamente a los más ilustres entre los nobles vasallos como pares del reino, la monarquía puede fomentar un sentimiento de mayor lealtad hacia la corona."
+ 
+ innovation_seigneurialism_desc:1 "Al delegar más responsabilidades y privilegios a la baja nobleza, se podría ejercer más control sobre el campesinado para extraer aún más impuestos y gravámenes, a costa de un dominio muy reducido para hacer la administración más manejable. Este sistema se volvió algo infame por obligar a las tierras alodiales que antes eran libres y a sus residentes a quedar atados al feudo del señor, inspirando recuerdos populares de señores tiránicos que oprimían a sus siervos indefensos."
+
+ #Central Germanic
+ innovation_stem_duchies_desc:0 "Las antiguas leyes y costumbres de los pueblos bávaro, alamán, franconio y sajón habían formado durante cientos de años el núcleo de las identidades de los pueblos de Germania. Aunque el Imperio había unido los reinos tribales en una sola entidad política y les había concedido un solo trono por el que competir, los ducados troncales regionales persistieron y servirían como bases de poder de las grandes casas principescas hasta que uno por uno cayeran en desorden o fueran desmantelados, la mayoría de las veces a manos de emperadores vengativos."
+ 
+ innovation_east_settling_desc:1 "Las tierras del este están escasamente habitadas, pero son ricas en recursos naturales. Permitir e incluso favorecer el establecimiento de asentamientos fortalecerá el comercio y beneficiará enormemente al pueblo [CULTURE.GetName]."
+
+ #Iberian
+ innovation_reconquista_desc:1 "Durante siglos, los gobernantes cristianos y moros lucharon no solo por la supremacía religiosa, sino también cultural sobre la Península Ibérica. Sin embargo, las hostilidades eran constantes entre las religiones rivales tanto como entre gobernantes de la misma fe, y no era raro que los hombres que se consideraban infieles lucharan uno al lado del otro contra un enemigo común. Guiados más por la conveniencia y la oportunidad de expansión que por el verdadero celo, los reyes guerreros de la España cristiana a menudo buscaban el conflicto religioso, independientemente de con quién lucharan o contra quién, como un medio para traer gloria y riqueza a sus reinos."

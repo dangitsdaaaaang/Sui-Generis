@@ -91,12 +91,6 @@ innovation_barb_horses_iberian = {
 		}
 	}
 	
-	can_progress = {
-		can_spread_from_neighboring_diff_culture_county = { 
-			HAS_INNOVATION_LIST = "has_innovation = innovation_barb_horses_berber has_innovation = innovation_barb_horses_andalusian has_innovation = innovation_barb_horses_iberian"
-		}
-	}
-	
 	maa_upgrade = {
 		type = light_cavalry
 		damage = 5

@@ -185,6 +185,7 @@ innovation_ghilman_potential_eval_pulse = {
 			limit = {
 				culture = {
 					NOT = { has_variable = innovation_ghilman_potential }
+					has_variable = sg_culture_religion_islam_religion
 					OR = {
 						can_show_innovation_due_to_exposure_new = {
 							HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"
@@ -202,8 +203,11 @@ innovation_ghilman_potential_eval_pulse = {
 				culture = {
 					has_variable = innovation_ghilman_potential
 					NOT = { 
-						can_show_innovation_due_to_exposure_new = {
-							HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"
+						OR = {
+							 has_variable = sg_culture_religion_islam_religion
+							can_show_innovation_due_to_exposure_new = {
+								HAS_INNOVATION_LIST = "has_innovation = innovation_ghilman"
+							}
 						}
 					}
 				}
@@ -797,6 +801,109 @@ innovation_persian_court_literature_can_progress_eval_pulse = {
 			}
 			culture = {
 				remove_variable = innovation_persian_court_literature_can_progress
+			}
+		}
+	}
+}
+
+#Damascene Steel (Arabic)
+innovation_wootz_steel_arabia_potential_eval_pulse = {
+	trigger = {
+		culture = {
+			culture_head = prev
+			NOT = { has_variable = innovation_wootz_steel_arabia_potential_eval }
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					NOT = { has_variable = innovation_wootz_steel_arabia_potential }
+					can_show_innovation_due_to_exposure_new = {
+						HAS_INNOVATION_LIST = "has_innovation = innovation_wootz_steel_arabia"
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_wootz_steel_arabia_potential }	
+				set_variable = { name = innovation_wootz_steel_arabia_potential_eval days = 60 }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_wootz_steel_arabia_potential
+					NOT = {
+						can_show_innovation_due_to_exposure_new = {
+							HAS_INNOVATION_LIST = "has_innovation = innovation_wootz_steel_arabia"
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_wootz_steel_arabia_potential
+				set_variable = { name = innovation_wootz_steel_arabia_potential_eval days = 60 }
+			}
+		}
+		else = {
+			culture = { set_variable = { name = innovation_wootz_steel_arabia_potential_eval days = 60 } }
+		}
+	}
+	
+	on_actions = {
+		innovation_wootz_steel_arabia_can_progress_eval_pulse
+	}
+}
+
+innovation_wootz_steel_arabia_can_progress_eval_pulse = {
+	effect = {
+		if = {
+			limit = { 
+				culture = { 
+					has_variable = innovation_wootz_steel_arabia_potential
+					NOT = { has_variable = innovation_wootz_steel_arabia_can_progress }
+					any_county = {
+						this.culture = prev 
+						development_level >= 20
+						any_province = {
+							OR = {
+								has_building = blacksmiths_01
+								has_building = blacksmiths_02
+								has_building = blacksmiths_03
+							}
+						}
+					}
+				}
+			}
+			culture = {
+				set_variable = { name = innovation_wootz_steel_arabia_can_progress }
+			}
+		}
+		else_if = {
+			limit = {
+				culture = {
+					has_variable = innovation_wootz_steel_arabia_can_progress
+					NOT = {
+						OR = {
+							has_variable = innovation_wootz_steel_arabia_potential
+							any_county = {
+								this.culture = prev 
+								development_level >= 20
+								any_province = {
+									OR = {
+										has_building = blacksmiths_01
+										has_building = blacksmiths_02
+										has_building = blacksmiths_03
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			culture = {
+				remove_variable = innovation_wootz_steel_arabia_can_progress
 			}
 		}
 	}

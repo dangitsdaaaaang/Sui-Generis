@@ -6,6 +6,10 @@ can_spread_from_close_family_member_ruler_or_noble_courtier_trigger = {
 	global_not = can_spread_from_close_family_member_ruler_or_noble_courtier_trigger
 }
 #INNOVATION TRIGGERS
+#Arabs
+innovation_wootz_steel_arabia_trigger = {
+	global_not = innovation_wootz_steel_arabia_trigger
+}
 #Byzantines
 innovation_legacy_of_byzantium_trigger = {
 	global_not = innovation_legacy_of_byzantium_trigger

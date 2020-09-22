@@ -1,8 +1,10 @@
 ﻿l_spanish:
- #Berber
- innovation_ghilman:1 "Ghilman"
- innovation_ghilman:1 "La dependencia de soldados esclavos como fuerza de combate profesional era preferible a la de los caudillos locales o las milicias para el suministro de soldados. Extraídos de los esclavos turcos capturados y criados en las casas personales de sus amos, los esclavos-soldado «ghulam» se convirtieron en un elemento básico en todo el mundo musulmán, no solo del ejército, sino también del gobierno. A algunos se les dio el mando de grandes territorios y se forjaron estados autónomos, si no a veces totalmente independientes."
+ #Arabic
+ #innovation_ghilman:1 "Ghilman"
+ #innovation_ghilman_desc:1 "La dependencia de soldados esclavos como fuerza de combate profesional era preferible a la de los caudillos locales o las milicias para el suministro de soldados. Extraídos de los esclavos turcos capturados y criados en las casas personales de sus amos, los esclavos-soldado «ghulam» se convirtieron en un elemento básico en todo el mundo musulmán, no solo del ejército, sino también del gobierno. A algunos se les dio el mando de grandes territorios y se forjaron estados autónomos, si no a veces totalmente independientes."
  innovation_ghilman_trigger:1 "No es $levantine$, $egyptian$, $bedouin$, o $yemeni$, #bold o#! ningún [county|E] de nuestra cultura limita con otro perteneciente a una cultura que haya adoptado esta innovación."
+ 
+ #Berber
  innovation_barb_horses_berber:1 "Caballo Bereber"
  innovation_barb_horses_berber_desc:1 "El caballo Bereber es una raza del norte africano con gran resistencia y con un temperamento normalmente fiero. Estos ansiados sementales acompañaron a los fieros invasores Bereberes en la conquista de al-Ándalus y se convirtieron en la piedra angular de las fuerzas de élite montadas de la península Ibérica y más allá."
  
@@ -58,8 +60,8 @@
  innovation_knights_of_the_east_outremer_trigger:1 "La mayoría de [rulers|E] [CULTURE.GetName] deben ser Cristianos para atraer a suficientes nobles jóvenes dispuestos a servir en sus filas."
  
  #Frankish
- innovation_french_peerage:2 "Par"
- innovation_french_peerage_desc:2 "Al reconocer legítimamente a los más ilustres entre los nobles vasallos como pares del reino, fomentaremos un sentimiento de mayor lealtad hacia la corona."
+ #innovation_french_peerage:2 "Par"
+ #innovation_french_peerage_desc:2 "Al reconocer legítimamente a los más ilustres entre los nobles vasallos como pares del reino, fomentaremos un sentimiento de mayor lealtad hacia la corona."
  innovation_french_peerage_trigger:1 "Ningún reino [CULTURE.GetName] [independent|E] existe o tiene acceso a un [county|E] perteneciente a una [culture|E] que conozca esta innovación."
  unlock_peerage_contract:1 "Desbloquea el [feudal_contract|E] #high $special_contract_peerage_short$#! que permite el nombramiento de los [peers|E]"
  sg_can_spread_from_neighboring_diff_culture_county_english_scottish:1 "Puede extenderse a los $english$ y $scottish$ desde una [culture|E] vecina que ya la haya adoptado"
@@ -72,8 +74,8 @@
  innovation_peerage_homage:1 "La Nobleza [ROOT.Char.GetPrimaryTitle.GetAdjective] Rinde Homenaje"
  innovation_peerage_homage_desc:1 "[peer_representative.Custom2('AppropriateGreetingPositive', ROOT.Char)]\nLa alta nobleza laica y eclesiástica de los [ROOT.Char.GetPrimaryTitle.GetName] le ofrece humildemente nuestro tributo y gratitud por la prosperidad que ha traído a nuestro reino. ¡Que [ROOT.Char.GetFaith.HighGodName] le bendiga con muchos años en el trono!"
  
- innovation_seigneurialism:1 "Señorialismo"
- innovation_seigneurialism_desc:1 "Al delegar más responsabilidades y privilegios a la baja nobleza, se podría ejercer más control sobre el campesinado para extraer aún más impuestos y gravámenes, a costa de un dominio muy reducido para hacer la administración más manejable. Este sistema se volvió algo infame por obligar a las tierras alodiales que antes eran libres y a sus residentes a quedar atados al feudo del señor, inspirando recuerdos populares de señores tiránicos que oprimían a sus siervos indefensos."
+ #innovation_seigneurialism:1 "Señorialismo"
+ #innovation_seigneurialism_desc:1 "Al delegar más responsabilidades y privilegios a la baja nobleza, se podría ejercer más control sobre el campesinado para extraer aún más impuestos y gravámenes, a costa de un dominio muy reducido para hacer la administración más manejable. Este sistema se volvió algo infame por obligar a las tierras alodiales que antes eran libres y a sus residentes a quedar atados al feudo del señor, inspirando recuerdos populares de señores tiránicos que oprimían a sus siervos indefensos."
  innovation_seigneurialism_trigger:1 "Ningún reino [CULTURE.GetName] tiene acceso a un [county|E] perteneciente a una [culture|E] que conozca esta innovación."
  seigneurialism_domain_limit_penalty:1 "[powerful_rank_ruler|E] sufre una penalización de [domain_limit|E] adicional que refleja su falta de recursos administrativos para consolidar adecuadamente sus posesiones."
  sg_consolidated_domain:1 "Dominio Señorial Consolidado"
@@ -84,12 +86,12 @@
  sg_may_designate_heir:1 "Habilita la interacción #italic $designate_heir_interaction$#! si el reino tiene $confederate_partition_succession_law$, $partition_succession_law$, o $high_partition_succession_law$ $game_concept_succession_law$"
  
  #Central Germanic
- innovation_stem_duchies:0 "Stammesherzogtum"
- innovation_stem_duchies_desc:0 "Las antiguas leyes y costumbres de los pueblos bávaro, alamán, franconio y sajón habían formado durante cientos de años el núcleo de las identidades de los pueblos de Germania. Aunque el Imperio había unido los reinos tribales en una sola entidad política y les había concedido un solo trono por el que competir, los ducados troncales regionales persistieron y servirían como bases de poder de las grandes casas principescas hasta que uno por uno cayeran en desorden o fueran desmantelados, la mayoría de las veces a manos de emperadores vengativos."
+ #innovation_stem_duchies:0 "Stammesherzogtum"
+ #innovation_stem_duchies_desc:0 "Las antiguas leyes y costumbres de los pueblos bávaro, alamán, franconio y sajón habían formado durante cientos de años el núcleo de las identidades de los pueblos de Germania. Aunque el Imperio había unido los reinos tribales en una sola entidad política y les había concedido un solo trono por el que competir, los ducados troncales regionales persistieron y servirían como bases de poder de las grandes casas principescas hasta que uno por uno cayeran en desorden o fueran desmantelados, la mayoría de las veces a manos de emperadores vengativos."
  sg_central_germanic_culture_group_reduced_factionalism:1 "Los [vassals|E] [culture_group|E] $central_germanic_group$ son menos propensos a unirse a [independence_factions|E] contra [rulers|E] de un [culture_group|E] $central_germanic_group$."
  
- innovation_east_settling:1 "Ostsiedlung"
- innovation_east_settling_desc:1 "Las tierras del este están escasamente habitadas, pero son ricas en recursos naturales. Permitir e incluso favorecer el establecimiento de asentamientos fortalecerá el comercio y beneficiará enormemente al pueblo [CULTURE.GetName]."
+ #innovation_east_settling:1 "Ostsiedlung"
+ #innovation_east_settling_desc:1 "Las tierras del este están escasamente habitadas, pero son ricas en recursos naturales. Permitir e incluso favorecer el establecimiento de asentamientos fortalecerá el comercio y beneficiará enormemente al pueblo [CULTURE.GetName]."
  sg_settle_the_borderlands:1 "Los [counties|E] con [culture|E] extranjera que limiten con los nuestros pueden cambiar de cultura."
  
  innovation_german_town_law:1 "Ley Municipal Alemana"
@@ -97,14 +99,14 @@
  innovation_german_town_law_trigger:1 "Ningún reino [CULTURE.GetName] [powerful_rank_adj|E] tiene acceso a un [county|E] que conozca esta innovación."
  sg_can_spread_from_neighboring_diff_culture_county_christian:1 "Puede extenderse a una cultura cristiana desde una cultura vecina que tenga esta innovación."
  
-
- innovation_reconquista:1 "Reconquista"
- innovation_reconquista_desc:1 "Durante siglos, los gobernantes cristianos y moros lucharon no solo por la supremacía religiosa, sino también cultural sobre la Península Ibérica. Sin embargo, las hostilidades eran constantes entre las religiones rivales tanto como entre gobernantes de la misma fe, y no era raro que los hombres que se consideraban infieles lucharan uno al lado del otro contra un enemigo común. Guiados más por la conveniencia y la oportunidad de expansión que por el verdadero celo, los reyes guerreros de la España cristiana a menudo buscaban el conflicto religioso, independientemente de con quién lucharan o contra quién, como un medio para traer gloria y riqueza a sus reinos."
+ #Iberian
+ #innovation_reconquista:1 "Reconquista"
+ #innovation_reconquista_desc:1 "Durante siglos, los gobernantes cristianos y moros lucharon no solo por la supremacía religiosa, sino también cultural sobre la Península Ibérica. Sin embargo, las hostilidades eran constantes entre las religiones rivales tanto como entre gobernantes de la misma fe, y no era raro que los hombres que se consideraban infieles lucharan uno al lado del otro contra un enemigo común. Guiados más por la conveniencia y la oportunidad de expansión que por el verdadero celo, los reyes guerreros de la España cristiana a menudo buscaban el conflicto religioso, independientemente de con quién lucharan o contra quién, como un medio para traer gloria y riqueza a sus reinos."
  innovation_reconquista_muslim:1 "Fath al-Andalus"
  innovation_reconquista_muslim_desc:1 "Durante siglos, los gobernantes cristianos y moros lucharon no solo por la supremacía religiosa, sino también cultural sobre la Península Ibérica. Aunque al principio la falta de cohesión entre los nativos cristianos facilitó la rápida conquista e integración de los muwalladun en el mundo musulmán, la resistencia feroz, el terreno difícil y la cultura guerrera en desarrollo en el norte peninsular resultaron demasiado difíciles de disipar. A finales del siglo X, amenazadas por un enemigo siempre envalentonado, las diversas taifas moriscas se enfrentaron a una terrible elección: unir las facciones en disputa y repeler la agresión de sus vecinos del norte a espada o morir por ella."
  sg_reconquista_raiding:1 "Permite el [raiding|E], aunque a un ritmo significativamente menor, de [counties|E] extranjeros en el $world_europe_west_iberia$ por [piety|E] #bold si son de distinta religión#! y proporcional a la habilidad [martial|E] del gobernante, a no ser que las [doctrines|E] de la [faith|E] del gobernante no lo prohíban."
  innovation_reconquista_piety_gain_toast:1 "¡Se han castigado los infieles de [barony.GetNameNoTier]!"
- innovation_reconquista_piety_gain_toast_desc:1 "¡ Los infieles [barony.GetProvince.GetCounty.GetFaith.GetAdjective] de [barony.GetNameNoTier] han recibido un castigo divino con nuestras espadas!"
+ innovation_reconquista_piety_gain_toast_desc:1 "¡Los infieles [barony.GetProvince.GetCounty.GetFaith.GetAdjective] de [barony.GetNameNoTier] han recibido un castigo divino con nuestras espadas!"
  innovation_reconquista_piety_toast_bad:1 "¡Se ha masacrado a los inocentes de [barony.GetNameNoTier]!"
  innovation_reconquista_piety_toast_bad_catholic_desc:1 " " #en referencia a la masacre de Béziers. Después de un largo asedio, las tropas papales empezaron a saquear la ciudad pero no podían distinguir entre los ciudadanos católicos de la ciudad y los rebeldes cathares, a que el jefe del ejército respondió: 'Caedite eos. Novit enim Dominus qui sunt eius (Matadlos a todos, pues Dios ya conoce a los suyos)'
  innovation_reconquista_piety_toast_bad_desc:1 " "

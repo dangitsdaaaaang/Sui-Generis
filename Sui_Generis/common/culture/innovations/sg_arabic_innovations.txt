@@ -70,3 +70,48 @@ innovation_ghilman = {
 	flag = global_regional
 	flag = early_medieval_era_regional
 }
+
+innovation_wootz_steel_arabia = { 
+	group = culture_group_regional
+	culture_era = culture_era_early_medieval
+	icon = @weapons_and_armor_01
+	
+	potential = {
+		NOT = { #exclude origin cultures and other South Indian residents
+			culture_group = culture_group:indo_aryan_group
+			culture_group = culture_group:dravidian_group
+			has_innovation = innovation_wootz_steel
+			any_county_in_region = {
+				region = world_india_deccan
+				culture = prev
+			}
+		}
+		OR = {
+			any_county_in_region = {
+				region = world_middle_east_arabia
+				culture = prev
+			}
+			has_variable = innovation_wootz_steel_arabia_potential
+		}
+	}
+	
+	can_progress = {
+		custom_description = {
+			text = innovation_wootz_steel_arabia_trigger
+			has_variable = innovation_wootz_steel_arabia_can_progress
+		}
+	}
+	
+	modifier = {
+		prowess = 1
+	}
+	maa_upgrade = {
+		type = heavy_cavalry
+		damage = 5
+	}
+
+	#custom = sg_innovation_wootz_steel_world_prowess_bonus
+
+	flag = global_regional
+	flag = early_medieval_era_regional
+}

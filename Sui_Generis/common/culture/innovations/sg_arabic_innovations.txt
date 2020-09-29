@@ -103,7 +103,7 @@ innovation_wootz_steel_arabia = {
 	}
 	
 	modifier = {
-		prowess = 1
+		knight_effectiveness_mult = 0.10
 	}
 	maa_upgrade = {
 		type = heavy_cavalry

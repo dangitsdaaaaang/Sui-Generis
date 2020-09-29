@@ -71,7 +71,7 @@ innovation_elephantry = {
 			culture_group = culture_group:dravidian_group
 			culture_group = culture_group:burman_group
 			any_county_in_region = {
-				region = world_europe_west_iberia
+				region = world_innovation_elephants
 				culture = prev
 			}
 		}
@@ -113,18 +113,19 @@ innovation_wootz_steel = {
 	}
 	
 	modifier = {
-		prowess = 2
+		prowess = 1
+		knight_effectiveness_mult = 0.10
 	}
 	maa_upgrade = {
 		type = heavy_infantry
-		damage = 5
+		damage = 2
 	}
 	maa_upgrade = {
 		type = heavy_cavalry
-		damage = 5
+		damage = 2
 	}
 	
-	custom = sg_innovation_wootz_steel_prowess_bonus
+	#custom = sg_innovation_wootz_steel_prowess_bonus
 
 	flag = global_regional
 	flag = tribal_era_regional

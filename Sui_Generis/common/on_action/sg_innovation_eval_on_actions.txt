@@ -820,8 +820,14 @@ innovation_wootz_steel_arabia_potential_eval_pulse = {
 			limit = { 
 				culture = { 
 					NOT = { has_variable = innovation_wootz_steel_arabia_potential }
-					can_show_innovation_due_to_exposure_new = {
-						HAS_INNOVATION_LIST = "has_innovation = innovation_wootz_steel_arabia"
+					OR = {
+						any_county_in_region = {
+							region = world_middle_east_arabia
+							culture = prev
+						}
+						can_show_innovation_due_to_exposure_new = {
+							HAS_INNOVATION_LIST = "has_innovation = innovation_wootz_steel_arabia"
+						}
 					}
 				}
 			}
@@ -835,6 +841,10 @@ innovation_wootz_steel_arabia_potential_eval_pulse = {
 				culture = {
 					has_variable = innovation_wootz_steel_arabia_potential
 					NOT = {
+						any_county_in_region = {
+							region = world_middle_east_arabia
+							culture = prev
+						}
 						can_show_innovation_due_to_exposure_new = {
 							HAS_INNOVATION_LIST = "has_innovation = innovation_wootz_steel_arabia"
 						}
@@ -867,11 +877,7 @@ innovation_wootz_steel_arabia_can_progress_eval_pulse = {
 						this.culture = prev 
 						development_level >= 20
 						any_province = {
-							OR = {
-								has_building = blacksmiths_01
-								has_building = blacksmiths_02
-								has_building = blacksmiths_03
-							}
+							has_building_or_higher = blacksmiths_01
 						}
 					}
 				}
@@ -884,18 +890,17 @@ innovation_wootz_steel_arabia_can_progress_eval_pulse = {
 			limit = {
 				culture = {
 					has_variable = innovation_wootz_steel_arabia_can_progress
-					NOT = {
-						OR = {
-							has_variable = innovation_wootz_steel_arabia_potential
-							any_county = {
+					OR = {
+						NOT = { has_variable = innovation_wootz_steel_arabia_potential }
+						any_county = {
+							filter = { 
 								this.culture = prev 
 								development_level >= 20
+							}
+							count = all
+							NOT = {
 								any_province = {
-									OR = {
-										has_building = blacksmiths_01
-										has_building = blacksmiths_02
-										has_building = blacksmiths_03
-									}
+									has_building_or_higher = blacksmiths_01
 								}
 							}
 						}

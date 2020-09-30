@@ -70,6 +70,7 @@ innovation_elephantry = {
 			culture_group = culture_group:indo_aryan_group
 			culture_group = culture_group:dravidian_group
 			culture_group = culture_group:burman_group
+			this = culture:kerati
 			any_county_in_region = {
 				region = world_innovation_elephants
 				culture = prev

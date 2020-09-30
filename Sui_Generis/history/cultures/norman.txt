@@ -31,10 +31,9 @@
 	discover_innovation = innovation_arched_saddle
 	#
 	discover_innovation = innovation_hereditary_rule
-	discover_innovation = innovation_armilary_sphere
 	discover_innovation = innovation_manorialism
 	discover_innovation = innovation_currency_02
 	#
-	discover_innovation = innovation_seigneurialism
-	discover_innovation = innovation_norman_customary_law
+	discover_innovation = innovation_seigneurialism #
+	discover_innovation = innovation_norman_customary_law #
 }

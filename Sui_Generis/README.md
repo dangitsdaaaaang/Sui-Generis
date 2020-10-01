@@ -6,6 +6,7 @@ Currently, the mod features innovations for the following culture groups:
 - Fatḥ al-Andalus _(available to Andalusian, Maghrebi, and Berber cultures with a presence in the Iberian region)_: Enables raiding, though at a significantly slower rate, of foreign counties within the Iberian region for piety **if of a different religion** scaled to the ruler's martial skill, +4 Advantage in Controlled Territory
 - Alcazabas _(available to the Andalusians, can be exported to the Iberian culture group)_: +1 Fort Level, +20% Hostile Raid Time, +50% Garrison Size, +25% Castle Holding Construction Cost
 - Ghilman _(available to Arabic culture group cultures in the Middle East, may spread to any predominantly Islamic culture)_: -33% Men-at-Arms Maintenance, +2 Men-at-Arms Regiments, -25% Levy Size, -50% Levy Reinforcement Rate
+- Damascene Steel _(available to Arabic culture group cultures in the Middle East, may spread to any sufficiently advanced culture, requires a county with 20 Development or higher and a duchy building from the Blacksmith line constructed in it)_: +15% Knight Effectiveness, bonus damage for heavy cavalry
 ## Berbers:
 - Barb Horses _(can be exported to other cultures)_: bonus damage, toughness, and pursuit for light cavalry
 - Barbary Corsairs: enables raiding by land and sea, -25% Embarkation cost and +40% Naval Movement speed

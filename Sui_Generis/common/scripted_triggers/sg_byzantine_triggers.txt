@@ -1,0 +1,12 @@
+﻿#Knights of the East (Byzantine)
+innovation_knights_of_the_east_candidate_trigger = {
+	culture = {
+		culture_group = culture_group:byzantine_group
+		NOT = { this = culture:greek }
+	}
+	faith.religion = religion:christianity_religion
+	can_be_knight_trigger = { ARMY_OWNER = $HOST$ }
+	age < 45
+	age >= 25
+	prowess > high_skill_rating
+}

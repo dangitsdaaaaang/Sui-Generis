@@ -62,8 +62,9 @@
  
  innovation_knights_of_the_east:1 "Knights of the East"
  innovation_knights_of_the_east_desc:1 "Though the unforgiving terrain of the Caucasus would prove a challenge to most, the resilient kingdoms of Armenia and Georgia developed a proud chivalric tradition stretching back to the dawn of empires. Their heavy cavalry repulsed larger armies time and time again, and even when the Turkic and Mongol hordes finally displaced them from their mountain halls, these noble cavaliers fought on and served as an integral part in the armies of both their Eastern brothers in faith and their Crusader neighbors."
- innovation_knights_of_the_east_trigger:1 "The majority of [CULTURE.GetName] [rulers|E] must be [eastern_christian_adj|E] to attract enough young nobles willing to serve among their ranks."
- innovation_knights_of_the_east_outremer_trigger:1 "The majority of [CULTURE.GetName] [rulers|E] must be Christian to attract enough young nobles willing to serve among their ranks."
+ innovation_knights_of_the_east_trigger:1 "The majority of [CULTURE.GetName] [rulers|E] must be [eastern_christian_adj|E] to attract enough nobles willing to serve among their ranks."
+ innovation_knights_of_the_east_outremer_trigger:1 "The majority of [CULTURE.GetName] [rulers|E] must be Christian to attract enough nobles willing to serve among their ranks."
+ sg_innovation_knights_of_the_east:1 "Increased chance of attracting powerful [knights|E] from the non-$greek$ $byzantine_group$ cultures"
  
  #Frankish
  #innovation_french_peerage:2 "Peerage"

@@ -4,6 +4,11 @@
  #innovation_ghilman_desc:1 "La dependencia de soldados esclavos como fuerza de combate profesional era preferible a la de los caudillos locales o las milicias para el suministro de soldados. Extraídos de los esclavos turcos capturados y criados en las casas personales de sus amos, los esclavos-soldado «ghulam» se convirtieron en un elemento básico en todo el mundo musulmán, no solo del ejército, sino también del gobierno. A algunos se les dio el mando de grandes territorios y se forjaron estados autónomos, si no a veces totalmente independientes."
  innovation_ghilman_trigger:1 "No es $levantine$, $egyptian$, $bedouin$, o $yemeni$, #bold o#! ningún [county|E] de nuestra cultura limita con otro perteneciente a una cultura que haya adoptado esta innovación."
  
+ innovation_wootz_steel_arabia:1 "Acero de Damasco"
+ innovation_wootz_steel_arabia_desc:1 "Llegados a la Península Arábiga con los vientos alisios del sur de la India, el preciado metal wootz indio se convirtió en un producto casi mítico hasta la llegada del acero de Damasco. Las armas forjadas con esta aleación excepcionalmente duradera eran famosas en Oriente Medio y Europa por su calidad."
+ innovation_wootz_steel_arabia_trigger:1 "Ningún [county|E] [CULTURE.GetName] ha construido el [duchy_building|E] #bold $building_type_blacksmiths_01$#! ni tiene [development_minor_adj|E] suficiente para producir Acero de Damasco."
+ sg_innovation_wootz_steel_prowess_bonus:1 "Podría encargar una arma #italic ukku#! artesanal para uso personal."
+ sg_innovation_wootz_steel_world_prowess_bonus:1 "Podría encargar una arma de acero damasquino para uso personal"
  #Berber
  innovation_barb_horses_berber:1 "Caballo Bereber"
  innovation_barb_horses_berber_desc:1 "El caballo Bereber es una raza del norte africano con gran resistencia y con un temperamento normalmente fiero. Estos ansiados sementales acompañaron a los fieros invasores Bereberes en la conquista de al-Ándalus y se convirtieron en la piedra angular de las fuerzas de élite montadas de la península Ibérica y más allá."

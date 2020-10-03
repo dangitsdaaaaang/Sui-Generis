@@ -139,11 +139,14 @@ innovation_knights_of_the_east = {
 	culture_era = culture_era_high_medieval
 	icon = @knight
 	
+	
 	potential = {
 		OR = { #must be Christian and exposed to the innovation to have visibility if not Georgian or Armenian
 			AND = {
 				culture_group = culture_group:byzantine_group
 				NOT = { this = culture:greek }
+				NOT = { this = culture:alan }
+				NOT = { this = culture:assyrian }
 			}
 			has_variable = innovation_knights_of_the_east_potential
 		}
@@ -169,13 +172,9 @@ innovation_knights_of_the_east = {
 		}
 	}
 	
-	modifier = {
-		knight_limit = 1
-	}
+	unlock_maa = hetselazaurkh
+	unlock_maa = raindebi
 	
-	custom = sg_innovation_knights_of_the_east
-	
-	flag = global_regional
-	flag = high_medieval_era_regional
+	flag = global_maa
 }
 

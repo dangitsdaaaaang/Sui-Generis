@@ -6,7 +6,7 @@
  
  innovation_wootz_steel_arabia:1 "Damascene Steel"
  innovation_wootz_steel_arabia_desc:1 "Arriving on the Arabian peninsula via the westerly tradewinds from South India, prized Indian wootz metal became an almost mythical commodity until the advent of Damascus steel. Arms forged from this uniquely durable alloy were famous throughout the Middle East and Europe for their quality."
- innovation_wootz_steel_arabia_trigger: "No [CULTURE.GetName] [county|E] has constructed the #bold $building_type_blacksmiths_01$#! [duchy_building|E] and has [development_minor_adj|E] sufficiently to produce Damascene steel."
+ innovation_wootz_steel_arabia_trigger:1 "No [CULTURE.GetName] [county|E] has constructed the #bold $building_type_blacksmiths_01$#! [duchy_building|E] and has [development_minor_adj|E] sufficiently to produce Damascene steel."
  sg_innovation_wootz_steel_prowess_bonus:1 "May commission an artisanal #italic ukku#! weapon for personal use"
  sg_innovation_wootz_steel_world_prowess_bonus:1 "May commission an artisanal Damascene steel weapon for personal use"
  

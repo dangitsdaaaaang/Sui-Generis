@@ -4,8 +4,13 @@ can_raid_trigger = { #overwrite entry in 00_scripted_rule_triggers.txt
 		government_has_flag = government_can_raid_rule
 		faith = { has_doctrine = unreformed_faith_doctrine }
 		culture = { has_innovation = innovation_barbary_corsairs }
-		culture = { has_innovation = innovation_reconquista }
-		culture = { has_innovation = innovation_reconquista_muslim }
+		AND = { #must be an Iberian culture character based in Iberia
+			OR = {
+				culture = { has_innovation = innovation_reconquista }
+				culture = { has_innovation = innovation_reconquista_muslim }
+			}
+			capital_province = { region = world_europe_west_iberia }
+		}
 	}
 	NOT = {
 		faith = {
